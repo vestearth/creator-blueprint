@@ -2,9 +2,12 @@
   "name": "creator-blueprint",
   "private": true,
   "scripts": {
-    "render:001": "node tools/render-001-video.mjs"
+    "render:001": "node tools/render-001-video.mjs",
+    "render:001:v1": "node tools/render-001-video-v1.mjs"
   },
   "devDependencies": {
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource/noto-sans-thai": "5.3.0",
     "ffmpeg-static": "5.2.0"
   }
 }

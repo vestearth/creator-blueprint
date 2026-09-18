@@ -1,0 +1,56 @@
+/* Hallmark · macrostructure: Narrative Workflow · tone: calm technical · theme: studied-DNA (source: approved draft) · contrast: pass (40–41) · nav: none · footer: scene-meta · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: fixed 16:9 canvas · icons: pass (30) */
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R4 V5 */
+@import url("./node_modules/@fontsource/noto-sans-thai/400.css");
+@import url("./node_modules/@fontsource/noto-sans-thai/600.css");
+@import url("./node_modules/@fontsource/noto-sans-thai/700.css");
+@import url("./node_modules/@fontsource/jetbrains-mono/600.css");
+
+:root {
+  --color-paper: oklch(97.5% 0.008 250);
+  --color-paper-raised: oklch(99.2% 0.004 250);
+  --color-paper-muted: oklch(93.5% 0.014 250);
+  --color-ink: oklch(19% 0.032 254);
+  --color-body: oklch(34% 0.025 252);
+  --color-muted: oklch(53% 0.021 252);
+  --color-rule: oklch(83% 0.018 250);
+  --color-accent: oklch(52% 0.2 260);
+  --color-accent-strong: oklch(42% 0.19 260);
+  --color-accent-soft: oklch(91% 0.052 255);
+  --color-key: oklch(89% 0.014 250);
+  --color-shadow: oklch(18% 0.025 250 / 0.16);
+
+  --font-display: "Noto Sans Thai", sans-serif;
+  --font-body: "Noto Sans Thai", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --text-xs: 18px;
+  --text-sm: 24px;
+  --text-md: 32px;
+  --text-lg: 48px;
+  --text-xl: 72px;
+  --text-hero: 104px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --rule-thin: 2px;
+  --rule-bold: 6px;
+  --shadow-object: 0 28px 64px var(--color-shadow);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 160ms;
+  --duration-scene: 480ms;
+}

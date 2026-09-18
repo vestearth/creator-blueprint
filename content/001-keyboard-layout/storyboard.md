@@ -1,6 +1,6 @@
 # Storyboard and Asset Plan
 
-Status: `animatic-v0-ready`
+Status: `visual-cut-v1-ready`
 
 Target runtime: `9:15`
 
@@ -78,6 +78,10 @@ Final color values must pass contrast review against the chosen background befor
 | G-001 | Thai/Latin typeface | Project-wide asset location TBD | Choose an OFL or otherwise licensed family | Licensed | Record font name, source URL and license file |
 | G-002 | Desk/mouse abstract graphic | `assets/001-keyboard-layout/desk-space.svg` | Drawn in-house | Original | No branded device silhouettes |
 | G-003 | Hand/key press graphic | `assets/001-keyboard-layout/key-press.svg` | Drawn in-house or generated as a non-realistic graphic | Original or generated | No real-person likeness; record generation method if used |
+| R-001 | TKL reference render | `assets/001-keyboard-layout/reference-tkl-v1.png` | Copied from the owner-provided earlier draft in `import/assets` | Owner-provided | Use only as a generic product illustration; no third-party logo shown |
+| R-002 | 75% reference render | `assets/001-keyboard-layout/reference-75-v1.png` | Copied from the owner-provided earlier draft in `import/assets` | Owner-provided | Use only as a generic product illustration; no third-party logo shown |
+| F-001 | Noto Sans Thai | npm `@fontsource/noto-sans-thai@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
+| F-002 | JetBrains Mono | npm `@fontsource/jetbrains-mono@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
 | M-001–M-005 | Layout morph transitions | Editing project outside Git; path to be recorded | Built from A-004 vectors | Original | Confirm transition matches the narrated removal/movement |
 | V-001 | Narration | External production file; path to be recorded | Owner voice or properly licensed synthetic voice | Original or licensed | No third-party voice clone; record tool and license |
 | B-001 | Background music | External production file; path to be recorded | Original or licensed library track | Licensed | Record title, creator, URL, license and download date |
@@ -113,6 +117,8 @@ Visual pack progress:
 - [x] A-005 width comparison created and rendered at 1920 × 1080.
 - [x] A-009 decision framework created and rendered at 1920 × 1080.
 - [x] Ten-beat browser animatic preview created and visually inspected.
+- [x] Twenty-five-scene visual cut v1 created and visually inspected at 1920 × 1080.
+- [x] Hallmark 58-gate slop review completed for the fixed 16:9 canvas.
 
 - [ ] Owner approves the scene order and visual language.
 - [ ] Script read-through and actual runtime are recorded.

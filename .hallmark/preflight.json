@@ -1,0 +1,11 @@
+{
+  "version": "1.1.0",
+  "audience": "Thai viewers comparing mechanical keyboard layouts",
+  "job": "narrow a shortlist to one or two layouts based on real key usage",
+  "tone": ["technical", "calm", "decisive"],
+  "macrostructure": "Narrative Workflow",
+  "theme": "studied-DNA: cool light paper, ultramarine signal, Thai technical sans",
+  "enrichment": "F5 annotated product image plus verified in-house diagrams",
+  "sceneCount": 25,
+  "format": "1920x1080, 16:9, 555 seconds"
+}
