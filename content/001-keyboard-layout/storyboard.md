@@ -89,7 +89,7 @@ Final color values must pass contrast review against the chosen background befor
 | F-001 | Noto Sans Thai | npm `@fontsource/noto-sans-thai@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
 | F-002 | JetBrains Mono | npm `@fontsource/jetbrains-mono@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
 | M-001–M-005 | Layout morph transitions | Editing project outside Git; path to be recorded | Built from A-004 vectors | Original | Confirm transition matches the narrated removal/movement |
-| V-001 | Narration | Generated stems in ignored `exports/001-keyboard-layout/narration-v1/`; final mix in `keyboard-layout-master-v1.mp4` | Kokoro-82M (`hexgrad/Kokoro-82M`) with espeak-ng Thai phonemization and `am_fenrir`; generated locally by `tools/synthesize-001-narration.py` | Kokoro model Apache-2.0; Kokoro Python package Apache-2.0; espeak-ng GPL-3.0-or-later; generated output used as original production audio | No voice clone; recording edits and spoken text are recorded in the generated manifest |
+| V-001 | Narration | Not used in `keyboard-layout-master-v1.mp4` | Intentionally omitted after owner review | Not applicable | Do not add synthetic narration without a new owner review |
 | B-001 | Background music | Final mix in `exports/001-keyboard-layout/keyboard-layout-master-v1.mp4` | Procedurally synthesized oscillators authored in `tools/render-001-master-v1.mjs` | Original | No third-party recording or composition used |
 | SFX-001 | Chapter transition sounds | Final mix in `exports/001-keyboard-layout/keyboard-layout-master-v1.mp4` | Procedurally synthesized two-tone cues authored in `tools/render-001-master-v1.mjs` | Original | No third-party recording used |
 
@@ -102,7 +102,7 @@ Final color values must pass contrast review against the chosen background befor
 - Do not clone or imitate the voice of another person. Record the narration source and commercial-use terms.
 - Choose music, fonts, icons, and sound effects only after their usage basis is documented in this manifest.
 - Re-evaluate the platform's synthetic-content disclosure at pre-publish QA; the current plan does not require realistic synthetic people or events.
-- Audio production decision recorded on `2026-09-19`: narration is a generic local synthetic voice, while music and chapter cues are original procedural audio. No realistic person, cloned voice, or real event is represented.
+- Audio production decision recorded on `2026-09-19`: narration was removed after owner review; music and chapter cues are original procedural audio. No realistic person, cloned voice, or real event is represented.
 
 ## Shorts candidates
 
@@ -127,8 +127,8 @@ Visual pack progress:
 - [x] Twenty-five-scene visual cut v1 created and visually inspected at 1920 × 1080.
 - [x] Hallmark 58-gate slop review completed for the fixed 16:9 canvas.
 - [x] Owner approved the scene order and visual language.
-- [x] Script runtime was fitted to the 9:15 visual timeline and recording edits were captured in the narration manifest.
-- [x] Typeface, narration method, music and SFX are selected with license records.
+- [x] Instrumental-only audio was fitted to the 9:15 visual timeline after owner review.
+- [x] Typeface, music and SFX are selected with usage records; narration is intentionally omitted.
 - [x] Rough animatic and final visual cut confirmed pacing before audio master production.
 - [x] Synthetic-content disclosure decision recorded for pre-publish QA.
 
