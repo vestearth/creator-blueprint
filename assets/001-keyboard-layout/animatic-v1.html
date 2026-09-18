@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../tokens.css">
   <style>
     /* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
-    /* Hallmark · macrostructure: Narrative Workflow · tone: calm technical · theme: studied-DNA (source: approved draft) */
+    /* Hallmark · macrostructure: Narrative Workflow · tone: calm technical · theme: studied-DNA (source: approved draft) · variation: layered kinetic motion (was static hold) */
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; overflow-x: clip; background: var(--color-paper-muted); color: var(--color-ink); }
     body { font-family: var(--font-body); }
@@ -25,6 +25,17 @@
       position: absolute;
       inset: var(--space-8);
       border: var(--rule-thin) solid var(--color-rule);
+      pointer-events: none;
+    }
+    .scene::after {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--space-2);
+      background: var(--color-accent);
+      opacity: var(--chapter-flash-opacity, 0);
+      transform: scaleY(var(--chapter-flash-scale, 0));
+      transform-origin: top;
       pointer-events: none;
     }
     .scene-grid {
@@ -55,7 +66,10 @@
     .support { margin: var(--space-8) 0 0; max-width: 58ch; color: var(--color-body); font-size: var(--text-md); line-height: 1.52; }
     .focus .support { margin-inline: auto; }
     .micro { margin-top: var(--space-10); color: var(--color-muted); font-family: var(--font-mono); font-size: var(--text-xs); line-height: 1.5; }
-    .visual { min-width: 0; }
+    .copy, .visual, .kicker, h1, .support, .annotation,
+    .workflow-step, .variant-item, .size-item, .answer,
+    .ladder-row, .product-row > *, .pair > * { will-change: auto; }
+    .visual { min-width: 0; transform-origin: center; }
     .product {
       position: relative;
       min-height: 600px;
@@ -360,10 +374,11 @@
     }
 
     const stage = document.querySelector('#stage');
-    const requested = Number.parseInt(new URLSearchParams(location.search).get('slide') || '0', 10);
+    const params = new URLSearchParams(location.search);
+    const requested = Number.parseInt(params.get('slide') || '0', 10);
     const active = Number.isFinite(requested) ? Math.min(Math.max(requested, 0), scenes.length - 1) : 0;
     stage.innerHTML = scenes.map((scene, index) => `
-      <article class="scene ${scene.reverse ? 'reverse' : ''} ${scene.mode || ''}" ${index === active ? '' : 'hidden'}>
+      <article class="scene ${scene.reverse ? 'reverse' : ''} ${scene.mode || ''} ${index === 0 || scenes[index - 1].chapter !== scene.chapter ? 'chapter-open' : ''}" ${index === active ? '' : 'hidden'}>
         <div class="safe-note">LAYOUT FIELD NOTES / 001</div>
         <div class="scene-grid">
           <section class="copy">
@@ -379,6 +394,57 @@
           <span>เลือกจากปุ่มที่เราใช้</span>
         </footer>
       </article>`).join('');
+
+    const clamp01 = (value) => Math.min(Math.max(value, 0), 1);
+    const smoothstep = (start, end, value) => {
+      const t = clamp01((value - start) / Math.max(end - start, 0.001));
+      return t * t * (3 - 2 * t);
+    };
+
+    window.setExportTime = (elapsed, duration) => {
+      const article = stage.querySelector('.scene:not([hidden])');
+      if (!article) return;
+
+      const exit = 1 - smoothstep(duration - 0.52, duration, elapsed);
+      const drift = smoothstep(1.1, Math.max(duration - 0.7, 1.2), elapsed);
+      const direction = article.classList.contains('reverse') ? 1 : -1;
+      const focusOpacity = article.classList.contains('focus') ? 0.34 : 1;
+      const copy = article.querySelector('.copy');
+      const visual = article.querySelector('.visual');
+      const kicker = article.querySelector('.kicker');
+      const title = article.querySelector('h1');
+      const support = article.querySelector('.support');
+
+      const copyIn = smoothstep(0.08, 0.88, elapsed);
+      const visualIn = smoothstep(0.22, 1.12, elapsed);
+      copy.style.opacity = copyIn * exit;
+      copy.style.transform = `translate3d(${direction * (1 - copyIn) * 72}px, ${(1 - copyIn) * 22 - (1 - exit) * 18}px, 0)`;
+      visual.style.opacity = visualIn * exit * focusOpacity;
+      visual.style.transform = `translate3d(${-direction * (1 - visualIn) * 96 + direction * drift * 14}px, ${(1 - visualIn) * 30 - drift * 8}px, 0) scale(${1.055 - visualIn * 0.055 + drift * 0.018})`;
+
+      [
+        [kicker, 0.00, 0.42, 18],
+        [title, 0.16, 0.84, 34],
+        [support, 0.48, 1.12, 24],
+      ].forEach(([element, start, end, distance]) => {
+        const amount = smoothstep(start, end, elapsed);
+        element.style.opacity = amount * exit;
+        element.style.transform = `translate3d(0, ${(1 - amount) * distance}px, 0)`;
+      });
+
+      const details = article.querySelectorAll('.annotation, .workflow-step, .variant-item, .size-item, .answer, .ladder-row, .product-row > *, .pair > *');
+      details.forEach((element, index) => {
+        const amount = smoothstep(0.7 + index * 0.08, 1.18 + index * 0.08, elapsed);
+        element.style.opacity = amount * exit;
+        element.style.transform = `translate3d(0, ${(1 - amount) * 22}px, 0)`;
+      });
+
+      const chapterFlash = article.classList.contains('chapter-open') ? 1 - smoothstep(0.18, 0.92, elapsed) : 0;
+      article.style.setProperty('--chapter-flash-opacity', chapterFlash);
+      article.style.setProperty('--chapter-flash-scale', smoothstep(0, 0.24, elapsed));
+    };
+
+    if (params.get('export') === '1') window.setExportTime(0, 1);
   </script>
 </body>
 </html>
