@@ -29,6 +29,10 @@
     .notes { margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .note { padding: 20px; border: 1px solid #2a3852; border-radius: 18px; background: #121a2b; }
     .note span { color: #9aabc2; }
+    body.export { background: #080d19; overflow: hidden; }
+    body.export header, body.export .intro, body.export .progress, body.export .strip, body.export .notes { display: none; }
+    body.export main { width: 100vw; max-width: none; margin: 0; padding: 0; }
+    body.export .stage { width: 100vw; height: 100vh; border: 0; border-radius: 0; box-shadow: none; }
     @media (max-width: 760px) { .strip, .notes { grid-template-columns: 1fr; } header { flex-wrap: wrap; } .caption { max-width: 100%; } }
   </style>
 </head>
@@ -63,6 +67,7 @@
   </main>
   <script>
     const slides = [...document.querySelectorAll('.slide')];
+    const params = new URLSearchParams(window.location.search);
     const strip = document.querySelector('#strip');
     const bar = document.querySelector('#bar');
     let index = 0;
@@ -89,7 +94,9 @@
       event.currentTarget.textContent = 'หยุด';
       timer = setInterval(() => { if (index === slides.length - 1) { stop(); show(0); } else show(index + 1); }, 1400);
     });
-    show(0);
+    if (params.get('export') === '1') document.body.classList.add('export');
+    const requestedSlide = Number.parseInt(params.get('slide') || '0', 10);
+    show(Number.isFinite(requestedSlide) ? requestedSlide : 0);
   </script>
 </body>
 </html>

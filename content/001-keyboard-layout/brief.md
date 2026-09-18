@@ -3,7 +3,7 @@ id: "001"
 title: "Keyboard Layout คืออะไร? 60%, 65%, 75%, TKL, 98%, 100% ต่างกันอย่างไร"
 channel: tech
 format: youtube-long-form
-state: producing
+state: visual-cut-v0
 owner: vestearth
 created: "2026-09-18"
 ---

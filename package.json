@@ -1,0 +1,10 @@
+{
+  "name": "creator-blueprint",
+  "private": true,
+  "scripts": {
+    "render:001": "node tools/render-001-video.mjs"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "5.2.0"
+  }
+}
