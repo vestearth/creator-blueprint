@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">ห้าคำถามก่อนเลือก Keyboard Layout</title>
+  <desc id="desc">Decision framework เลือก Keyboard Layout จาก Numpad, F-row, Navigation, Layer และพื้นที่</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080D19"/><stop offset="1" stop-color="#101A2F"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".3"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6z" fill="#65758D"/></marker>
+    <g id="check"><circle r="26" fill="#173D2B" stroke="#58D68D" stroke-width="3"/><path d="M-11 0l8 8 15-18" fill="none" stroke="#58D68D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <text x="960" y="98" text-anchor="middle" fill="#F4F7FB" font-family="Tahoma, Segoe UI, sans-serif" font-size="58" font-weight="700">ตอบ 5 คำถาม ก่อนดูคำว่า “กี่เปอร์เซ็นต์”</text>
+  <text x="960" y="150" text-anchor="middle" fill="#9AABC2" font-family="Tahoma, Segoe UI, sans-serif" font-size="28">เริ่มจาก Workflow ของเรา แล้วค่อยลดตัวเลือก</text>
+
+  <g font-family="Tahoma, Segoe UI, sans-serif" filter="url(#shadow)">
+    <g transform="translate(120 220)"><rect width="520" height="150" rx="26" fill="#121A2B" stroke="#E879F9" stroke-width="3"/><circle cx="70" cy="75" r="36" fill="#3A2449"/><text x="70" y="87" text-anchor="middle" fill="#E879F9" font-size="34" font-weight="700">1</text><text x="130" y="66" fill="#F4F7FB" font-size="29" font-weight="700">เราใช้ Numpad บ่อยไหม?</text><text x="130" y="106" fill="#9AABC2" font-size="23">บ่อย → เริ่มที่ 100% หรือ 96/98</text></g>
+    <g transform="translate(700 220)"><rect width="520" height="150" rx="26" fill="#121A2B" stroke="#4DA3FF" stroke-width="3"/><circle cx="70" cy="75" r="36" fill="#183B61"/><text x="70" y="87" text-anchor="middle" fill="#4DA3FF" font-size="34" font-weight="700">2</text><text x="130" y="66" fill="#F4F7FB" font-size="29" font-weight="700">ต้องกด F1–F12 ตรงไหม?</text><text x="130" y="106" fill="#9AABC2" font-size="23">บ่อย → TKL หรือ 75%</text></g>
+    <g transform="translate(1280 220)"><rect width="520" height="150" rx="26" fill="#121A2B" stroke="#FFB84D" stroke-width="3"/><circle cx="70" cy="75" r="36" fill="#4A351A"/><text x="70" y="87" text-anchor="middle" fill="#FFB84D" font-size="34" font-weight="700">3</text><text x="130" y="66" fill="#F4F7FB" font-size="29" font-weight="700">Nav ปุ่มไหนขาดไม่ได้?</text><text x="130" y="106" fill="#9AABC2" font-size="23">ดู Home · End · PgUp · PgDn · Del</text></g>
+    <g transform="translate(410 430)"><rect width="520" height="150" rx="26" fill="#121A2B" stroke="#A78BFA" stroke-width="3"/><circle cx="70" cy="75" r="36" fill="#302654"/><text x="70" y="87" text-anchor="middle" fill="#A78BFA" font-size="34" font-weight="700">4</text><text x="130" y="66" fill="#F4F7FB" font-size="29" font-weight="700">เรายอมใช้ Layer แค่ไหน?</text><text x="130" y="106" fill="#9AABC2" font-size="23">ยอมได้ → 65% หรือ 60%</text></g>
+    <g transform="translate(990 430)"><rect width="520" height="150" rx="26" fill="#121A2B" stroke="#58D68D" stroke-width="3"/><circle cx="70" cy="75" r="36" fill="#173D2B"/><text x="70" y="87" text-anchor="middle" fill="#58D68D" font-size="34" font-weight="700">5</text><text x="130" y="66" fill="#F4F7FB" font-size="29" font-weight="700">พื้นที่มีค่ากับเราแค่ไหน?</text><text x="130" y="106" fill="#9AABC2" font-size="23">เล็กลง เมื่อพื้นที่ที่ได้คืนมีประโยชน์</text></g>
+  </g>
+
+  <path d="M960 620V680" stroke="#65758D" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(260 700)" font-family="Tahoma, Segoe UI, sans-serif" filter="url(#shadow)">
+    <rect width="1400" height="290" rx="34" fill="#121A2B" stroke="#2A3852" stroke-width="3"/>
+    <text x="700" y="54" text-anchor="middle" fill="#F4F7FB" font-size="31" font-weight="700">ผลลัพธ์คือ Shortlist ไม่ใช่ผู้ชนะหนึ่งเดียว</text>
+    <g transform="translate(130 116)"><use href="#check"/><text x="0" y="62" text-anchor="middle" fill="#F4F7FB" font-size="23" font-weight="700">Numpad</text><text x="0" y="92" text-anchor="middle" fill="#9AABC2" font-size="21">100 / 96 / 98</text></g>
+    <g transform="translate(415 116)"><use href="#check"/><text x="0" y="62" text-anchor="middle" fill="#F4F7FB" font-size="23" font-weight="700">คุ้นมือ</text><text x="0" y="92" text-anchor="middle" fill="#9AABC2" font-size="21">TKL</text></g>
+    <g transform="translate(700 116)"><use href="#check"/><text x="0" y="62" text-anchor="middle" fill="#F4F7FB" font-size="23" font-weight="700">F-row</text><text x="0" y="92" text-anchor="middle" fill="#9AABC2" font-size="21">75%</text></g>
+    <g transform="translate(985 116)"><use href="#check"/><text x="0" y="62" text-anchor="middle" fill="#F4F7FB" font-size="23" font-weight="700">Arrows</text><text x="0" y="92" text-anchor="middle" fill="#9AABC2" font-size="21">65%</text></g>
+    <g transform="translate(1270 116)"><use href="#check"/><text x="0" y="62" text-anchor="middle" fill="#F4F7FB" font-size="23" font-weight="700">Layer</text><text x="0" y="92" text-anchor="middle" fill="#9AABC2" font-size="21">60%</text></g>
+    <text x="700" y="260" text-anchor="middle" fill="#FFB84D" font-size="25">ขั้นสุดท้าย: เปิดภาพ Layout · Keymap · Manual ของรุ่นจริง</text>
+  </g>
+</svg>

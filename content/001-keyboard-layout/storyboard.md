@@ -1,6 +1,6 @@
 # Storyboard and Asset Plan
 
-Status: `draft-v1`
+Status: `animatic-v0-ready`
 
 Target runtime: `9:15`
 
@@ -104,6 +104,15 @@ Final color values must pass contrast review against the chosen background befor
 Shorts must be edited as complete standalone answers, not raw excerpts that depend on the long-form introduction.
 
 ## Production gate
+
+Visual pack progress:
+
+- [x] Visual tokens and usage rules documented.
+- [x] A-001 master keyboard diagram created and rendered at 1920 × 1080.
+- [x] A-004 layout family diagram created and rendered at 1920 × 1080.
+- [x] A-005 width comparison created and rendered at 1920 × 1080.
+- [x] A-009 decision framework created and rendered at 1920 × 1080.
+- [x] Ten-beat browser animatic preview created and visually inspected.
 
 - [ ] Owner approves the scene order and visual language.
 - [ ] Script read-through and actual runtime are recorded.

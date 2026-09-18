@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">เปรียบเทียบ Keyboard Layout หกกลุ่ม</title>
+  <desc id="desc">การ์ดเปรียบเทียบ Full-size, 96/98, TKL, 75%, 65% และ 60% โดยใช้สีแทนกลุ่มปุ่ม</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080D19"/><stop offset="1" stop-color="#101A2F"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".3"/></filter>
+    <g id="core"><rect width="250" height="104" rx="14" fill="#1C2940" stroke="#41516C" stroke-width="2"/><path d="M18 30H232M18 58H232M18 86H232M54 12V94M92 12V94M130 12V94M168 12V94M206 12V94" stroke="#65758D" stroke-width="2" opacity=".5"/></g>
+    <g id="frow"><rect width="250" height="24" rx="7" fill="#183B61" stroke="#4DA3FF" stroke-width="2"/></g>
+    <g id="nav"><rect width="58" height="58" rx="10" fill="#4A351A" stroke="#FFB84D" stroke-width="2"/><path d="M29 4V54M4 29H54" stroke="#FFB84D" opacity=".45"/></g>
+    <g id="arrows"><path d="M31 0h26v26H31zM0 30h26v26H0zM31 30h26v26H31zM62 30h26v26H62z" fill="#173D2B" stroke="#58D68D" stroke-width="2"/></g>
+    <g id="numpad"><rect width="98" height="132" rx="12" fill="#3A2449" stroke="#E879F9" stroke-width="2"/><path d="M33 8V124M66 8V124M8 35H90M8 66H90M8 97H90" stroke="#E879F9" stroke-width="2" opacity=".45"/></g>
+    <g id="layer"><rect width="250" height="24" rx="7" fill="none" stroke="#A78BFA" stroke-width="3" stroke-dasharray="8 7"/></g>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <text x="96" y="104" fill="#F4F7FB" font-family="Tahoma, Segoe UI, sans-serif" font-size="56" font-weight="700">Layout เล็กลง = กลุ่มปุ่มเปลี่ยนสถานะ</text>
+  <text x="96" y="154" fill="#9AABC2" font-family="Tahoma, Segoe UI, sans-serif" font-size="28">สีทึบคือ Dedicated · เส้นประสีม่วงคือเข้าถึงผ่าน Fn/Layer</text>
+
+  <g font-family="Tahoma, Segoe UI, sans-serif" filter="url(#shadow)">
+    <g transform="translate(96 220)"><rect width="540" height="330" rx="28" fill="#121A2B" stroke="#2A3852" stroke-width="2"/><text x="34" y="54" fill="#F4F7FB" font-size="34" font-weight="700">100% · Full-size</text><text x="34" y="88" fill="#9AABC2" font-size="21">ครบทุกกลุ่ม · ใช้พื้นที่มากที่สุด</text><g transform="translate(34 126)"><use href="#frow"/><use href="#core" y="38"/><use href="#nav" x="270" y="38"/><use href="#arrows" x="266" y="108"/><use href="#numpad" x="350"/></g></g>
+    <g transform="translate(690 220)"><rect width="540" height="330" rx="28" fill="#121A2B" stroke="#2A3852" stroke-width="2"/><text x="34" y="54" fill="#F4F7FB" font-size="34" font-weight="700">96/98 · Compact-full</text><text x="34" y="88" fill="#9AABC2" font-size="21">เก็บ Numpad · บีบ Navigation และช่องว่าง</text><g transform="translate(34 126)"><use href="#frow"/><use href="#core" y="38"/><use href="#nav" x="256" y="42" transform="scale(.76)"/><use href="#arrows" x="254" y="101"/><use href="#numpad" x="344"/></g></g>
+    <g transform="translate(1284 220)"><rect width="540" height="330" rx="28" fill="#121A2B" stroke="#2A3852" stroke-width="2"/><text x="34" y="54" fill="#F4F7FB" font-size="34" font-weight="700">80% · TKL</text><text x="34" y="88" fill="#9AABC2" font-size="21">ตัด Numpad · กลุ่มอื่นยัง Dedicated</text><g transform="translate(72 126)"><use href="#frow"/><use href="#core" y="38"/><use href="#nav" x="274" y="38"/><use href="#arrows" x="270" y="108"/></g></g>
+
+    <g transform="translate(96 610)"><rect width="540" height="330" rx="28" fill="#121A2B" stroke="#2A3852" stroke-width="2"/><text x="34" y="54" fill="#F4F7FB" font-size="34" font-weight="700">75%</text><text x="34" y="88" fill="#9AABC2" font-size="21">เก็บ F-row และ Arrows · Navigation ลดลง</text><g transform="translate(104 126)"><use href="#frow"/><use href="#core" y="38"/><use href="#nav" x="260" y="46" transform="scale(.62)"/><use href="#arrows" x="252" y="108"/></g></g>
+    <g transform="translate(690 610)"><rect width="540" height="330" rx="28" fill="#121A2B" stroke="#2A3852" stroke-width="2"/><text x="34" y="54" fill="#F4F7FB" font-size="34" font-weight="700">65%</text><text x="34" y="88" fill="#9AABC2" font-size="21">Arrows ยังอยู่ · F-row ย้ายไป Layer</text><g transform="translate(126 126)"><use href="#layer"/><use href="#core" y="38"/><use href="#arrows" x="252" y="108"/></g></g>
+    <g transform="translate(1284 610)"><rect width="540" height="330" rx="28" fill="#121A2B" stroke="#2A3852" stroke-width="2"/><text x="34" y="54" fill="#F4F7FB" font-size="34" font-weight="700">60%</text><text x="34" y="88" fill="#9AABC2" font-size="21">Core typing · F-row, Nav และ Arrows ผ่าน Layer</text><g transform="translate(144 126)"><use href="#layer"/><use href="#core" y="38"/><rect x="0" y="38" width="250" height="104" rx="14" fill="none" stroke="#A78BFA" stroke-width="3" stroke-dasharray="9 7"/></g></g>
+  </g>
+
+  <text x="1824" y="1022" text-anchor="end" fill="#9AABC2" font-family="Tahoma, Segoe UI, sans-serif" font-size="24">ตำแหน่งปุ่มต่างกันตามรุ่น · ตรวจ Physical Layout ก่อนซื้อ</text>
+</svg>

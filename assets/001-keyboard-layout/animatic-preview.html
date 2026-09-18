@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>001 Keyboard Layout — Animatic Preview</title>
+  <style>
+    :root { color-scheme: dark; font-family: Tahoma, "Segoe UI", sans-serif; background: #080d19; color: #f4f7fb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at 70% 0%, #1a2945 0, #080d19 45%); }
+    header { position: sticky; top: 0; z-index: 10; display: flex; gap: 18px; align-items: center; padding: 18px 30px; background: rgba(8,13,25,.92); border-bottom: 1px solid #2a3852; backdrop-filter: blur(14px); }
+    header strong { margin-right: auto; }
+    button { border: 1px solid #4da3ff; border-radius: 12px; padding: 10px 16px; background: #183b61; color: #f4f7fb; cursor: pointer; font-weight: 700; }
+    button.secondary { border-color: #65758d; background: #121a2b; }
+    main { max-width: 1320px; margin: 0 auto; padding: 46px 28px 100px; }
+    .intro { margin-bottom: 34px; color: #9aabc2; }
+    .stage { position: relative; aspect-ratio: 16/9; overflow: hidden; border: 1px solid #2a3852; border-radius: 26px; background: #080d19; box-shadow: 0 30px 80px rgba(0,0,0,.38); }
+    .slide { position: absolute; inset: 0; display: grid; place-items: center; padding: 0; opacity: 0; pointer-events: none; transition: opacity .35s ease; }
+    .slide.active { opacity: 1; pointer-events: auto; }
+    .slide img { width: 100%; height: 100%; object-fit: contain; }
+    .overlay { position: absolute; left: 5%; right: 5%; bottom: 6%; display: flex; align-items: end; justify-content: space-between; gap: 30px; }
+    .caption { max-width: 68%; padding: 18px 24px; border-radius: 18px; background: rgba(8,13,25,.9); border: 1px solid #41516c; font-size: clamp(18px, 2vw, 32px); font-weight: 700; }
+    .time { padding: 12px 18px; border-radius: 999px; background: #121a2b; color: #9aabc2; font-variant-numeric: tabular-nums; }
+    .progress { height: 6px; margin-top: 18px; overflow: hidden; border-radius: 999px; background: #1c2940; }
+    .progress > div { height: 100%; width: 10%; background: linear-gradient(90deg, #4da3ff, #a78bfa); transition: width .3s ease; }
+    .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 22px; }
+    .thumb { padding: 13px; border: 1px solid #2a3852; border-radius: 14px; background: #121a2b; color: #9aabc2; cursor: pointer; text-align: left; }
+    .thumb.active { border-color: #4da3ff; color: #f4f7fb; }
+    .notes { margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .note { padding: 20px; border: 1px solid #2a3852; border-radius: 18px; background: #121a2b; }
+    .note span { color: #9aabc2; }
+    @media (max-width: 760px) { .strip, .notes { grid-template-columns: 1fr; } header { flex-wrap: wrap; } .caption { max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>001 · Keyboard Layout Animatic v0</strong>
+    <button id="prev" class="secondary">ก่อนหน้า</button>
+    <button id="play">เล่น Preview</button>
+    <button id="next" class="secondary">ถัดไป</button>
+  </header>
+  <main>
+    <p class="intro">Preview นี้ย่อ storyboard 25 ฉากเป็น 10 visual beats และเล่นแบบเร่งเพื่อเช็ก narrative flow ไม่ใช่ตัวแทนเวลาจริงของ narration</p>
+    <section class="stage" id="stage">
+      <article class="slide active" data-label="Hook" data-time="0:00–0:35"><img src="layout-family.svg" alt="Layout family"><div class="overlay"><div class="caption">98% เหมือนกัน แต่จำนวนปุ่มอาจไม่เท่ากัน</div><div class="time">0:00–0:35</div></div></article>
+      <article class="slide" data-label="Key groups" data-time="0:35–1:15"><img src="keyboard-master.svg" alt="Key groups"><div class="overlay"><div class="caption">มอง 5 กลุ่มปุ่ม แทนการจำเปอร์เซ็นต์</div><div class="time">0:35–1:15</div></div></article>
+      <article class="slide" data-label="Full-size" data-time="1:15–2:05"><img src="width-comparison.svg" alt="Width comparison"><div class="overlay"><div class="caption">Full-size คือแผนที่ตั้งต้น: ปุ่มครบ แลกกับพื้นที่</div><div class="time">1:15–2:05</div></div></article>
+      <article class="slide" data-label="96/98" data-time="2:05–3:00"><img src="layout-family.svg" alt="Compact full layouts"><div class="overlay"><div class="caption">96/98 เก็บ Numpad แล้วบีบช่องว่างและ Navigation</div><div class="time">2:05–3:00</div></div></article>
+      <article class="slide" data-label="TKL" data-time="3:00–3:55"><img src="width-comparison.svg" alt="Full size and TKL"><div class="overlay"><div class="caption">TKL ตัด Numpad และคืนพื้นที่ราว 8 ซม. ในตัวอย่าง</div><div class="time">3:00–3:55</div></div></article>
+      <article class="slide" data-label="75%" data-time="3:55–4:55"><img src="layout-family.svg" alt="75 percent layout"><div class="overlay"><div class="caption">75% เก็บ F-row และ Arrows แต่บีบตำแหน่ง</div><div class="time">3:55–4:55</div></div></article>
+      <article class="slide" data-label="65%" data-time="4:55–6:00"><img src="layout-family.svg" alt="65 percent layout"><div class="overlay"><div class="caption">65% เก็บ Arrows และย้าย F-row ไป Layer</div><div class="time">4:55–6:00</div></div></article>
+      <article class="slide" data-label="60%" data-time="6:00–7:05"><img src="layout-family.svg" alt="60 percent layout"><div class="overlay"><div class="caption">60% ไม่ได้ทำให้ฟังก์ชันหาย แต่เพิ่มสิ่งที่เราต้องจำ</div><div class="time">6:00–7:05</div></div></article>
+      <article class="slide" data-label="Decision" data-time="7:05–8:45"><img src="decision-framework.svg" alt="Decision framework"><div class="overlay"><div class="caption">ตอบ 5 คำถามจาก Workflow แล้วค่อยสร้าง Shortlist</div><div class="time">7:05–8:45</div></div></article>
+      <article class="slide" data-label="Recap" data-time="8:45–9:15"><img src="layout-family.svg" alt="All layout groups"><div class="overlay"><div class="caption">เลือกจากปุ่มที่เราใช้ ไม่ใช่ชื่อเปอร์เซ็นต์</div><div class="time">8:45–9:15</div></div></article>
+    </section>
+    <div class="progress"><div id="bar"></div></div>
+    <nav class="strip" id="strip" aria-label="Animatic chapters"></nav>
+    <section class="notes">
+      <div class="note"><strong>Visual check</strong><br><span>สีของแต่ละกลุ่มต้องเหมือนกันทุกเฟรม</span></div>
+      <div class="note"><strong>Rights check</strong><br><span>ทุกภาพเป็น vector ที่วาดใหม่ ไม่มี logo หรือ screenshot สินค้า</span></div>
+      <div class="note"><strong>Timing check</strong><br><span>ต้องอัด read-through จริงก่อนล็อก duration รายฉาก</span></div>
+    </section>
+  </main>
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const strip = document.querySelector('#strip');
+    const bar = document.querySelector('#bar');
+    let index = 0;
+    let timer = null;
+    slides.forEach((slide, i) => {
+      const button = document.createElement('button');
+      button.className = `thumb${i === 0 ? ' active' : ''}`;
+      button.textContent = `${i + 1}. ${slide.dataset.label}`;
+      button.addEventListener('click', () => show(i));
+      strip.appendChild(button);
+    });
+    const thumbs = [...document.querySelectorAll('.thumb')];
+    function show(next) {
+      index = (next + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
+      bar.style.width = `${((index + 1) / slides.length) * 100}%`;
+    }
+    function stop() { if (timer) clearInterval(timer); timer = null; document.querySelector('#play').textContent = 'เล่น Preview'; }
+    document.querySelector('#prev').addEventListener('click', () => { stop(); show(index - 1); });
+    document.querySelector('#next').addEventListener('click', () => { stop(); show(index + 1); });
+    document.querySelector('#play').addEventListener('click', event => {
+      if (timer) return stop();
+      event.currentTarget.textContent = 'หยุด';
+      timer = setInterval(() => { if (index === slides.length - 1) { stop(); show(0); } else show(index + 1); }, 1400);
+    });
+    show(0);
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">ตัวอย่างความกว้าง Keyboard Layout</title>
+  <desc id="desc">เปรียบเทียบความกว้างของตัวอย่าง Full-size, TKL, 65% และ 60% บนสเกลเดียวกัน</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080D19"/><stop offset="1" stop-color="#101A2F"/></linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#1C2940"/><stop offset="1" stop-color="#263650"/></linearGradient>
+    <pattern id="keys" width="42" height="38" patternUnits="userSpaceOnUse"><rect x="4" y="4" width="32" height="28" rx="6" fill="#31415D" stroke="#566985" stroke-width="1"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#000" flood-opacity=".32"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <text x="110" y="110" fill="#F4F7FB" font-family="Tahoma, Segoe UI, sans-serif" font-size="58" font-weight="700">พื้นที่ที่ได้คืนมา มองเห็นได้จริง</text>
+  <text x="110" y="162" fill="#9AABC2" font-family="Tahoma, Segoe UI, sans-serif" font-size="28">ตัวอย่างจากรุ่นที่ใช้ใน Research · ไม่ใช่ขนาดมาตรฐานของทั้งกลุ่ม</text>
+
+  <g font-family="Tahoma, Segoe UI, sans-serif" filter="url(#shadow)">
+    <g transform="translate(110 240)">
+      <text x="0" y="36" fill="#F4F7FB" font-size="30" font-weight="700">Full-size</text><text x="250" y="36" fill="#9AABC2" font-size="24">≈ 435 mm</text>
+      <rect x="0" y="58" width="1520" height="130" rx="24" fill="url(#board)" stroke="#65758D" stroke-width="2"/>
+      <rect x="24" y="78" width="1472" height="90" rx="12" fill="url(#keys)"/>
+      <path d="M0 218H1520M0 204v28M1520 204v28" stroke="#F4F7FB" stroke-width="3"/><text x="760" y="260" text-anchor="middle" fill="#F4F7FB" font-size="24">435 mm</text>
+    </g>
+    <g transform="translate(110 490)">
+      <text x="0" y="36" fill="#F4F7FB" font-size="30" font-weight="700">TKL</text><text x="250" y="36" fill="#9AABC2" font-size="24">≈ 354 mm · คืนพื้นที่ราว 8 cm</text>
+      <rect x="0" y="58" width="1237" height="130" rx="24" fill="url(#board)" stroke="#58D68D" stroke-width="3"/>
+      <rect x="24" y="78" width="1189" height="90" rx="12" fill="url(#keys)"/>
+      <rect x="1262" y="58" width="258" height="130" rx="24" fill="#173D2B" stroke="#58D68D" stroke-width="3" stroke-dasharray="10 8"/>
+      <text x="1391" y="133" text-anchor="middle" fill="#58D68D" font-size="24" font-weight="700">พื้นที่ที่ได้คืน</text>
+    </g>
+    <g transform="translate(110 710)">
+      <text x="0" y="36" fill="#F4F7FB" font-size="30" font-weight="700">65%</text><text x="250" y="36" fill="#9AABC2" font-size="24">≈ 313 mm</text>
+      <rect x="0" y="58" width="1094" height="112" rx="22" fill="url(#board)" stroke="#A78BFA" stroke-width="3"/>
+      <rect x="22" y="76" width="1050" height="76" rx="10" fill="url(#keys)"/>
+    </g>
+    <g transform="translate(110 902)">
+      <text x="0" y="28" fill="#F4F7FB" font-size="30" font-weight="700">60%</text><text x="250" y="28" fill="#9AABC2" font-size="24">≈ 293 mm</text>
+      <rect x="0" y="48" width="1024" height="92" rx="20" fill="url(#board)" stroke="#A78BFA" stroke-width="3"/>
+      <rect x="20" y="64" width="984" height="60" rx="9" fill="url(#keys)"/>
+    </g>
+  </g>
+  <text x="1810" y="1004" text-anchor="end" fill="#FFB84D" font-family="Tahoma, Segoe UI, sans-serif" font-size="27" font-weight="700">เล็กลง ≠ เหมาะขึ้นเสมอ</text>
+  <text x="1810" y="1040" text-anchor="end" fill="#9AABC2" font-family="Tahoma, Segoe UI, sans-serif" font-size="22">ดูปุ่มที่เราใช้ควบคู่กับพื้นที่ที่ได้คืน</text>
+</svg>
