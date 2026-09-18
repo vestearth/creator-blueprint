@@ -6,6 +6,7 @@
   <title>001 Keyboard Layout — Visual Cut v1</title>
   <link rel="stylesheet" href="../../tokens.css">
   <style>
+    /* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
     /* Hallmark · macrostructure: Narrative Workflow · tone: calm technical · theme: studied-DNA (source: approved draft) */
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; overflow-x: clip; background: var(--color-paper-muted); color: var(--color-ink); }
@@ -70,6 +71,16 @@
     }
     .product.end-product { min-height: 420px; }
     .product.end-product img { max-height: 420px; }
+    .product.mini { min-height: 0; }
+    .product.mini img { max-height: 300px; }
+    .product.micro img { max-height: 190px; }
+    .product-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8); align-items: center; }
+    .variant-strip { display: grid; grid-template-rows: repeat(3, minmax(0, 1fr)); gap: var(--space-3); max-height: 620px; }
+    .variant-item { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: var(--space-4); align-items: center; color: var(--color-muted); font-family: var(--font-mono); font-size: var(--text-sm); }
+    .variant-item img { display: block; width: 100%; max-height: 170px; object-fit: contain; filter: drop-shadow(var(--shadow-object)); }
+    .size-stack { display: grid; gap: var(--space-3); align-items: center; }
+    .size-item { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: var(--space-6); align-items: center; color: var(--color-muted); font-family: var(--font-mono); font-size: var(--text-xs); }
+    .size-item img { display: block; width: var(--product-width); max-height: 125px; object-fit: contain; filter: drop-shadow(var(--shadow-object)); }
     .reverse .product img { transform: rotate(2deg); }
     .annotation {
       position: absolute;
@@ -87,23 +98,6 @@
     .annotation.top { top: var(--space-12); right: 0; }
     .annotation.bottom { bottom: var(--space-12); left: 0; }
     .keyboard-stack { display: grid; gap: var(--space-8); align-items: center; }
-    .keyboard-shell {
-      width: var(--keyboard-width, 100%);
-      margin-inline: auto;
-      padding: var(--space-5);
-      border: var(--rule-thin) solid var(--color-rule);
-      border-radius: var(--radius-lg);
-      background: var(--color-paper-raised);
-      box-shadow: var(--shadow-object);
-      transform: rotate(var(--tilt, -1deg));
-    }
-    .keyboard-svg { display: block; width: 100%; height: auto; overflow: visible; }
-    .keyboard-svg .keycap { fill: var(--color-key); stroke: var(--color-rule); stroke-width: var(--rule-thin); }
-    .keyboard-svg .keycap.mark { fill: var(--color-accent-soft); stroke: var(--color-accent); }
-    .keyboard-svg .keycap.void, .keyboard-svg .keylegend.void { opacity: 0.18; }
-    .keyboard-svg .keylegend { fill: var(--color-body); font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
-    .keyboard-svg .keylegend.small { font-size: 8px; }
-    .keyboard-label { display: flex; justify-content: space-between; margin: var(--space-4) var(--space-2) 0; color: var(--color-muted); font-family: var(--font-mono); font-size: var(--text-xs); }
     .pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-8); align-items: center; }
     .metric {
       min-height: 520px;
@@ -180,7 +174,7 @@
       { chapter: '65%', title: 'ต้นทุนของ Fn<br><span class="accent">ขึ้นกับงานเรา</span>', body: 'F5 · F10 · F11 · Home · End · Delete — ใช้บ่อยแค่ไหน?', visual: 'workflow', reverse: true },
       { chapter: '60%', title: 'เหลือแกนหลัก<br><span class="accent">ของการพิมพ์</span>', body: '60% ตัด dedicated arrows, Navigation และ F-row', visual: 'sixty' },
       { chapter: '60%', title: 'ปุ่มไม่หาย<br><span class="accent">แค่ย้ายชั้น</span>', body: 'ฟังก์ชันเดิมยังอยู่ แต่เราต้องจำ Fn combination', visual: 'layer', reverse: true },
-      { chapter: 'TRADE-OFF', title: 'เล็กลง<br><span class="accent">ไม่แปลว่าเหมาะขึ้น</span>', body: 'พื้นที่ลดลง แต่ learning curve อาจเพิ่มขึ้น', visual: 'sizes', mode: 'focus' },
+      { chapter: 'TRADE-OFF', title: 'เล็กลง<br><span class="accent">ไม่แปลว่าเหมาะขึ้น</span>', body: 'พื้นที่ลดลง แต่ learning curve อาจเพิ่มขึ้น', visual: 'sizes', reverse: true },
       { chapter: 'DECIDE', title: 'เราใช้ Numpad<br><span class="accent">บ่อยไหม?</span>', body: 'ตัวเลขทั้งวัน → เก็บไว้ · ใช้นาน ๆ ครั้ง → แยกภายนอกได้', visual: 'q1' },
       { chapter: 'DECIDE', title: 'ต้องกด F1–F12<br><span class="accent">ปุ่มเดียวไหม?</span>', body: 'Shortcut ต่อเนื่อง เหมาะกับ dedicated F-row มากกว่า', visual: 'q2', reverse: true },
       { chapter: 'DECIDE', title: 'Navigation ปุ่มไหน<br><span class="accent">ขาดไม่ได้?</span>', body: 'อย่าถามว่าใช้ Nav ไหม — ถามทีละปุ่ม', visual: 'q3' },
@@ -336,23 +330,23 @@
 
     function renderVisual(type) {
       const map = {
-        compactPair: `<div class="pair">${keyboard('compact', '97 KEYS', 'right', '100%', '-2deg', 6)}${keyboard('compact', '99 KEYS', 'right', '100%', '2deg', 8)}</div>`,
+        compactPair: `<div class="product-row"><div class="product mini"><img src="keyboard-97-v2.png" alt="ตัวอย่างคีย์บอร์ด compact-full 97 ปุ่ม"><div class="annotation bottom">97 KEYS</div></div><div class="product mini"><img src="keyboard-99-v2.png" alt="ตัวอย่างคีย์บอร์ด compact-full 99 ปุ่ม"><div class="annotation bottom">99 KEYS</div></div></div>`,
         percent: `<div class="big-symbol">%</div>`,
-        fadeKeys: keyboard('full', 'USE MAP', 'fade', '95%'),
-        groups: keyboard('full', '5 KEY GROUPS', 'none', '100%', '1deg'),
-        full: keyboard('full', 'FULL-SIZE / 100%', 'none', '100%'),
-        widthFull: `<div class="metric"><strong>≈ 435 MM</strong><span>ตัวอย่าง Full-size 104 ปุ่ม</span>${keyboard('full', 'WIDTH', 'none', '100%')}</div>`,
-        compact: keyboard('compact', '96 / 98 / 1800', 'right', '92%', '-1deg', 7),
-        compactVariants: `<div class="keyboard-stack">${keyboard('compact', '97 KEYS', 'right', '82%', '-1deg', 6)}${keyboard('compact', '98 KEYS', 'right', '90%', '1deg', 7)}${keyboard('compact', '99 KEYS', 'right', '96%', '-1deg', 8)}</div>`,
+        fadeKeys: `<div class="product"><img src="keyboard-fullsize-v2.png" alt="คีย์บอร์ด Full-size 104 ปุ่ม"><div class="annotation bottom">เริ่มจากปุ่มที่เราใช้ทุกวัน</div></div>`,
+        groups: `<div class="product"><img src="keyboard-fullsize-v2.png" alt="คีย์บอร์ด Full-size ที่เห็นกลุ่มปุ่มครบ"><div class="annotation top">F-row · System · Numpad</div><div class="annotation bottom">Core · Navigation · Arrows</div></div>`,
+        full: `<div class="product"><img src="keyboard-fullsize-v2.png" alt="คีย์บอร์ด Full-size 104 ปุ่ม"></div>`,
+        widthFull: `<div class="metric"><strong>≈ 435 MM</strong><span>ตัวอย่าง Full-size 104 ปุ่ม</span><div class="product mini"><img src="keyboard-fullsize-v2.png" alt="คีย์บอร์ด Full-size 104 ปุ่ม"></div></div>`,
+        compact: `<div class="product"><img src="keyboard-98-v2.png" alt="คีย์บอร์ด compact-full 98 ปุ่ม"><div class="annotation bottom">Numpad อยู่ · ช่องว่างหาย</div></div>`,
+        compactVariants: `<div class="variant-strip"><div class="variant-item"><span>97</span><img src="keyboard-97-v2.png" alt="ตัวอย่าง 97 ปุ่ม"></div><div class="variant-item"><span>98</span><img src="keyboard-98-v2.png" alt="ตัวอย่าง 98 ปุ่ม"></div><div class="variant-item"><span>99</span><img src="keyboard-99-v2.png" alt="ตัวอย่าง 99 ปุ่ม"></div></div>`,
         tklImage: `<div class="product"><img src="reference-tkl-v1.png" alt="คีย์บอร์ด TKL จาก draft เดิม"><div class="annotation top">Numpad ถูกตัดออก</div><div class="annotation bottom">F-row + Navigation + Arrows ยังอยู่</div></div>`,
-        widthTkl: `<div class="metric"><strong>435 → 354</strong><span>มิลลิเมตร · ตัวอย่าง ไม่ใช่มาตรฐานทั้งกลุ่ม</span>${keyboard('tkl', 'TKL', 'none', '82%')}</div>`,
+        widthTkl: `<div class="metric"><strong>435 → 354</strong><span>มิลลิเมตร · ตัวอย่าง ไม่ใช่มาตรฐานทั้งกลุ่ม</span><div class="product mini"><img src="reference-tkl-v1.png" alt="คีย์บอร์ด TKL"></div></div>`,
         seventyFiveImage: `<div class="product"><img src="reference-75-v1.png" alt="คีย์บอร์ด 75 เปอร์เซ็นต์จาก draft เดิม"><div class="annotation top">F-row ยังอยู่</div><div class="annotation bottom">Navigation ถูกบีบเข้า</div></div>`,
         countPair: `<div class="pair"><div class="metric"><strong>82</strong><span>ปุ่ม</span></div><div class="metric"><strong>84</strong><span>ปุ่ม</span></div></div>`,
-        sixtyFive: keyboard('sixtyFive', '65%', 'arrows', '82%'),
+        sixtyFive: `<div class="product"><img src="keyboard-65-v2.png" alt="คีย์บอร์ด 65 เปอร์เซ็นต์"><div class="annotation bottom">Dedicated Arrows</div></div>`,
         workflow: `<div class="workflow"><div class="workflow-step"><b>CODE</b><span>F5 · F10 · F11</span></div><div class="workflow-step"><b>EDIT</b><span>Home · End · Delete</span></div><div class="workflow-step"><b>COUNT</b><span>กี่ครั้งต่อวัน?</span></div></div>`,
-        sixty: keyboard('sixty', '60%', 'fade', '74%'),
-        layer: `<div class="pair">${keyboard('sixty', 'BASE', 'none', '100%', '-2deg')}${keyboard('sixty', 'FN LAYER', 'all', '100%', '2deg')}</div>`,
-        sizes: `<div class="keyboard-stack">${keyboard('full', '100% · 435 MM', 'none', '92%')}${keyboard('tkl', 'TKL · 354 MM', 'none', '74%')}${keyboard('sixtyFive', '65% · 313 MM', 'none', '64%')}${keyboard('sixty', '60% · 293 MM', 'none', '58%')}</div>`,
+        sixty: `<div class="product"><img src="keyboard-60-v2.png" alt="คีย์บอร์ด 60 เปอร์เซ็นต์"><div class="annotation bottom">61-key core</div></div>`,
+        layer: `<div class="product-row"><div class="product mini"><img src="keyboard-60-v2.png" alt="ชั้นปุ่มหลักของคีย์บอร์ด 60 เปอร์เซ็นต์"><div class="annotation bottom">BASE</div></div><div class="product mini"><img src="keyboard-60-v2.png" alt="ชั้น Fn ของคีย์บอร์ด 60 เปอร์เซ็นต์"><div class="annotation bottom">FN LAYER</div></div></div>`,
+        sizes: `<div class="size-stack"><div class="size-item"><span>100% · 435 MM</span><img style="--product-width:100%" src="keyboard-fullsize-v2.png" alt="Full-size"></div><div class="size-item"><span>TKL · 354 MM</span><img style="--product-width:82%" src="reference-tkl-v1.png" alt="TKL"></div><div class="size-item"><span>65% · 313 MM</span><img style="--product-width:72%" src="keyboard-65-v2.png" alt="65 เปอร์เซ็นต์"></div><div class="size-item"><span>60% · 293 MM</span><img style="--product-width:67%" src="keyboard-60-v2.png" alt="60 เปอร์เซ็นต์"></div></div>`,
         q1: question(1, 'เก็บ 100% หรือ 96/98', 'เริ่มดู TKL ลงมา'),
         q2: question(2, 'เก็บ TKL หรือ 75%', 'ดู 65% หรือ 60%'),
         q3: `<div class="workflow"><div class="workflow-step"><b>HOME / END</b><span>แก้ข้อความ</span></div><div class="workflow-step"><b>PGUP / PGDN</b><span>อ่านเอกสาร</span></div><div class="workflow-step"><b>INS / DEL</b><span>workflow เฉพาะ</span></div></div>`,

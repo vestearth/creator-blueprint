@@ -80,6 +80,12 @@ Final color values must pass contrast review against the chosen background befor
 | G-003 | Hand/key press graphic | `assets/001-keyboard-layout/key-press.svg` | Drawn in-house or generated as a non-realistic graphic | Original or generated | No real-person likeness; record generation method if used |
 | R-001 | TKL reference render | `assets/001-keyboard-layout/reference-tkl-v1.png` | Copied from the owner-provided earlier draft in `import/assets` | Owner-provided | Use only as a generic product illustration; no third-party logo shown |
 | R-002 | 75% reference render | `assets/001-keyboard-layout/reference-75-v1.png` | Copied from the owner-provided earlier draft in `import/assets` | Owner-provided | Use only as a generic product illustration; no third-party logo shown |
+| G-004 | Full-size keyboard render | `assets/001-keyboard-layout/keyboard-fullsize-v2.png` | OpenAI ImageGen; top-down studio product render, warm ivory/charcoal/orange, guided by R-001/R-002 | Generated | Confirm navigation-cluster alignment; treat legends and key count as illustrative |
+| G-005 | Compact-full 97-key example | `assets/001-keyboard-layout/keyboard-97-v2.png` | OpenAI ImageGen; top-down studio product render, navy/gray/copper, guided by R-001/R-002 | Generated | Generic product only; treat legends and key count as illustrative |
+| G-006 | Compact-full 98-key example | `assets/001-keyboard-layout/keyboard-98-v2.png` | OpenAI ImageGen; top-down studio product render, burgundy/cream/coral, guided by R-001/R-002 | Generated | Generic product only; treat legends and key count as illustrative |
+| G-007 | Compact-full 99-key example | `assets/001-keyboard-layout/keyboard-99-v2.png` | OpenAI ImageGen; top-down studio product render, slate/gray/teal, guided by R-001/R-002 | Generated | Generic product only; treat legends and key count as illustrative |
+| G-008 | 65% keyboard render | `assets/001-keyboard-layout/keyboard-65-v2.png` | OpenAI ImageGen; top-down studio product render, forest green/cream/amber, guided by R-001/R-002 | Generated | Generic product only; visually confirm arrows and right column before publish |
+| G-009 | 60% keyboard render | `assets/001-keyboard-layout/keyboard-60-v2.png` | OpenAI ImageGen; top-down studio product render, silver/lavender/violet, guided by R-001/R-002 | Generated | Generic product only; visually confirm omitted dedicated clusters before publish |
 | F-001 | Noto Sans Thai | npm `@fontsource/noto-sans-thai@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
 | F-002 | JetBrains Mono | npm `@fontsource/jetbrains-mono@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
 | M-001–M-005 | Layout morph transitions | Editing project outside Git; path to be recorded | Built from A-004 vectors | Original | Confirm transition matches the narrated removal/movement |
@@ -89,10 +95,10 @@ Final color values must pass contrast review against the chosen background befor
 
 ## Rights and disclosure plan
 
-- Product photos, website screenshots, logos, review footage, and advertisement clips are not planned.
+- Third-party product photos, website screenshots, logos, review footage, and advertisement clips are not planned.
 - Manufacturer pages in `research.md` support factual claims; they are not an asset license.
-- All keyboard layouts shown on screen should be newly drawn, generic diagrams.
-- If generative AI is used, prefer abstract diagrams or non-realistic supporting graphics and record the tool and prompt provenance.
+- Keyboard layouts shown on screen use owner-provided references or newly generated, brandless product illustrations.
+- Generated keyboard prompts specify a strict top-down orthographic product view, transparent background, realistic switches/keycaps, a distinct palette for each size, and the intended physical clusters; R-001/R-002 supplied the visual-quality reference.
 - Do not clone or imitate the voice of another person. Record the narration source and commercial-use terms.
 - Choose music, fonts, icons, and sound effects only after their usage basis is documented in this manifest.
 - Re-evaluate the platform's synthetic-content disclosure at pre-publish QA; the current plan does not require realistic synthetic people or events.
