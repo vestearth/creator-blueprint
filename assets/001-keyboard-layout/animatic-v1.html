@@ -68,6 +68,8 @@
       filter: drop-shadow(var(--shadow-object));
       transform: rotate(-2deg);
     }
+    .product.end-product { min-height: 420px; }
+    .product.end-product img { max-height: 420px; }
     .reverse .product img { transform: rotate(2deg); }
     .annotation {
       position: absolute;
@@ -95,16 +97,12 @@
       box-shadow: var(--shadow-object);
       transform: rotate(var(--tilt, -1deg));
     }
-    .key-row { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--space-2); margin-bottom: var(--space-2); }
-    .key-row:last-child { margin-bottom: 0; }
-    .key {
-      height: 42px;
-      border: var(--rule-thin) solid var(--color-rule);
-      border-radius: var(--radius-sm);
-      background: var(--color-key);
-    }
-    .key.mark { border-color: var(--color-accent); background: var(--color-accent-soft); }
-    .key.void { opacity: 0.16; }
+    .keyboard-svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .keyboard-svg .keycap { fill: var(--color-key); stroke: var(--color-rule); stroke-width: var(--rule-thin); }
+    .keyboard-svg .keycap.mark { fill: var(--color-accent-soft); stroke: var(--color-accent); }
+    .keyboard-svg .keycap.void, .keyboard-svg .keylegend.void { opacity: 0.18; }
+    .keyboard-svg .keylegend { fill: var(--color-body); font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+    .keyboard-svg .keylegend.small { font-size: 8px; }
     .keyboard-label { display: flex; justify-content: space-between; margin: var(--space-4) var(--space-2) 0; color: var(--color-muted); font-family: var(--font-mono); font-size: var(--text-xs); }
     .pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-8); align-items: center; }
     .metric {
@@ -193,25 +191,143 @@
       { chapter: 'END', title: 'เราใช้ Layout<br><span class="accent">อะไรอยู่?</span>', body: 'แล้วปุ่มไหนที่ขาดไม่ได้จริง ๆ', visual: 'end', mode: 'focus' }
     ];
 
-    const rows = {
-      full: [16, 18, 18, 17, 16, 12],
-      compact: [15, 16, 16, 15, 15, 11],
-      tkl: [16, 15, 15, 14, 13, 9],
-      seventyFive: [15, 15, 15, 14, 13, 9],
-      sixtyFive: [14, 14, 14, 13, 12],
-      sixty: [14, 14, 14, 13, 11]
-    };
+    const unit = 44;
+    const gap = 5;
+    const keyHeight = 40;
 
-    function keyboard(layout, label, mark = 'none', width = '100%', tilt = '-1deg') {
-      const keyRows = rows[layout].map((count, rowIndex) => {
-        const keys = Array.from({ length: count }, (_, keyIndex) => {
-          const marked = mark === 'all' || (mark === 'right' && keyIndex > count - 4) || (mark === 'top' && rowIndex === 0) || (mark === 'arrows' && rowIndex > rows[layout].length - 3 && keyIndex > count - 4);
-          const faded = mark === 'fade' && (rowIndex === 0 || keyIndex > count - 4);
-          return `<span class="key${marked ? ' mark' : ''}${faded ? ' void' : ''}"></span>`;
-        }).join('');
-        return `<div class="key-row">${keys}</div>`;
+    function keyState(group, mark) {
+      const marked = mark === 'all' || (mark === 'right' && (group === 'nav' || group === 'numpad')) || (mark === 'top' && group === 'frow') || (mark === 'arrows' && group === 'arrows');
+      const faded = mark === 'fade' && group !== 'core';
+      return `${marked ? ' mark' : ''}${faded ? ' void' : ''}`;
+    }
+
+    function keycap(x, y, units, text, group, mark) {
+      const width = units * unit + (units - 1) * gap;
+      const classes = keyState(group, mark);
+      const labelClass = text.length > 5 ? ' small' : '';
+      return `<g><rect class="keycap${classes}" x="${x}" y="${y}" width="${width}" height="${keyHeight}" rx="7"/><text class="keylegend${classes}${labelClass}" x="${x + width / 2}" y="${y + keyHeight / 2 + 1}">${text}</text></g>`;
+    }
+
+    function row(keys, y, startX, group, mark) {
+      let x = startX;
+      const drawing = keys.map(([text, units = 1, keyGroup = group]) => {
+        const shape = keycap(x, y, units, text, keyGroup, mark);
+        x += units * unit + units * gap;
+        return shape;
       }).join('');
-      return `<div class="keyboard-shell" style="--keyboard-width:${width};--tilt:${tilt}"><div>${keyRows}</div><div class="keyboard-label"><span>${label}</span><span>${layout}</span></div></div>`;
+      return { drawing, endX: x - gap };
+    }
+
+    function functionRow(mark, startX = 0, compact = false, systemKeys = false) {
+      let x = startX;
+      let drawing = keycap(x, 0, 1, 'Esc', 'frow', mark);
+      x += compact ? unit + gap : unit * 1.65;
+      for (let index = 1; index <= 12; index += 1) {
+        drawing += keycap(x, 0, 1, `F${index}`, 'frow', mark);
+        x += unit + gap;
+        if (!compact && [4, 8].includes(index)) x += gap * 2.4;
+      }
+      if (systemKeys) {
+        x += gap * 2.4;
+        ['PrtSc', 'ScrLk', 'Pause'].forEach((label) => {
+          drawing += keycap(x, 0, 1, label, 'nav', mark);
+          x += unit + gap;
+        });
+      }
+      return { drawing, endX: x - gap };
+    }
+
+    const alphaRows = [
+      [['~'], ['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['0'], ['-'], ['='], ['Back', 2]],
+      [['Tab', 1.5], ['Q'], ['W'], ['E'], ['R'], ['T'], ['Y'], ['U'], ['I'], ['O'], ['P'], ['['], [']'], ['\\', 1.5]],
+      [['Caps', 1.75], ['A'], ['S'], ['D'], ['F'], ['G'], ['H'], ['J'], ['K'], ['L'], [';'], ["'"], ['Enter', 2.25]],
+      [['Shift', 2.25], ['Z'], ['X'], ['C'], ['V'], ['B'], ['N'], ['M'], [','], ['.'], ['/'], ['Shift', 2.75]],
+      [['Ctrl', 1.25], ['Win', 1.25], ['Alt', 1.25], ['Space', 6.25], ['Alt', 1.25], ['Win', 1.25], ['Menu', 1.25], ['Ctrl', 1.25]]
+    ];
+
+    function drawCore(mark, startY, startX = 0) {
+      return alphaRows.map((keys, index) => row(keys, startY + index * (keyHeight + gap), startX, 'core', mark).drawing).join('');
+    }
+
+    function drawNavigation(startX, startY, mark) {
+      const labels = [['Ins', 'Home', 'PgUp'], ['Del', 'End', 'PgDn']];
+      let drawing = '';
+      labels.forEach((line, rowIndex) => line.forEach((label, column) => {
+        drawing += keycap(startX + column * (unit + gap), startY + rowIndex * (keyHeight + gap), 1, label, 'nav', mark);
+      }));
+      const arrowY = startY + 3.15 * (keyHeight + gap);
+      drawing += keycap(startX + unit + gap, arrowY, 1, '↑', 'arrows', mark);
+      ['←', '↓', '→'].forEach((label, column) => { drawing += keycap(startX + column * (unit + gap), arrowY + keyHeight + gap, 1, label, 'arrows', mark); });
+      return drawing;
+    }
+
+    function drawNumpad(startX, startY, mark) {
+      const labels = [['Num', '/', '*', '-'], ['7', '8', '9', '+'], ['4', '5', '6', '+'], ['1', '2', '3', 'Enter'], ['0', '0', '.', 'Enter']];
+      let drawing = '';
+      labels.forEach((line, rowIndex) => line.forEach((label, column) => {
+        if ((rowIndex === 2 && column === 3) || (rowIndex === 4 && column === 3) || (rowIndex === 4 && column === 1)) return;
+        const wide = rowIndex === 4 && column === 0 ? 2 : 1;
+        const tall = (rowIndex === 1 && column === 3) || (rowIndex === 3 && column === 3);
+        const x = startX + column * (unit + gap);
+        const y = startY + rowIndex * (keyHeight + gap);
+        const shape = keycap(x, y, wide, label, 'numpad', mark);
+        drawing += tall ? shape.replace(`height="${keyHeight}"`, `height="${keyHeight * 2 + gap}"`).replace(`y="${y + keyHeight / 2 + 1}"`, `y="${y + keyHeight + gap / 2}"`) : shape;
+      }));
+      return drawing;
+    }
+
+    function drawCompactNavigation(startX, startY, count, mark) {
+      const labels = ['Ins', 'Del', 'Home', 'End', 'PgUp', 'PgDn', 'ScrLk', 'Pause'];
+      let drawing = '';
+      labels.slice(0, count).forEach((label, index) => {
+        const column = index % 2;
+        const rowIndex = Math.floor(index / 2);
+        drawing += keycap(startX + column * (unit + gap), startY + rowIndex * (keyHeight + gap), 1, label, 'nav', mark);
+      });
+      return drawing;
+    }
+
+    function drawIntegratedColumn(startX, startY, mark, withFrow) {
+      const labels = withFrow ? ['Del', 'Home', 'PgUp', 'PgDn', 'End', '↑'] : ['Del', 'Home', 'PgUp', 'PgDn', '↑'];
+      let drawing = '';
+      labels.forEach((label, index) => { drawing += keycap(startX, startY + index * (keyHeight + gap), 1, label, label === '↑' ? 'arrows' : 'nav', mark); });
+      const arrowY = startY + (labels.length - 1) * (keyHeight + gap);
+      drawing += keycap(startX - 2 * (unit + gap), arrowY, 1, '←', 'arrows', mark);
+      drawing += keycap(startX - unit - gap, arrowY, 1, '↓', 'arrows', mark);
+      drawing += keycap(startX + unit + gap, arrowY, 1, '→', 'arrows', mark);
+      return drawing;
+    }
+
+    function keyboard(layout, label, mark = 'none', width = '100%', tilt = '-1deg', compactNavigationCount = 7) {
+      const topOffset = layout === 'sixty' || layout === 'sixtyFive' ? 0 : keyHeight + gap * 3;
+      const coreWidth = 15 * unit + 14 * gap;
+      let drawing = drawCore(mark, topOffset);
+      let totalWidth = coreWidth;
+      if (layout !== 'sixty' && layout !== 'sixtyFive') drawing += functionRow(mark, 0, layout === 'seventyFive' || layout === 'compact', layout === 'full' || layout === 'tkl').drawing;
+      if (layout === 'full' || layout === 'tkl') {
+        const navX = coreWidth + 34;
+        drawing += drawNavigation(navX, topOffset, mark);
+        totalWidth = navX + 3 * unit + 2 * gap;
+        if (layout === 'full') {
+          const numX = totalWidth + 34;
+          drawing += drawNumpad(numX, topOffset, mark);
+          totalWidth = numX + 4 * unit + 3 * gap;
+        }
+      }
+      if (layout === 'compact') {
+        const navX = coreWidth + gap;
+        drawing += drawCompactNavigation(navX, topOffset, compactNavigationCount, mark);
+        const numX = navX + 2 * (unit + gap) + gap;
+        drawing += drawNumpad(numX, topOffset, mark);
+        totalWidth = numX + 4 * unit + 3 * gap;
+      }
+      if (layout === 'seventyFive' || layout === 'sixtyFive') {
+        const columnX = coreWidth + gap;
+        drawing += drawIntegratedColumn(columnX, topOffset, mark, layout === 'seventyFive');
+        totalWidth = columnX + 2 * unit + gap;
+      }
+      const totalHeight = topOffset + 5 * keyHeight + 4 * gap;
+      return `<div class="keyboard-shell" style="--keyboard-width:${width};--tilt:${tilt}"><svg class="keyboard-svg" viewBox="-3 -3 ${totalWidth + 6} ${totalHeight + 6}" role="img" aria-label="แผนผังคีย์บอร์ด ${label}">${drawing}</svg><div class="keyboard-label"><span>${label}</span><span>${layout}</span></div></div>`;
     }
 
     function question(number, yes, no) {
@@ -220,14 +336,14 @@
 
     function renderVisual(type) {
       const map = {
-        compactPair: `<div class="pair">${keyboard('compact', '97 KEYS', 'right', '100%', '-2deg')}${keyboard('compact', '99 KEYS', 'right', '100%', '2deg')}</div>`,
+        compactPair: `<div class="pair">${keyboard('compact', '97 KEYS', 'right', '100%', '-2deg', 6)}${keyboard('compact', '99 KEYS', 'right', '100%', '2deg', 8)}</div>`,
         percent: `<div class="big-symbol">%</div>`,
         fadeKeys: keyboard('full', 'USE MAP', 'fade', '95%'),
-        groups: keyboard('full', '5 KEY GROUPS', 'all', '100%', '1deg'),
+        groups: keyboard('full', '5 KEY GROUPS', 'none', '100%', '1deg'),
         full: keyboard('full', 'FULL-SIZE / 100%', 'none', '100%'),
         widthFull: `<div class="metric"><strong>≈ 435 MM</strong><span>ตัวอย่าง Full-size 104 ปุ่ม</span>${keyboard('full', 'WIDTH', 'none', '100%')}</div>`,
-        compact: keyboard('compact', '96 / 98 / 1800', 'right', '92%'),
-        compactVariants: `<div class="keyboard-stack">${keyboard('compact', '97 KEYS', 'right', '82%', '-1deg')}${keyboard('compact', '98 KEYS', 'right', '90%', '1deg')}${keyboard('compact', '99 KEYS', 'right', '96%', '-1deg')}</div>`,
+        compact: keyboard('compact', '96 / 98 / 1800', 'right', '92%', '-1deg', 7),
+        compactVariants: `<div class="keyboard-stack">${keyboard('compact', '97 KEYS', 'right', '82%', '-1deg', 6)}${keyboard('compact', '98 KEYS', 'right', '90%', '1deg', 7)}${keyboard('compact', '99 KEYS', 'right', '96%', '-1deg', 8)}</div>`,
         tklImage: `<div class="product"><img src="reference-tkl-v1.png" alt="คีย์บอร์ด TKL จาก draft เดิม"><div class="annotation top">Numpad ถูกตัดออก</div><div class="annotation bottom">F-row + Navigation + Arrows ยังอยู่</div></div>`,
         widthTkl: `<div class="metric"><strong>435 → 354</strong><span>มิลลิเมตร · ตัวอย่าง ไม่ใช่มาตรฐานทั้งกลุ่ม</span>${keyboard('tkl', 'TKL', 'none', '82%')}</div>`,
         seventyFiveImage: `<div class="product"><img src="reference-75-v1.png" alt="คีย์บอร์ด 75 เปอร์เซ็นต์จาก draft เดิม"><div class="annotation top">F-row ยังอยู่</div><div class="annotation bottom">Navigation ถูกบีบเข้า</div></div>`,
@@ -244,7 +360,7 @@
         q5: question(5, 'ให้ขนาดเป็นตัวตัดสิน', 'ให้ปุ่มจริงมาก่อน'),
         checklist: `<div class="workflow"><div class="workflow-step"><b>01</b><span>ภาพ Layout</span></div><div class="workflow-step"><b>02</b><span>Keymap</span></div><div class="workflow-step"><b>03</b><span>Manual</span></div><div class="workflow-step"><b>04</b><span>จำนวนปุ่ม</span></div></div>`,
         ladder: `<div class="ladder"><div class="ladder-row"><strong>100/98</strong><div class="ladder-line"></div><span>Numpad</span></div><div class="ladder-row"><strong>TKL</strong><div class="ladder-line" style="width:82%"></div><span>คุ้นมือ</span></div><div class="ladder-row"><strong>75%</strong><div class="ladder-line" style="width:72%"></div><span>F-row</span></div><div class="ladder-row"><strong>65%</strong><div class="ladder-line" style="width:62%"></div><span>Arrows</span></div><div class="ladder-row"><strong>60%</strong><div class="ladder-line" style="width:54%"></div><span>Layer</span></div></div>`,
-        end: `<div class="pair">${keyboard('seventyFive', '75%', 'top', '100%', '-3deg')}${keyboard('tkl', 'TKL', 'right', '100%', '3deg')}</div>`
+        end: `<div class="pair"><div class="product end-product"><img src="reference-75-v1.png" alt="คีย์บอร์ด 75 เปอร์เซ็นต์"></div><div class="product end-product"><img src="reference-tkl-v1.png" alt="คีย์บอร์ด TKL"></div></div>`
       };
       return map[type];
     }
