@@ -1,6 +1,6 @@
 # Script
 
-Status: `draft-v1`
+Status: `approved-for-storyboard`
 
 Target runtime: `8–10 minutes`
 
@@ -227,6 +227,10 @@ friction ที่เกิดขึ้น
 คำตอบนั้นมีประโยชน์กับคนที่กำลังเลือกระหว่างสองขนาดมากกว่าคำว่า “ตัวนี้ดีที่สุด”
 
 ## Owner review before script approval
+
+Storyboard authorized: `2026-09-18`
+
+The remaining read-through checks must be completed before recording narration.
 
 - [ ] ยืนยันว่าภาษาและจังหวะเหมือนน้ำเสียงที่ต้องการใช้กับช่อง
 - [ ] เติมหรือตัดตัวอย่างจาก workflow การเขียนโปรแกรมจริงในช่วง 75% และ 65%
