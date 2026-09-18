@@ -20,6 +20,12 @@ more effectively, or avoid a practical mistake.
 - Honest about uncertainty and trade-offs
 - No exaggerated certainty, manufactured urgency, or empty hype
 
+## Audience relationship
+
+- Use `เรา` for both narrator and audience to create a shared exploration.
+- Avoid `ผม` and `คุณ` in narration unless a quotation or context requires them.
+- Prefer inclusive phrasing such as `ถ้าเราใช้...` and `ลองดูว่าเรา...`.
+
 ## Format direction
 
 - Primary: evergreen YouTube videos of approximately 6–12 minutes
