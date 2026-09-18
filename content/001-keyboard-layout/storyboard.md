@@ -89,9 +89,9 @@ Final color values must pass contrast review against the chosen background befor
 | F-001 | Noto Sans Thai | npm `@fontsource/noto-sans-thai@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
 | F-002 | JetBrains Mono | npm `@fontsource/jetbrains-mono@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
 | M-001–M-005 | Layout morph transitions | Editing project outside Git; path to be recorded | Built from A-004 vectors | Original | Confirm transition matches the narrated removal/movement |
-| V-001 | Narration | External production file; path to be recorded | Owner voice or properly licensed synthetic voice | Original or licensed | No third-party voice clone; record tool and license |
-| B-001 | Background music | External production file; path to be recorded | Original or licensed library track | Licensed | Record title, creator, URL, license and download date |
-| SFX-001 | Transition/key press sounds | External production file; path to be recorded | Original recording or licensed library | Original or licensed | Record source and license for every non-original file |
+| V-001 | Narration | Generated stems in ignored `exports/001-keyboard-layout/narration-v1/`; final mix in `keyboard-layout-master-v1.mp4` | Kokoro-82M (`hexgrad/Kokoro-82M`) with espeak-ng Thai phonemization and `am_fenrir`; generated locally by `tools/synthesize-001-narration.py` | Kokoro model Apache-2.0; Kokoro Python package Apache-2.0; espeak-ng GPL-3.0-or-later; generated output used as original production audio | No voice clone; recording edits and spoken text are recorded in the generated manifest |
+| B-001 | Background music | Final mix in `exports/001-keyboard-layout/keyboard-layout-master-v1.mp4` | Procedurally synthesized oscillators authored in `tools/render-001-master-v1.mjs` | Original | No third-party recording or composition used |
+| SFX-001 | Chapter transition sounds | Final mix in `exports/001-keyboard-layout/keyboard-layout-master-v1.mp4` | Procedurally synthesized two-tone cues authored in `tools/render-001-master-v1.mjs` | Original | No third-party recording used |
 
 ## Rights and disclosure plan
 
@@ -102,6 +102,7 @@ Final color values must pass contrast review against the chosen background befor
 - Do not clone or imitate the voice of another person. Record the narration source and commercial-use terms.
 - Choose music, fonts, icons, and sound effects only after their usage basis is documented in this manifest.
 - Re-evaluate the platform's synthetic-content disclosure at pre-publish QA; the current plan does not require realistic synthetic people or events.
+- Audio production decision recorded on `2026-09-19`: narration is a generic local synthetic voice, while music and chapter cues are original procedural audio. No realistic person, cloned voice, or real event is represented.
 
 ## Shorts candidates
 
@@ -125,11 +126,11 @@ Visual pack progress:
 - [x] Ten-beat browser animatic preview created and visually inspected.
 - [x] Twenty-five-scene visual cut v1 created and visually inspected at 1920 × 1080.
 - [x] Hallmark 58-gate slop review completed for the fixed 16:9 canvas.
+- [x] Owner approved the scene order and visual language.
+- [x] Script runtime was fitted to the 9:15 visual timeline and recording edits were captured in the narration manifest.
+- [x] Typeface, narration method, music and SFX are selected with license records.
+- [x] Rough animatic and final visual cut confirmed pacing before audio master production.
+- [x] Synthetic-content disclosure decision recorded for pre-publish QA.
 
-- [ ] Owner approves the scene order and visual language.
-- [ ] Script read-through and actual runtime are recorded.
 - [ ] Every asset has a final file location and usage basis.
-- [ ] Typeface, narration method, music and SFX are selected with license records.
 - [ ] Layout diagrams are checked against the claim ledger.
-- [ ] A rough animatic confirms pacing before final asset production.
-- [ ] Synthetic-content disclosure decision is recorded during QA.
