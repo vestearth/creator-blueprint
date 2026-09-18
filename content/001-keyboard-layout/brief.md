@@ -3,7 +3,7 @@ id: "001"
 title: "Keyboard Layout คืออะไร? 60%, 65%, 75%, TKL, 98%, 100% ต่างกันอย่างไร"
 channel: tech
 format: youtube-long-form
-state: validated
+state: scripting
 owner: vestearth
 created: "2026-09-18"
 ---
@@ -34,7 +34,7 @@ created: "2026-09-18"
 
 ### Included
 
-- 60%, 65%, 75%, TKL, 98% และ full-size
+- 60%, 65%, 75%, TKL, กลุ่ม 96%/98%/1800 compact และ full-size
 - ปุ่มที่คงอยู่หรือถูกตัดออก
 - ผลต่อการเขียนโปรแกรม, งานตัวเลข, gaming, desk space และ portability
 - วิธีเลือกจาก workflow ก่อนเลือกจากรูปลักษณ์
