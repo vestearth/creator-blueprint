@@ -154,7 +154,7 @@
       right: var(--space-16);
       bottom: var(--space-10);
       display: grid;
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns: 1fr auto;
       gap: var(--space-6);
       align-items: center;
       font-family: var(--font-mono);
@@ -389,7 +389,6 @@
           <section class="visual" aria-hidden="true">${renderVisual(scene.visual)}</section>
         </div>
         <footer class="scene-meta">
-          <span>${String(index + 1).padStart(2, '0')} / ${scenes.length}</span>
           <div class="progress-track"><div class="progress-value" style="--progress:${((index + 1) / scenes.length) * 100}%"></div></div>
           <span>เลือกจากปุ่มที่เราใช้</span>
         </footer>
