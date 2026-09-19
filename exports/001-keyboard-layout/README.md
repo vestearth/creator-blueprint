@@ -38,3 +38,18 @@ copied into the versioned asset folder.
 
 This revision intentionally contains no narration. Music attribution and the exact
 YouTube description credit block are recorded in `assets/001-keyboard-layout/audio/README.md`.
+
+# Keyboard Layout Short v1
+
+- File: `keyboard-layout-short-v1.mp4`
+- Format: H.264 MP4, 1080×1920 (9:16), 30 fps, stereo AAC 256 kbps
+- Runtime: 0:42
+- Narration: none
+- Music: `Always Yours` by The Parrisian feat. Parris Fleming
+- Source: `assets/001-keyboard-layout/short-v1.html`
+- Render command: `npm run render:001:short`
+- Story: a standalone answer explaining why keyboards sold as 98% can have 97 or 99 keys
+
+The composition reserves the right edge and lower portion of the frame for YouTube
+Shorts interface controls. The source music file is intentionally excluded from Git;
+only the mixed video is versioned.

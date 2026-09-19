@@ -108,7 +108,7 @@ Final color values must pass contrast review against the chosen background befor
 
 | Candidate | Source scenes | Hook | Target length |
 | --- | --- | --- | --- |
-| SH-01 | S01–S02, S08 | `ทำไม Keyboard 98% ถึงมีทั้ง 97 และ 99 ปุ่ม?` | 20–30 seconds |
+| SH-01 | S01–S02, S08 | `ทำไม Keyboard 98% ถึงมีทั้ง 97 และ 99 ปุ่ม?` | 42 seconds (produced as `keyboard-layout-short-v1.mp4`) |
 | SH-02 | S05, S09, S11, S13, S15 | `Keyboard เล็กลงแต่ละขั้น ปุ่มไหนหายไป?` | 35–45 seconds |
 | SH-03 | S18–S24 | `ตอบ 5 คำถามนี้ก่อนเลือก Keyboard Layout` | 45–60 seconds |
 
@@ -131,6 +131,7 @@ Visual pack progress:
 - [x] Typeface, music and SFX are selected with usage records; narration is intentionally omitted.
 - [x] Rough animatic and final visual cut confirmed pacing before audio master production.
 - [x] Synthetic-content disclosure decision recorded for pre-publish QA.
+- [x] SH-01 produced as a standalone 9:16 Short with instrumental music and no narration.
 
 - [ ] Every asset has a final file location and usage basis.
 - [ ] Layout diagrams are checked against the claim ledger.

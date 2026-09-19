@@ -4,7 +4,8 @@
   "scripts": {
     "render:001": "node tools/render-001-video.mjs",
     "render:001:v1": "node tools/render-001-video-v1.mjs",
-    "render:001:master": "node tools/render-001-master-v1.mjs"
+    "render:001:master": "node tools/render-001-master-v1.mjs",
+    "render:001:short": "node tools/render-001-short-v1.mjs"
   },
   "devDependencies": {
     "@fontsource/jetbrains-mono": "5.3.0",

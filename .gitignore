@@ -3,3 +3,4 @@ __pycache__/
 exports/*/frames*/
 exports/*/narration-v1/
 exports/*/narration-test-*.wav
+assets/*/audio/always-yours-youtube-library.*

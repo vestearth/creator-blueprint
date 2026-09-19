@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard Layout Short v1</title>
+  <style>
+    @font-face { font-family: NotoThai; src: url('../../node_modules/@fontsource/noto-sans-thai/files/noto-sans-thai-thai-700-normal.woff2'); font-weight: 700; }
+    @font-face { font-family: NotoThai; src: url('../../node_modules/@fontsource/noto-sans-thai/files/noto-sans-thai-thai-400-normal.woff2'); font-weight: 400; }
+    @font-face { font-family: JetBrains; src: url('../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2'); font-weight: 700; }
+    :root { --ink:#17213a; --paper:#f5f0e5; --blue:#3157d5; --orange:#e46d3f; --mint:#55a98b; --line:#d8d1c2; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; width:1080px; height:1920px; overflow:hidden; background:var(--paper); }
+    body { font-family:NotoThai, sans-serif; color:var(--ink); }
+    body::before { content:""; position:absolute; inset:0; opacity:.42; background-image:linear-gradient(rgba(23,33,58,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(23,33,58,.035) 1px,transparent 1px); background-size:40px 40px; }
+    .scene { display:none; position:absolute; inset:0; padding:116px 150px 250px 72px; }
+    .scene.active { display:block; }
+    .eyebrow { font:700 24px/1 JetBrains,monospace; letter-spacing:.14em; color:var(--blue); margin-bottom:34px; transform:translateY(calc((1 - var(--enter))*36px)); opacity:var(--enter); }
+    h1 { margin:0; font-size:86px; line-height:1.06; letter-spacing:-.035em; max-width:840px; transform:translateY(calc((1 - var(--enter))*52px)); opacity:var(--enter); }
+    h1 .accent { color:var(--orange); }
+    .sub { margin-top:34px; font-size:39px; line-height:1.35; color:#4f5870; max-width:790px; transform:translateY(calc((1 - var(--enter))*42px)); opacity:var(--enter); }
+    .rule { height:8px; width:180px; border-radius:20px; background:var(--orange); margin:42px 0; transform:scaleX(var(--enter)); transform-origin:left; }
+    .numbers { margin-top:120px; display:flex; align-items:center; gap:26px; }
+    .number { width:310px; height:270px; display:grid; place-items:center; border:3px solid var(--ink); border-radius:32px; background:#fffdf8; box-shadow:14px 14px 0 var(--line); font:700 112px/1 JetBrains,monospace; transform:translateY(calc((1 - var(--enter))*80px)) rotate(calc((1 - var(--enter))*-4deg)); opacity:var(--enter); }
+    .number:last-child { color:var(--orange); transition-delay:.08s; transform:translateY(calc((1 - var(--enter))*80px)) rotate(calc((1 - var(--enter))*4deg)); }
+    .neq { font:700 66px/1 JetBrains,monospace; color:var(--blue); opacity:var(--enter); }
+    .keyboard-card { margin-top:55px; padding:32px; border:2px solid var(--line); border-radius:34px; background:rgba(255,255,255,.78); box-shadow:0 24px 50px rgba(23,33,58,.12); transform:translateY(calc((1 - var(--enter))*70px)); opacity:var(--enter); }
+    .keyboard-card img { display:block; width:100%; height:300px; object-fit:contain; filter:drop-shadow(0 16px 14px rgba(23,33,58,.16)); }
+    .card-label { display:flex; justify-content:space-between; align-items:center; margin-top:8px; font-size:31px; font-weight:700; }
+    .badge { padding:10px 18px; border-radius:999px; background:var(--ink); color:white; font:700 25px/1 JetBrains,monospace; }
+    .percent { margin-top:100px; font:700 250px/.9 JetBrains,monospace; color:var(--blue); letter-spacing:-.1em; transform:scale(calc(.78 + var(--enter)*.22)); opacity:var(--enter); transform-origin:left center; }
+    .definition { margin-top:70px; padding:36px 38px; border-left:12px solid var(--orange); background:#fffdf8; font-size:48px; line-height:1.3; font-weight:700; transform:translateX(calc((1 - var(--enter))*60px)); opacity:var(--enter); }
+    .chips { display:flex; flex-wrap:wrap; gap:18px; margin-top:46px; }
+    .chip { border:2px solid var(--line); border-radius:999px; padding:14px 24px; font:700 26px/1 JetBrains,monospace; background:white; opacity:var(--enter); }
+    .checklist { margin-top:56px; display:grid; gap:20px; }
+    .check { display:flex; align-items:center; gap:22px; padding:24px 28px; background:#fffdf8; border:2px solid var(--line); border-radius:20px; font-size:34px; font-weight:700; transform:translateX(calc((1 - var(--enter))*70px)); opacity:var(--enter); }
+    .check::before { content:"✓"; display:grid; place-items:center; width:50px; height:50px; border-radius:50%; background:var(--mint); color:white; font:700 28px/1 JetBrains,monospace; }
+    .final-card { margin-top:100px; padding:50px 44px; border-radius:40px; background:var(--ink); color:white; transform:scale(calc(.9 + var(--enter)*.1)); opacity:var(--enter); }
+    .final-card strong { display:block; color:#ffb38f; font-size:66px; line-height:1.12; }
+    .final-card p { margin:32px 0 0; font-size:38px; line-height:1.4; }
+    .footer { position:absolute; left:72px; bottom:172px; width:820px; display:flex; align-items:center; gap:18px; color:#61697c; font:700 20px/1 JetBrains,monospace; letter-spacing:.08em; }
+    .footer::before { content:""; width:58px; height:5px; border-radius:5px; background:var(--orange); }
+  </style>
+</head>
+<body>
+  <section class="scene" data-scene="0">
+    <div class="eyebrow">KEYBOARD LAYOUT</div>
+    <h1>เขียนว่า <span class="accent">98%</span><br>เหมือนกัน</h1>
+    <div class="sub">แต่ทำไมจำนวนปุ่มไม่เท่ากัน?</div>
+    <div class="numbers"><div class="number">97</div><div class="neq">≠</div><div class="number">99</div></div>
+    <div class="footer">CREATOR BLUEPRINT</div>
+  </section>
+
+  <section class="scene" data-scene="1">
+    <div class="eyebrow">ชื่อเดียวกัน · Layout ต่างกัน</div>
+    <h1><span class="accent">97 ปุ่ม</span> กับ<br>99 ปุ่ม</h1>
+    <div class="keyboard-card"><img src="keyboard-97-v2.png"><div class="card-label"><span>ตัวอย่าง A</span><span class="badge">97 KEYS</span></div></div>
+    <div class="keyboard-card"><img src="keyboard-99-v2.png"><div class="card-label"><span>ตัวอย่าง B</span><span class="badge">99 KEYS</span></div></div>
+    <div class="footer">ดูตำแหน่งปุ่ม ไม่ใช่แค่ชื่อ</div>
+  </section>
+
+  <section class="scene" data-scene="2">
+    <div class="eyebrow">กติกาที่ต้องจำ</div>
+    <div class="percent">98%</div>
+    <div class="definition">เป็นชื่อกลุ่มขนาด<br><span class="accent">โดยประมาณ</span><br>ไม่ใช่มาตรฐานตายตัว</div>
+    <div class="chips"><span class="chip">96%</span><span class="chip">98%</span><span class="chip">1800</span><span class="chip">COMPACT FULL</span></div>
+    <div class="footer">เปอร์เซ็นต์บอกภาพรวมเท่านั้น</div>
+  </section>
+
+  <section class="scene" data-scene="3">
+    <div class="eyebrow">ก่อนกดซื้อ</div>
+    <h1>เช็ก <span class="accent">Layout จริง</span><br>ของรุ่นนั้น</h1>
+    <div class="keyboard-card"><img src="keyboard-98-v2.png"></div>
+    <div class="checklist">
+      <div class="check">ตำแหน่ง Delete / Home / End</div>
+      <div class="check">ลูกศรและ Numpad</div>
+      <div class="check">Keymap และจำนวนปุ่ม</div>
+    </div>
+    <div class="footer">มือเราจำตำแหน่ง ไม่ได้จำเปอร์เซ็นต์</div>
+  </section>
+
+  <section class="scene" data-scene="4">
+    <div class="eyebrow">สรุปในประโยคเดียว</div>
+    <h1>อย่าซื้อจาก<br><span class="accent">เปอร์เซ็นต์</span><br>อย่างเดียว</h1>
+    <div class="final-card"><strong>เลือกจากปุ่ม<br>ที่เราใช้จริง</strong><p>แล้วค่อยดูว่าขนาดไหน<br>พอดีกับโต๊ะและ Workflow</p></div>
+    <div class="footer">ปุ่มไหนที่เราขาดไม่ได้?</div>
+  </section>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const sceneIndex = Number(params.get('scene') || 0);
+    const scene = document.querySelector(`[data-scene="${sceneIndex}"]`) || document.querySelector('[data-scene="0"]');
+    scene.classList.add('active');
+    window.setExportTime = (elapsed, duration) => {
+      const enter = Math.max(0, Math.min(1, elapsed / 0.75));
+      scene.style.setProperty('--enter', enter.toFixed(4));
+      scene.style.setProperty('--progress', Math.max(0, Math.min(1, elapsed / duration)).toFixed(4));
+    };
+    window.setExportTime(0, 1);
+  </script>
+</body>
+</html>
