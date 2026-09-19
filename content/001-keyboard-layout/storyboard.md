@@ -90,7 +90,7 @@ Final color values must pass contrast review against the chosen background befor
 | F-002 | JetBrains Mono | npm `@fontsource/jetbrains-mono@5.3.0` | Fontsource package, SIL Open Font License | Licensed | Version locked in `package-lock.json` |
 | M-001–M-005 | Layout morph transitions | Editing project outside Git; path to be recorded | Built from A-004 vectors | Original | Confirm transition matches the narrated removal/movement |
 | V-001 | Narration | Not used in `keyboard-layout-master-v1.mp4` | Intentionally omitted after owner review | Not applicable | Do not add synthetic narration without a new owner review |
-| B-001 | Background music | Final mix in `exports/001-keyboard-layout/keyboard-layout-master-v1.mp4` | Procedurally synthesized oscillators authored in `tools/render-001-master-v1.mjs` | Original | No third-party recording or composition used |
+| B-001 | Background music | `assets/001-keyboard-layout/audio/midnight-jay-someday.m4a`; final mix in `exports/001-keyboard-layout/keyboard-layout-master-v1.mp4` | `Midnight` by Jay Someday; downloaded from the artist's SoundCloud track page on 2026-09-19 | CC BY 3.0 with attribution; full credit block and SHA-256 recorded beside the asset | Loop with two-second crossfades; include the recorded credit block in the YouTube description |
 | SFX-001 | Chapter transition sounds | Final mix in `exports/001-keyboard-layout/keyboard-layout-master-v1.mp4` | Procedurally synthesized two-tone cues authored in `tools/render-001-master-v1.mjs` | Original | No third-party recording used |
 
 ## Rights and disclosure plan
@@ -102,7 +102,7 @@ Final color values must pass contrast review against the chosen background befor
 - Do not clone or imitate the voice of another person. Record the narration source and commercial-use terms.
 - Choose music, fonts, icons, and sound effects only after their usage basis is documented in this manifest.
 - Re-evaluate the platform's synthetic-content disclosure at pre-publish QA; the current plan does not require realistic synthetic people or events.
-- Audio production decision recorded on `2026-09-19`: narration was removed after owner review; music and chapter cues are original procedural audio. No realistic person, cloned voice, or real event is represented.
+- Audio production decision recorded on `2026-09-19`: narration was removed after owner review; `Midnight` by Jay Someday is used under CC BY 3.0, and chapter cues remain original procedural audio. No realistic person, cloned voice, or real event is represented.
 
 ## Shorts candidates
 

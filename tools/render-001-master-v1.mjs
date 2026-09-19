@@ -7,10 +7,12 @@ import ffmpegPath from "ffmpeg-static";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const exportDir = path.join(root, "exports", "001-keyboard-layout");
 const video = path.join(exportDir, "keyboard-layout-visual-cut-v1.mp4");
+const music = path.join(root, "assets", "001-keyboard-layout", "audio", "midnight-jay-someday.m4a");
 const output = path.join(exportDir, "keyboard-layout-master-v1.mp4");
 const runtime = 555;
 
 if (!existsSync(video)) throw new Error(`Missing visual cut: ${video}`);
+if (!existsSync(music)) throw new Error(`Missing licensed music: ${music}`);
 
 const chapterTimes = [0, 35, 75, 125, 180, 235, 295, 360, 410, 425, 505, 525, 545];
 const cueExpression = chapterTimes.map((start) => {
@@ -18,24 +20,19 @@ const cueExpression = chapterTimes.map((start) => {
   return `between(t,${start},${start + 0.42})*exp(-8*max(0,${local}))*(sin(2*PI*660*${local})+0.55*sin(2*PI*990*${local}))`;
 }).join("+").replaceAll(",", "\\,");
 
-const leftMusic = [
-  "0.013*sin(2*PI*110*t+0.22*sin(2*PI*0.021*t))",
-  "0.008*sin(2*PI*164.81*t+0.7+0.16*sin(2*PI*0.017*t))",
-  "0.006*sin(2*PI*220*t+1.4)",
-  "0.004*pow(max(0,sin(2*PI*0.25*t)),12)*sin(2*PI*440*t)",
-].join("+");
-const rightMusic = [
-  "0.013*sin(2*PI*110*t+0.18+0.22*sin(2*PI*0.019*t))",
-  "0.008*sin(2*PI*164.81*t+1.1+0.16*sin(2*PI*0.023*t))",
-  "0.006*sin(2*PI*220*t+1.8)",
-  "0.004*pow(max(0,sin(2*PI*0.25*t+0.5)),12)*sin(2*PI*440*t+0.3)",
-].join("+");
-const musicExpression = `${leftMusic}|${rightMusic}`.replaceAll(",", "\\,");
-
 const filter = [
-  `aevalsrc='${musicExpression}':s=48000:d=${runtime},` +
-    "lowpass=f=5200,highpass=f=55,aecho=0.8:0.42:70|140:0.14|0.08," +
-    "afade=t=in:st=0:d=2.5,afade=t=out:st=549:d=6[music]",
+  "[1:a]aresample=48000[m0]",
+  "[2:a]aresample=48000[m1]",
+  "[3:a]aresample=48000[m2]",
+  "[4:a]aresample=48000[m3]",
+  "[5:a]aresample=48000[m4]",
+  "[6:a]aresample=48000[m5]",
+  "[m0][m1]acrossfade=d=2:c1=tri:c2=tri[x1]",
+  "[x1][m2]acrossfade=d=2:c1=tri:c2=tri[x2]",
+  "[x2][m3]acrossfade=d=2:c1=tri:c2=tri[x3]",
+  "[x3][m4]acrossfade=d=2:c1=tri:c2=tri[x4]",
+  "[x4][m5]acrossfade=d=2:c1=tri:c2=tri,atrim=duration=555," +
+    "afade=t=in:st=0:d=1.5,afade=t=out:st=549:d=6[music]",
   `aevalsrc='0.11*(${cueExpression})|0.11*(${cueExpression})':s=48000:d=${runtime},` +
     "highpass=f=300,lowpass=f=4800[sfx]",
   "[music][sfx]amix=inputs=2:duration=longest:normalize=0," +
@@ -45,6 +42,12 @@ const filter = [
 execFileSync(ffmpegPath, [
   "-y",
   "-i", video,
+  "-i", music,
+  "-i", music,
+  "-i", music,
+  "-i", music,
+  "-i", music,
+  "-i", music,
   "-filter_complex", filter,
   "-map", "0:v:0",
   "-map", "[aout]",
