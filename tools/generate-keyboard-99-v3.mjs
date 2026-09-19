@@ -15,9 +15,10 @@ const coreY = topY + keyHeight + 14;
 const coreX = padding;
 const step = unit + gap;
 const coreWidth = 15 * unit + 14 * gap;
-// A compact 1800/96% silhouette: the numpad begins immediately after the
-// alphanumeric block. The arrows occupy the final three lower grid positions.
-const numpadX = coreX + coreWidth + gap;
+// A compact 1800/96% silhouette keeps the ANSI typing block intact. The
+// three-key arrow bridge occupies columns 13–15 and the numpad starts at 16.
+// This removes the full-size navigation island without shrinking the spacebar.
+const numpadX = coreX + 16 * step;
 const numpadWidth = 4 * unit + 3 * gap;
 const boardWidth = numpadX + numpadWidth + padding;
 const boardHeight = coreY + 5 * keyHeight + 4 * gap + padding;
@@ -39,12 +40,46 @@ function addRow(items, definitions, y, startX = coreX) {
   }
 }
 
-function createKeyboard(functionLabels) {
+function functionKeyX(index) {
+  if (index === 0) return coreX;
+  if (index <= 4) return coreX + index * step;
+  if (index <= 8) return coreX + (index + 0.25) * step;
+  if (index <= 12) return coreX + (index + 0.5) * step;
+  if (index === 13) return coreX + 14 * step;
+  return coreX + (index + 1) * step;
+}
+
+function assertValidLayout(items, expectedCount, name) {
+  if (items.length !== expectedCount) {
+    throw new Error(`${name}: expected ${expectedCount} physical keys, generated ${items.length}`);
+  }
+
+  for (const [index, key] of items.entries()) {
+    const bounds = {
+      left: key.x,
+      top: key.y,
+      right: key.x + keyWidth(key.width),
+      bottom: key.y + key.height * keyHeight + (key.height - 1) * gap,
+    };
+    if (bounds.left < padding || bounds.top < padding || bounds.right > boardWidth - padding || bounds.bottom > boardHeight - padding) {
+      throw new Error(`${name}: key ${index + 1} (${key.label}) falls outside the case`);
+    }
+
+    for (let otherIndex = 0; otherIndex < index; otherIndex += 1) {
+      const other = items[otherIndex];
+      const overlapX = Math.min(bounds.right, other.x + keyWidth(other.width)) - Math.max(bounds.left, other.x);
+      const overlapY = Math.min(bounds.bottom, other.y + other.height * keyHeight + (other.height - 1) * gap) - Math.max(bounds.top, other.y);
+      if (overlapX > 0.01 && overlapY > 0.01) {
+        throw new Error(`${name}: key ${index + 1} (${key.label}) overlaps key ${otherIndex + 1} (${other.label})`);
+      }
+    }
+  }
+}
+
+function createKeyboard(functionLabels, expectedCount, name) {
   const items = [];
-  let functionX = coreX;
   for (const [index, label] of functionLabels.entries()) {
-    addKey(items, functionX, topY, label, 1, 1, "function", index === 0);
-    functionX += step;
+    addKey(items, functionKeyX(index), topY, label, 1, 1, "function", index === 0);
   }
 
   const alphaRows = [
@@ -52,13 +87,13 @@ function createKeyboard(functionLabels) {
     [["Tab", 1.5], ["Q"], ["W"], ["E"], ["R"], ["T"], ["Y"], ["U"], ["I"], ["O"], ["P"], ["["], ["]"], ["\\", 1.5]],
     [["Caps", 1.75], ["A"], ["S"], ["D"], ["F"], ["G"], ["H"], ["J"], ["K"], ["L"], [";"], ["'"], ["Enter", 2.25, "core", true]],
     [["Shift", 2.25], ["Z"], ["X"], ["C"], ["V"], ["B"], ["N"], ["M"], [","], ["."], ["/"], ["Shift", 1.75]],
-    [["Ctrl", 1.25], ["Win", 1.25], ["Alt", 1.25], ["", 5], ["Alt", 1.25], ["Fn"], ["Ctrl"]],
+    [["Ctrl", 1.25], ["Win", 1.25], ["Alt", 1.25], ["", 6], ["Alt", 1.25], ["Fn"], ["Ctrl"]],
   ];
 
   alphaRows.forEach((row, index) => addRow(items, row, coreY + index * (keyHeight + gap)));
 
   // The arrow cluster is integrated into the lower-right edge of the main block.
-  addKey(items, numpadX - step, coreY + 3 * (keyHeight + gap), "↑", 1, 1, "arrow", true);
+  addKey(items, numpadX - 2 * step, coreY + 3 * (keyHeight + gap), "↑", 1, 1, "arrow", true);
   [["←", 3], ["↓", 2], ["→", 1]].forEach(([label, stepsFromNumpad]) => {
     addKey(items, numpadX - stepsFromNumpad * step, coreY + 4 * (keyHeight + gap), label, 1, 1, "arrow");
   });
@@ -81,15 +116,12 @@ function createKeyboard(functionLabels) {
   addKey(items, numpadX, coreY + 4 * (keyHeight + gap), "0", 2, 1, "numpad");
   addKey(items, numpadX + 2 * step, coreY + 4 * (keyHeight + gap), ".", 1, 1, "numpad");
 
+  assertValidLayout(items, expectedCount, name);
   return items;
 }
 
-const keys99 = createKeyboard(["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del", "Home", "End", "PgUp", "PgDn"]);
-const keys97 = createKeyboard(["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del", "Home", "End"]);
-
-if (keys97.length !== 97 || keys99.length !== 99) {
-  throw new Error(`Expected 97/99 physical keys, generated ${keys97.length}/${keys99.length}`);
-}
+const keys99 = createKeyboard(["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del", "Home", "End", "PgUp", "PgDn"], 99, "99-key compact");
+const keys97 = createKeyboard(["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del", "Home", "End"], 97, "97-key compact");
 
 const escapeXml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -115,10 +147,10 @@ function renderKeyMarkup(items) {
 }
 
 function renderStatusPanel() {
-  const panelX = coreX + 16 * step;
-  const knobX = coreX + 17.55 * step;
+  const panelX = coreX + 18 * step;
+  const knobX = coreX + 19.35 * step;
   return `<g class="status-panel" aria-label="decorative status panel, not a key">
-    <rect x="${panelX}" y="${topY + 3}" width="${keyWidth(1.35)}" height="${keyHeight - 6}" rx="8" fill="#071521" stroke="#6d8293" stroke-width="2"/>
+    <rect x="${panelX}" y="${topY + 3}" width="${keyWidth(1.1)}" height="${keyHeight - 6}" rx="8" fill="#071521" stroke="#6d8293" stroke-width="2"/>
     <path d="M ${panelX + 12} ${topY + 39} L ${panelX + 29} ${topY + 22} L ${panelX + 43} ${topY + 34} L ${panelX + 62} ${topY + 15}" fill="none" stroke="#ff8a54" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="${knobX}" cy="${topY + keyHeight / 2}" r="23" fill="#172b3d" stroke="#ff9a68" stroke-width="4"/>
     <circle cx="${knobX}" cy="${topY + keyHeight / 2}" r="8" fill="#ff9a68"/>
