@@ -5,6 +5,8 @@ import { fileURLToPath } from "node:url";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const output99Path = path.join(repoRoot, "assets", "001-keyboard-layout", "keyboard-99-v3.svg");
 const output97Path = path.join(repoRoot, "assets", "001-keyboard-layout", "keyboard-97-v3.svg");
+const outputShort99Path = path.join(repoRoot, "assets", "001-keyboard-layout", "keyboard-99-short-v4.svg");
+const outputShort97Path = path.join(repoRoot, "assets", "001-keyboard-layout", "keyboard-97-short-v4.svg");
 
 const unit = 64;
 const gap = 7;
@@ -76,7 +78,7 @@ function assertValidLayout(items, expectedCount, name) {
   }
 }
 
-function createKeyboard(functionLabels, expectedCount, name) {
+function createKeyboard(functionLabels, expectedCount, name, options = {}) {
   const items = [];
   for (const [index, label] of functionLabels.entries()) {
     addKey(items, functionKeyX(index), topY, label, 1, 1, "function", index === 0);
@@ -87,10 +89,14 @@ function createKeyboard(functionLabels, expectedCount, name) {
     [["Tab", 1.5], ["Q"], ["W"], ["E"], ["R"], ["T"], ["Y"], ["U"], ["I"], ["O"], ["P"], ["["], ["]"], ["\\", 1.5]],
     [["Caps", 1.75], ["A"], ["S"], ["D"], ["F"], ["G"], ["H"], ["J"], ["K"], ["L"], [";"], ["'"], ["Enter", 2.25, "core", true]],
     [["Shift", 2.25], ["Z"], ["X"], ["C"], ["V"], ["B"], ["N"], ["M"], [","], ["."], ["/"], ["Shift", 1.75]],
-    [["Ctrl", 1.25], ["Win", 1.25], ["Alt", 1.25], ["", 6], ["Alt", 1.25], ["Fn"], ["Ctrl"]],
+    options.bottomRow ?? [["Ctrl", 1.25], ["Win", 1.25], ["Alt", 1.25], ["", 6], ["Alt", 1.25], ["Fn"], ["Ctrl"]],
   ];
 
   alphaRows.forEach((row, index) => addRow(items, row, coreY + index * (keyHeight + gap)));
+
+  for (const [label, row] of options.navigationKeys ?? []) {
+    addKey(items, coreX + 15 * step, coreY + row * (keyHeight + gap), label, 1, 1, "navigation");
+  }
 
   // The arrow cluster is integrated into the lower-right edge of the main block.
   addKey(items, numpadX - 2 * step, coreY + 3 * (keyHeight + gap), "↑", 1, 1, "arrow", true);
@@ -122,6 +128,15 @@ function createKeyboard(functionLabels, expectedCount, name) {
 
 const keys99 = createKeyboard(["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del", "Home", "End", "PgUp", "PgDn"], 99, "99-key compact");
 const keys97 = createKeyboard(["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del", "Home", "End"], 97, "97-key compact");
+const keys97Short = createKeyboard(
+  ["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del"],
+  97,
+  "97-key compact Short example",
+  {
+    bottomRow: [["Ctrl", 1.25], ["Win", 1.25], ["Alt", 1.25], ["", 6.25], ["Fn"], ["Ctrl", 1.25]],
+    navigationKeys: [["Home", 0], ["End", 1], ["PgUp", 2]],
+  },
+);
 
 const escapeXml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -146,11 +161,11 @@ function renderKeyMarkup(items) {
   }).join("\n  ");
 }
 
-function renderStatusPanel() {
-  const panelX = coreX + 18 * step;
-  const knobX = coreX + 19.35 * step;
+function renderStatusPanel(panelColumn = 18, panelUnits = 1.1, knobColumn = 19.35) {
+  const panelX = coreX + panelColumn * step;
+  const knobX = coreX + knobColumn * step;
   return `<g class="status-panel" aria-label="decorative status panel, not a key">
-    <rect x="${panelX}" y="${topY + 3}" width="${keyWidth(1.1)}" height="${keyHeight - 6}" rx="8" fill="#071521" stroke="#6d8293" stroke-width="2"/>
+    <rect x="${panelX}" y="${topY + 3}" width="${keyWidth(panelUnits)}" height="${keyHeight - 6}" rx="8" fill="#071521" stroke="#6d8293" stroke-width="2"/>
     <path d="M ${panelX + 12} ${topY + 39} L ${panelX + 29} ${topY + 22} L ${panelX + 43} ${topY + 34} L ${panelX + 62} ${topY + 15}" fill="none" stroke="#ff8a54" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="${knobX}" cy="${topY + keyHeight / 2}" r="23" fill="#172b3d" stroke="#ff9a68" stroke-width="4"/>
     <circle cx="${knobX}" cy="${topY + keyHeight / 2}" r="8" fill="#ff9a68"/>
@@ -195,8 +210,25 @@ const svg99 = renderSvg(
   "A compact 1800-style 99-key keyboard with the numpad directly adjacent to the main block and the arrow cluster integrated at the lower right.",
   ["#25c8d4", "#0796aa", "#047384"],
 );
+const svg97Short = renderSvg(
+  keys97Short,
+  "97-key compact Short example",
+  "A 97-key compact layout with a three-key vertical navigation bridge, integrated arrows, a standard numpad, and a non-key display and knob above it.",
+  ["#ffab76", "#e97848", "#bd4f2c"],
+  renderStatusPanel(16, 2.2, 19.35),
+);
+const svg99Short = renderSvg(
+  keys99,
+  "99-key compact Short example",
+  "A 99-key compact layout with five navigation keys in the top row, integrated arrows, and a standard numpad.",
+  ["#25c8d4", "#0796aa", "#047384"],
+);
 
 writeFileSync(output97Path, svg97, "utf8");
 writeFileSync(output99Path, svg99, "utf8");
+writeFileSync(outputShort97Path, svg97Short, "utf8");
+writeFileSync(outputShort99Path, svg99Short, "utf8");
 console.log(`Generated ${output97Path} (${keys97.length} physical keys)`);
 console.log(`Generated ${output99Path} (${keys99.length} physical keys)`);
+console.log(`Generated ${outputShort97Path} (${keys97Short.length} physical keys)`);
+console.log(`Generated ${outputShort99Path} (${keys99.length} physical keys)`);
