@@ -89,7 +89,7 @@ try {
     const duration = durations[sceneIndex];
     await client.call("Page.navigate", { url:`${pathToFileURL(page).href}?export=1&scene=${sceneIndex}` }, sessionId);
     await client.call("Runtime.evaluate", {
-      expression:"document.fonts.ready.then(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))",
+      expression:"Promise.all([document.fonts.ready, ...Array.from(document.images, image => image.complete ? Promise.resolve() : new Promise((resolve, reject) => { image.addEventListener('load', resolve, { once:true }); image.addEventListener('error', reject, { once:true }); }))]).then(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))",
       awaitPromise:true,
     }, sessionId);
     const times = sampleTimes(duration);

@@ -26,6 +26,10 @@
     .neq { font:700 66px/1 JetBrains,monospace; color:var(--blue); opacity:var(--enter); }
     .keyboard-card { margin-top:55px; padding:32px; border:2px solid var(--line); border-radius:34px; background:rgba(255,255,255,.78); box-shadow:0 24px 50px rgba(23,33,58,.12); transform:translateY(calc((1 - var(--enter))*70px)); opacity:var(--enter); }
     .keyboard-card img { display:block; width:100%; height:300px; object-fit:contain; filter:drop-shadow(0 16px 14px rgba(23,33,58,.16)); }
+    .product-photo-frame { position:relative; height:300px; overflow:hidden; border-radius:22px; background:#fff; }
+    .keyboard-card .product-photo { position:absolute; left:50%; top:50%; width:100%; height:auto; max-width:none; object-fit:initial; filter:none; }
+    .keyboard-card .product-photo.ak980 { transform:translate(-50%,-50%) scale(1.08); }
+    .keyboard-card .product-photo.f99 { transform:translate(-50%,-63%) scale(1); }
     .card-label { display:flex; justify-content:space-between; align-items:center; margin-top:8px; font-size:31px; font-weight:700; }
     .badge { padding:10px 18px; border-radius:999px; background:var(--ink); color:white; font:700 25px/1 JetBrains,monospace; }
     .percent { margin-top:100px; font:700 250px/.9 JetBrains,monospace; color:var(--blue); letter-spacing:-.1em; transform:scale(calc(.78 + var(--enter)*.22)); opacity:var(--enter); transform-origin:left center; }
@@ -54,8 +58,8 @@
   <section class="scene" data-scene="1">
     <div class="eyebrow">ชื่อเดียวกัน · Layout ต่างกัน</div>
     <h1><span class="accent">97 ปุ่ม</span> กับ<br>99 ปุ่ม</h1>
-    <div class="keyboard-card"><img src="keyboard-97-short-v4.svg"><div class="card-label"><span>ตัวอย่าง A</span><span class="badge">97 KEYS</span></div></div>
-    <div class="keyboard-card"><img src="keyboard-99-short-v4.svg"><div class="card-label"><span>ตัวอย่าง B</span><span class="badge">99 KEYS</span></div></div>
+    <div class="keyboard-card"><div class="product-photo-frame"><img class="product-photo ak980" src="https://ajazzstore.com/cdn/shop/files/AJAZZ_AK980_V2_Grey_01.png?v=1763567614" alt="AJAZZ AK980 รุ่น 97 ปุ่ม"></div><div class="card-label"><span>AJAZZ AK980</span><span class="badge">97 KEYS</span></div></div>
+    <div class="keyboard-card"><div class="product-photo-frame"><img class="product-photo f99" src="https://epomaker.com/cdn/shop/files/203A8549.jpg?v=1701754595&amp;width=1400" alt="EPOMAKER x AULA F99 รุ่น 99 ปุ่ม"></div><div class="card-label"><span>AULA F99</span><span class="badge">99 KEYS</span></div></div>
     <div class="footer">ดูตำแหน่งปุ่ม ไม่ใช่แค่ชื่อ</div>
   </section>
 
