@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1629 452" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1398 470" role="img" aria-labelledby="title desc">
   <title id="title">Generic compact 97-key ANSI keyboard</title>
-  <desc id="desc">A verified 97-key compact 1800 layout with one alphanumeric block, two navigation keys, one arrow cluster, and one standard numpad.</desc>
+  <desc id="desc">A compact 1800-style 97-key keyboard with the numpad directly adjacent to the main block and the arrow cluster integrated at the lower right.</desc>
   <defs>
     <linearGradient id="case" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24384c"/><stop offset=".55" stop-color="#15293c"/><stop offset="1" stop-color="#0b1c2d"/></linearGradient>
     <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#aeb8c2"/><stop offset=".42" stop-color="#8694a2"/><stop offset="1" stop-color="#657482"/></linearGradient>
@@ -14,587 +14,593 @@
     .legend { fill: #f5f7f8; font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; paint-order: stroke; stroke: rgba(4,14,24,.45); stroke-width: 1px; }
     .legend.small { font-size: 14px; }
   </style>
-  <rect x="4" y="4" width="1621" height="444" rx="31" fill="url(#case)" stroke="#496175" stroke-width="4" filter="url(#boardShadow)"/>
-  <rect x="15" y="15" width="1599" height="422" rx="24" fill="none" stroke="#7590a5" stroke-opacity=".26" stroke-width="2"/>
+  <rect x="4" y="4" width="1390" height="462" rx="31" fill="url(#case)" stroke="#496175" stroke-width="4" filter="url(#boardShadow)"/>
+  <rect x="15" y="15" width="1368" height="440" rx="24" fill="none" stroke="#7590a5" stroke-opacity=".26" stroke-width="2"/>
+  <g class="status-panel" aria-label="decorative status panel, not a key">
+    <rect x="1164" y="31" width="88.85000000000001" height="56" rx="8" fill="#071521" stroke="#6d8293" stroke-width="2"/>
+    <path d="M 1176 67 L 1193 50 L 1207 62 L 1226 43" fill="none" stroke="#ff8a54" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1274.05" cy="59" r="23" fill="#172b3d" stroke="#ff9a68" stroke-width="4"/>
+    <circle cx="1274.05" cy="59" r="8" fill="#ff9a68"/>
+  </g>
   <g class="key function" data-key-index="1" transform="translate(28 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#accent)"/>
-      <text class="legend " x="32" y="30">Esc</text>
-    </g>
-  <g class="key function" data-key-index="2" transform="translate(113 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F1</text>
-    </g>
-  <g class="key function" data-key-index="3" transform="translate(184 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F2</text>
-    </g>
-  <g class="key function" data-key-index="4" transform="translate(255 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F3</text>
-    </g>
-  <g class="key function" data-key-index="5" transform="translate(326 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F4</text>
-    </g>
-  <g class="key function" data-key-index="6" transform="translate(411 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F5</text>
-    </g>
-  <g class="key function" data-key-index="7" transform="translate(482 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F6</text>
-    </g>
-  <g class="key function" data-key-index="8" transform="translate(553 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F7</text>
-    </g>
-  <g class="key function" data-key-index="9" transform="translate(624 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F8</text>
-    </g>
-  <g class="key function" data-key-index="10" transform="translate(709 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F9</text>
-    </g>
-  <g class="key function" data-key-index="11" transform="translate(780 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F10</text>
-    </g>
-  <g class="key function" data-key-index="12" transform="translate(851 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F11</text>
-    </g>
-  <g class="key function" data-key-index="13" transform="translate(922 28)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F12</text>
-    </g>
-  <g class="key core" data-key-index="14" transform="translate(28 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">~</text>
-    </g>
-  <g class="key core" data-key-index="15" transform="translate(99 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">1</text>
-    </g>
-  <g class="key core" data-key-index="16" transform="translate(170 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">2</text>
-    </g>
-  <g class="key core" data-key-index="17" transform="translate(241 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">3</text>
-    </g>
-  <g class="key core" data-key-index="18" transform="translate(312 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">4</text>
-    </g>
-  <g class="key core" data-key-index="19" transform="translate(383 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">5</text>
-    </g>
-  <g class="key core" data-key-index="20" transform="translate(454 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">6</text>
-    </g>
-  <g class="key core" data-key-index="21" transform="translate(525 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">7</text>
-    </g>
-  <g class="key core" data-key-index="22" transform="translate(596 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">8</text>
-    </g>
-  <g class="key core" data-key-index="23" transform="translate(667 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">9</text>
-    </g>
-  <g class="key core" data-key-index="24" transform="translate(738 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">0</text>
-    </g>
-  <g class="key core" data-key-index="25" transform="translate(809 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">-</text>
-    </g>
-  <g class="key core" data-key-index="26" transform="translate(880 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">=</text>
-    </g>
-  <g class="key core" data-key-index="27" transform="translate(951 106)">
-      <rect class="key-shadow" x="0" y="3" width="135" height="58" rx="9"/>
-      <rect class="key-wall" width="135" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="127" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="67.5" y="30">Back</text>
-    </g>
-  <g class="key core" data-key-index="28" transform="translate(28 171)">
-      <rect class="key-shadow" x="0" y="3" width="99.5" height="58" rx="9"/>
-      <rect class="key-wall" width="99.5" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="91.5" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="49.75" y="30">Tab</text>
-    </g>
-  <g class="key core" data-key-index="29" transform="translate(134.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">Q</text>
-    </g>
-  <g class="key core" data-key-index="30" transform="translate(205.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">W</text>
-    </g>
-  <g class="key core" data-key-index="31" transform="translate(276.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">E</text>
-    </g>
-  <g class="key core" data-key-index="32" transform="translate(347.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">R</text>
-    </g>
-  <g class="key core" data-key-index="33" transform="translate(418.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">T</text>
-    </g>
-  <g class="key core" data-key-index="34" transform="translate(489.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">Y</text>
-    </g>
-  <g class="key core" data-key-index="35" transform="translate(560.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">U</text>
-    </g>
-  <g class="key core" data-key-index="36" transform="translate(631.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">I</text>
-    </g>
-  <g class="key core" data-key-index="37" transform="translate(702.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">O</text>
-    </g>
-  <g class="key core" data-key-index="38" transform="translate(773.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">P</text>
-    </g>
-  <g class="key core" data-key-index="39" transform="translate(844.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">[</text>
-    </g>
-  <g class="key core" data-key-index="40" transform="translate(915.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">]</text>
-    </g>
-  <g class="key core" data-key-index="41" transform="translate(986.5 171)">
-      <rect class="key-shadow" x="0" y="3" width="99.5" height="58" rx="9"/>
-      <rect class="key-wall" width="99.5" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="91.5" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="49.75" y="30">\</text>
-    </g>
-  <g class="key core" data-key-index="42" transform="translate(28 236)">
-      <rect class="key-shadow" x="0" y="3" width="117.25" height="58" rx="9"/>
-      <rect class="key-wall" width="117.25" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="109.25" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="58.625" y="30">Caps</text>
-    </g>
-  <g class="key core" data-key-index="43" transform="translate(152.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">A</text>
-    </g>
-  <g class="key core" data-key-index="44" transform="translate(223.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">S</text>
-    </g>
-  <g class="key core" data-key-index="45" transform="translate(294.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">D</text>
-    </g>
-  <g class="key core" data-key-index="46" transform="translate(365.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">F</text>
-    </g>
-  <g class="key core" data-key-index="47" transform="translate(436.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">G</text>
-    </g>
-  <g class="key core" data-key-index="48" transform="translate(507.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">H</text>
-    </g>
-  <g class="key core" data-key-index="49" transform="translate(578.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">J</text>
-    </g>
-  <g class="key core" data-key-index="50" transform="translate(649.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">K</text>
-    </g>
-  <g class="key core" data-key-index="51" transform="translate(720.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">L</text>
-    </g>
-  <g class="key core" data-key-index="52" transform="translate(791.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">;</text>
-    </g>
-  <g class="key core" data-key-index="53" transform="translate(862.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">'</text>
-    </g>
-  <g class="key core" data-key-index="54" transform="translate(933.25 236)">
-      <rect class="key-shadow" x="0" y="3" width="152.75" height="58" rx="9"/>
-      <rect class="key-wall" width="152.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="144.75" height="48" rx="7" fill="url(#accent)"/>
-      <text class="legend small" x="76.375" y="30">Enter</text>
-    </g>
-  <g class="key core" data-key-index="55" transform="translate(28 301)">
-      <rect class="key-shadow" x="0" y="3" width="152.75" height="58" rx="9"/>
-      <rect class="key-wall" width="152.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="144.75" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend small" x="76.375" y="30">Shift</text>
-    </g>
-  <g class="key core" data-key-index="56" transform="translate(187.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">Z</text>
-    </g>
-  <g class="key core" data-key-index="57" transform="translate(258.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">X</text>
-    </g>
-  <g class="key core" data-key-index="58" transform="translate(329.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">C</text>
-    </g>
-  <g class="key core" data-key-index="59" transform="translate(400.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">V</text>
-    </g>
-  <g class="key core" data-key-index="60" transform="translate(471.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">B</text>
-    </g>
-  <g class="key core" data-key-index="61" transform="translate(542.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">N</text>
-    </g>
-  <g class="key core" data-key-index="62" transform="translate(613.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">M</text>
-    </g>
-  <g class="key core" data-key-index="63" transform="translate(684.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">,</text>
-    </g>
-  <g class="key core" data-key-index="64" transform="translate(755.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">.</text>
-    </g>
-  <g class="key core" data-key-index="65" transform="translate(826.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">/</text>
-    </g>
-  <g class="key core" data-key-index="66" transform="translate(897.75 301)">
-      <rect class="key-shadow" x="0" y="3" width="188.25" height="58" rx="9"/>
-      <rect class="key-wall" width="188.25" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="180.25" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend small" x="94.125" y="30">Shift</text>
-    </g>
-  <g class="key core" data-key-index="67" transform="translate(28 366)">
-      <rect class="key-shadow" x="0" y="3" width="81.75" height="58" rx="9"/>
-      <rect class="key-wall" width="81.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="73.75" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="40.875" y="30">Ctrl</text>
-    </g>
-  <g class="key core" data-key-index="68" transform="translate(116.75 366)">
-      <rect class="key-shadow" x="0" y="3" width="81.75" height="58" rx="9"/>
-      <rect class="key-wall" width="81.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="73.75" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="40.875" y="30">Win</text>
-    </g>
-  <g class="key core" data-key-index="69" transform="translate(205.5 366)">
-      <rect class="key-shadow" x="0" y="3" width="81.75" height="58" rx="9"/>
-      <rect class="key-wall" width="81.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="73.75" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="40.875" y="30">Alt</text>
-    </g>
-  <g class="key core" data-key-index="70" transform="translate(294.25 366)">
-      <rect class="key-shadow" x="0" y="3" width="436.75" height="58" rx="9"/>
-      <rect class="key-wall" width="436.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="428.75" height="48" rx="7" fill="url(#cap)"/>
-    </g>
-  <g class="key core" data-key-index="71" transform="translate(738 366)">
-      <rect class="key-shadow" x="0" y="3" width="81.75" height="58" rx="9"/>
-      <rect class="key-wall" width="81.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="73.75" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="40.875" y="30">Alt</text>
-    </g>
-  <g class="key core" data-key-index="72" transform="translate(826.75 366)">
-      <rect class="key-shadow" x="0" y="3" width="81.75" height="58" rx="9"/>
-      <rect class="key-wall" width="81.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="73.75" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="40.875" y="30">Fn</text>
-    </g>
-  <g class="key core" data-key-index="73" transform="translate(915.5 366)">
-      <rect class="key-shadow" x="0" y="3" width="81.75" height="58" rx="9"/>
-      <rect class="key-wall" width="81.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="73.75" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="40.875" y="30">Menu</text>
-    </g>
-  <g class="key core" data-key-index="74" transform="translate(1004.25 366)">
-      <rect class="key-shadow" x="0" y="3" width="81.75" height="58" rx="9"/>
-      <rect class="key-wall" width="81.75" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="73.75" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="40.875" y="30">Ctrl</text>
-    </g>
-  <g class="key navigation" data-key-index="75" transform="translate(1102 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">Home</text>
-    </g>
-  <g class="key navigation" data-key-index="76" transform="translate(1173 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">End</text>
-    </g>
-  <g class="key arrow" data-key-index="77" transform="translate(1173 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#accent)"/>
-      <text class="legend " x="32" y="30">↑</text>
-    </g>
-  <g class="key arrow" data-key-index="78" transform="translate(1102 366)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">←</text>
-    </g>
-  <g class="key arrow" data-key-index="79" transform="translate(1173 366)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">↓</text>
-    </g>
-  <g class="key arrow" data-key-index="80" transform="translate(1244 366)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">→</text>
-    </g>
-  <g class="key numpad" data-key-index="81" transform="translate(1324 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">Num</text>
-    </g>
-  <g class="key numpad" data-key-index="82" transform="translate(1395 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">/</text>
-    </g>
-  <g class="key numpad" data-key-index="83" transform="translate(1466 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">*</text>
-    </g>
-  <g class="key numpad" data-key-index="84" transform="translate(1537 106)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">-</text>
-    </g>
-  <g class="key numpad" data-key-index="85" transform="translate(1324 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">7</text>
-    </g>
-  <g class="key numpad" data-key-index="86" transform="translate(1395 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">8</text>
-    </g>
-  <g class="key numpad" data-key-index="87" transform="translate(1466 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">9</text>
-    </g>
-  <g class="key numpad" data-key-index="88" transform="translate(1537 171)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="123" rx="9"/>
-      <rect class="key-wall" width="64" height="123" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="113" rx="7" fill="url(#accent)"/>
-      <text class="legend " x="32" y="62.5">+</text>
-    </g>
-  <g class="key numpad" data-key-index="89" transform="translate(1324 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">4</text>
-    </g>
-  <g class="key numpad" data-key-index="90" transform="translate(1395 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">5</text>
-    </g>
-  <g class="key numpad" data-key-index="91" transform="translate(1466 236)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">6</text>
-    </g>
-  <g class="key numpad" data-key-index="92" transform="translate(1324 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">1</text>
-    </g>
-  <g class="key numpad" data-key-index="93" transform="translate(1395 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">2</text>
-    </g>
-  <g class="key numpad" data-key-index="94" transform="translate(1466 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">3</text>
-    </g>
-  <g class="key numpad" data-key-index="95" transform="translate(1537 301)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="123" rx="9"/>
-      <rect class="key-wall" width="64" height="123" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="113" rx="7" fill="url(#accent)"/>
-      <text class="legend small" x="32" y="62.5">Enter</text>
-    </g>
-  <g class="key numpad" data-key-index="96" transform="translate(1324 366)">
-      <rect class="key-shadow" x="0" y="3" width="135" height="58" rx="9"/>
-      <rect class="key-wall" width="135" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="127" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="67.5" y="30">0</text>
-    </g>
-  <g class="key numpad" data-key-index="97" transform="translate(1466 366)">
-      <rect class="key-shadow" x="0" y="3" width="64" height="58" rx="9"/>
-      <rect class="key-wall" width="64" height="58" rx="9"/>
-      <rect class="key-top" x="4" y="4" width="56" height="48" rx="7" fill="url(#cap)"/>
-      <text class="legend " x="32" y="30">.</text>
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#accent)"/>
+      <text class="legend " x="32" y="32">Esc</text>
+    </g>
+  <g class="key function" data-key-index="2" transform="translate(99 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F1</text>
+    </g>
+  <g class="key function" data-key-index="3" transform="translate(170 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F2</text>
+    </g>
+  <g class="key function" data-key-index="4" transform="translate(241 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F3</text>
+    </g>
+  <g class="key function" data-key-index="5" transform="translate(312 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F4</text>
+    </g>
+  <g class="key function" data-key-index="6" transform="translate(383 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F5</text>
+    </g>
+  <g class="key function" data-key-index="7" transform="translate(454 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F6</text>
+    </g>
+  <g class="key function" data-key-index="8" transform="translate(525 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F7</text>
+    </g>
+  <g class="key function" data-key-index="9" transform="translate(596 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F8</text>
+    </g>
+  <g class="key function" data-key-index="10" transform="translate(667 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F9</text>
+    </g>
+  <g class="key function" data-key-index="11" transform="translate(738 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F10</text>
+    </g>
+  <g class="key function" data-key-index="12" transform="translate(809 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F11</text>
+    </g>
+  <g class="key function" data-key-index="13" transform="translate(880 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F12</text>
+    </g>
+  <g class="key function" data-key-index="14" transform="translate(951 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">Del</text>
+    </g>
+  <g class="key function" data-key-index="15" transform="translate(1022 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">Home</text>
+    </g>
+  <g class="key function" data-key-index="16" transform="translate(1093 28)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">End</text>
+    </g>
+  <g class="key core" data-key-index="17" transform="translate(28 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">~</text>
+    </g>
+  <g class="key core" data-key-index="18" transform="translate(99 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">1</text>
+    </g>
+  <g class="key core" data-key-index="19" transform="translate(170 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">2</text>
+    </g>
+  <g class="key core" data-key-index="20" transform="translate(241 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">3</text>
+    </g>
+  <g class="key core" data-key-index="21" transform="translate(312 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">4</text>
+    </g>
+  <g class="key core" data-key-index="22" transform="translate(383 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">5</text>
+    </g>
+  <g class="key core" data-key-index="23" transform="translate(454 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">6</text>
+    </g>
+  <g class="key core" data-key-index="24" transform="translate(525 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">7</text>
+    </g>
+  <g class="key core" data-key-index="25" transform="translate(596 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">8</text>
+    </g>
+  <g class="key core" data-key-index="26" transform="translate(667 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">9</text>
+    </g>
+  <g class="key core" data-key-index="27" transform="translate(738 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">0</text>
+    </g>
+  <g class="key core" data-key-index="28" transform="translate(809 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">-</text>
+    </g>
+  <g class="key core" data-key-index="29" transform="translate(880 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">=</text>
+    </g>
+  <g class="key core" data-key-index="30" transform="translate(951 104)">
+      <rect class="key-shadow" x="0" y="3" width="135" height="62" rx="9"/>
+      <rect class="key-wall" width="135" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="127" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="67.5" y="32">Back</text>
+    </g>
+  <g class="key core" data-key-index="31" transform="translate(28 173)">
+      <rect class="key-shadow" x="0" y="3" width="99.5" height="62" rx="9"/>
+      <rect class="key-wall" width="99.5" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="91.5" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="49.75" y="32">Tab</text>
+    </g>
+  <g class="key core" data-key-index="32" transform="translate(134.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">Q</text>
+    </g>
+  <g class="key core" data-key-index="33" transform="translate(205.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">W</text>
+    </g>
+  <g class="key core" data-key-index="34" transform="translate(276.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">E</text>
+    </g>
+  <g class="key core" data-key-index="35" transform="translate(347.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">R</text>
+    </g>
+  <g class="key core" data-key-index="36" transform="translate(418.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">T</text>
+    </g>
+  <g class="key core" data-key-index="37" transform="translate(489.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">Y</text>
+    </g>
+  <g class="key core" data-key-index="38" transform="translate(560.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">U</text>
+    </g>
+  <g class="key core" data-key-index="39" transform="translate(631.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">I</text>
+    </g>
+  <g class="key core" data-key-index="40" transform="translate(702.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">O</text>
+    </g>
+  <g class="key core" data-key-index="41" transform="translate(773.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">P</text>
+    </g>
+  <g class="key core" data-key-index="42" transform="translate(844.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">[</text>
+    </g>
+  <g class="key core" data-key-index="43" transform="translate(915.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">]</text>
+    </g>
+  <g class="key core" data-key-index="44" transform="translate(986.5 173)">
+      <rect class="key-shadow" x="0" y="3" width="99.5" height="62" rx="9"/>
+      <rect class="key-wall" width="99.5" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="91.5" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="49.75" y="32">\</text>
+    </g>
+  <g class="key core" data-key-index="45" transform="translate(28 242)">
+      <rect class="key-shadow" x="0" y="3" width="117.25" height="62" rx="9"/>
+      <rect class="key-wall" width="117.25" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="109.25" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="58.625" y="32">Caps</text>
+    </g>
+  <g class="key core" data-key-index="46" transform="translate(152.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">A</text>
+    </g>
+  <g class="key core" data-key-index="47" transform="translate(223.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">S</text>
+    </g>
+  <g class="key core" data-key-index="48" transform="translate(294.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">D</text>
+    </g>
+  <g class="key core" data-key-index="49" transform="translate(365.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">F</text>
+    </g>
+  <g class="key core" data-key-index="50" transform="translate(436.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">G</text>
+    </g>
+  <g class="key core" data-key-index="51" transform="translate(507.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">H</text>
+    </g>
+  <g class="key core" data-key-index="52" transform="translate(578.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">J</text>
+    </g>
+  <g class="key core" data-key-index="53" transform="translate(649.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">K</text>
+    </g>
+  <g class="key core" data-key-index="54" transform="translate(720.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">L</text>
+    </g>
+  <g class="key core" data-key-index="55" transform="translate(791.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">;</text>
+    </g>
+  <g class="key core" data-key-index="56" transform="translate(862.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">'</text>
+    </g>
+  <g class="key core" data-key-index="57" transform="translate(933.25 242)">
+      <rect class="key-shadow" x="0" y="3" width="152.75" height="62" rx="9"/>
+      <rect class="key-wall" width="152.75" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="144.75" height="52" rx="7" fill="url(#accent)"/>
+      <text class="legend small" x="76.375" y="32">Enter</text>
+    </g>
+  <g class="key core" data-key-index="58" transform="translate(28 311)">
+      <rect class="key-shadow" x="0" y="3" width="152.75" height="62" rx="9"/>
+      <rect class="key-wall" width="152.75" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="144.75" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend small" x="76.375" y="32">Shift</text>
+    </g>
+  <g class="key core" data-key-index="59" transform="translate(187.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">Z</text>
+    </g>
+  <g class="key core" data-key-index="60" transform="translate(258.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">X</text>
+    </g>
+  <g class="key core" data-key-index="61" transform="translate(329.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">C</text>
+    </g>
+  <g class="key core" data-key-index="62" transform="translate(400.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">V</text>
+    </g>
+  <g class="key core" data-key-index="63" transform="translate(471.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">B</text>
+    </g>
+  <g class="key core" data-key-index="64" transform="translate(542.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">N</text>
+    </g>
+  <g class="key core" data-key-index="65" transform="translate(613.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">M</text>
+    </g>
+  <g class="key core" data-key-index="66" transform="translate(684.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">,</text>
+    </g>
+  <g class="key core" data-key-index="67" transform="translate(755.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">.</text>
+    </g>
+  <g class="key core" data-key-index="68" transform="translate(826.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">/</text>
+    </g>
+  <g class="key core" data-key-index="69" transform="translate(897.75 311)">
+      <rect class="key-shadow" x="0" y="3" width="117.25" height="62" rx="9"/>
+      <rect class="key-wall" width="117.25" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="109.25" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend small" x="58.625" y="32">Shift</text>
+    </g>
+  <g class="key core" data-key-index="70" transform="translate(28 380)">
+      <rect class="key-shadow" x="0" y="3" width="81.75" height="62" rx="9"/>
+      <rect class="key-wall" width="81.75" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="73.75" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="40.875" y="32">Ctrl</text>
+    </g>
+  <g class="key core" data-key-index="71" transform="translate(116.75 380)">
+      <rect class="key-shadow" x="0" y="3" width="81.75" height="62" rx="9"/>
+      <rect class="key-wall" width="81.75" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="73.75" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="40.875" y="32">Win</text>
+    </g>
+  <g class="key core" data-key-index="72" transform="translate(205.5 380)">
+      <rect class="key-shadow" x="0" y="3" width="81.75" height="62" rx="9"/>
+      <rect class="key-wall" width="81.75" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="73.75" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="40.875" y="32">Alt</text>
+    </g>
+  <g class="key core" data-key-index="73" transform="translate(294.25 380)">
+      <rect class="key-shadow" x="0" y="3" width="348" height="62" rx="9"/>
+      <rect class="key-wall" width="348" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="340" height="52" rx="7" fill="url(#cap)"/>
+    </g>
+  <g class="key core" data-key-index="74" transform="translate(649.25 380)">
+      <rect class="key-shadow" x="0" y="3" width="81.75" height="62" rx="9"/>
+      <rect class="key-wall" width="81.75" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="73.75" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="40.875" y="32">Alt</text>
+    </g>
+  <g class="key core" data-key-index="75" transform="translate(738 380)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">Fn</text>
+    </g>
+  <g class="key core" data-key-index="76" transform="translate(809 380)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">Ctrl</text>
+    </g>
+  <g class="key arrow" data-key-index="77" transform="translate(1022 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#accent)"/>
+      <text class="legend " x="32" y="32">↑</text>
+    </g>
+  <g class="key arrow" data-key-index="78" transform="translate(880 380)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">←</text>
+    </g>
+  <g class="key arrow" data-key-index="79" transform="translate(951 380)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">↓</text>
+    </g>
+  <g class="key arrow" data-key-index="80" transform="translate(1022 380)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">→</text>
+    </g>
+  <g class="key numpad" data-key-index="81" transform="translate(1093 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">Num</text>
+    </g>
+  <g class="key numpad" data-key-index="82" transform="translate(1164 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">/</text>
+    </g>
+  <g class="key numpad" data-key-index="83" transform="translate(1235 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">*</text>
+    </g>
+  <g class="key numpad" data-key-index="84" transform="translate(1306 104)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">-</text>
+    </g>
+  <g class="key numpad" data-key-index="85" transform="translate(1093 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">7</text>
+    </g>
+  <g class="key numpad" data-key-index="86" transform="translate(1164 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">8</text>
+    </g>
+  <g class="key numpad" data-key-index="87" transform="translate(1235 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">9</text>
+    </g>
+  <g class="key numpad" data-key-index="88" transform="translate(1306 173)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="131" rx="9"/>
+      <rect class="key-wall" width="64" height="131" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="121" rx="7" fill="url(#accent)"/>
+      <text class="legend " x="32" y="66.5">+</text>
+    </g>
+  <g class="key numpad" data-key-index="89" transform="translate(1093 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">4</text>
+    </g>
+  <g class="key numpad" data-key-index="90" transform="translate(1164 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">5</text>
+    </g>
+  <g class="key numpad" data-key-index="91" transform="translate(1235 242)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">6</text>
+    </g>
+  <g class="key numpad" data-key-index="92" transform="translate(1093 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">1</text>
+    </g>
+  <g class="key numpad" data-key-index="93" transform="translate(1164 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">2</text>
+    </g>
+  <g class="key numpad" data-key-index="94" transform="translate(1235 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">3</text>
+    </g>
+  <g class="key numpad" data-key-index="95" transform="translate(1306 311)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="131" rx="9"/>
+      <rect class="key-wall" width="64" height="131" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="121" rx="7" fill="url(#accent)"/>
+      <text class="legend small" x="32" y="66.5">Enter</text>
+    </g>
+  <g class="key numpad" data-key-index="96" transform="translate(1093 380)">
+      <rect class="key-shadow" x="0" y="3" width="135" height="62" rx="9"/>
+      <rect class="key-wall" width="135" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="127" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="67.5" y="32">0</text>
+    </g>
+  <g class="key numpad" data-key-index="97" transform="translate(1235 380)">
+      <rect class="key-shadow" x="0" y="3" width="64" height="62" rx="9"/>
+      <rect class="key-wall" width="64" height="62" rx="9"/>
+      <rect class="key-top" x="4" y="4" width="56" height="52" rx="7" fill="url(#cap)"/>
+      <text class="legend " x="32" y="32">.</text>
     </g>
 </svg>

@@ -8,85 +8,87 @@ const output97Path = path.join(repoRoot, "assets", "001-keyboard-layout", "keybo
 
 const unit = 64;
 const gap = 7;
-const keyHeight = 58;
+const keyHeight = 62;
 const padding = 28;
 const topY = padding;
-const coreY = topY + keyHeight + 20;
+const coreY = topY + keyHeight + 14;
 const coreX = padding;
+const step = unit + gap;
 const coreWidth = 15 * unit + 14 * gap;
-const navX = coreX + coreWidth + 16;
-const navWidth = 3 * unit + 2 * gap;
-const numpadX = navX + navWidth + 16;
+// A compact 1800/96% silhouette: the numpad begins immediately after the
+// alphanumeric block. The arrows occupy the final three lower grid positions.
+const numpadX = coreX + coreWidth + gap;
 const numpadWidth = 4 * unit + 3 * gap;
 const boardWidth = numpadX + numpadWidth + padding;
 const boardHeight = coreY + 5 * keyHeight + 4 * gap + padding;
-
-const keys = [];
 
 function keyWidth(units) {
   return units * unit + (units - 1) * gap;
 }
 
-function addKey(x, y, label, width = 1, height = 1, group = "core", accent = false) {
-  keys.push({ x, y, label, width, height, group, accent });
+function addKey(items, x, y, label, width = 1, height = 1, group = "core", accent = false) {
+  items.push({ x, y, label, width, height, group, accent });
 }
 
-function addRow(definitions, y, startX = coreX) {
+function addRow(items, definitions, y, startX = coreX) {
   let x = startX;
   for (const definition of definitions) {
     const [label, width = 1, group = "core", accent = false] = definition;
-    addKey(x, y, label, width, 1, group, accent);
+    addKey(items, x, y, label, width, 1, group, accent);
     x += keyWidth(width) + gap;
   }
 }
 
-let functionX = coreX;
-addKey(functionX, topY, "Esc", 1, 1, "function", true);
-functionX += unit + gap * 3;
-for (let index = 1; index <= 12; index += 1) {
-  addKey(functionX, topY, `F${index}`, 1, 1, "function");
-  functionX += unit + gap;
-  if (index === 4 || index === 8) functionX += gap * 2;
+function createKeyboard(functionLabels) {
+  const items = [];
+  let functionX = coreX;
+  for (const [index, label] of functionLabels.entries()) {
+    addKey(items, functionX, topY, label, 1, 1, "function", index === 0);
+    functionX += step;
+  }
+
+  const alphaRows = [
+    [["~"], ["1"], ["2"], ["3"], ["4"], ["5"], ["6"], ["7"], ["8"], ["9"], ["0"], ["-"], ["="], ["Back", 2]],
+    [["Tab", 1.5], ["Q"], ["W"], ["E"], ["R"], ["T"], ["Y"], ["U"], ["I"], ["O"], ["P"], ["["], ["]"], ["\\", 1.5]],
+    [["Caps", 1.75], ["A"], ["S"], ["D"], ["F"], ["G"], ["H"], ["J"], ["K"], ["L"], [";"], ["'"], ["Enter", 2.25, "core", true]],
+    [["Shift", 2.25], ["Z"], ["X"], ["C"], ["V"], ["B"], ["N"], ["M"], [","], ["."], ["/"], ["Shift", 1.75]],
+    [["Ctrl", 1.25], ["Win", 1.25], ["Alt", 1.25], ["", 5], ["Alt", 1.25], ["Fn"], ["Ctrl"]],
+  ];
+
+  alphaRows.forEach((row, index) => addRow(items, row, coreY + index * (keyHeight + gap)));
+
+  // The arrow cluster is integrated into the lower-right edge of the main block.
+  addKey(items, numpadX - step, coreY + 3 * (keyHeight + gap), "↑", 1, 1, "arrow", true);
+  [["←", 3], ["↓", 2], ["→", 1]].forEach(([label, stepsFromNumpad]) => {
+    addKey(items, numpadX - stepsFromNumpad * step, coreY + 4 * (keyHeight + gap), label, 1, 1, "arrow");
+  });
+
+  // Standard 17-key numpad, directly adjacent to the main block.
+  [["Num", 0], ["/", 1], ["*", 2], ["-", 3]].forEach(([label, column]) => {
+    addKey(items, numpadX + column * step, coreY, label, 1, 1, "numpad");
+  });
+  [["7", 0], ["8", 1], ["9", 2]].forEach(([label, column]) => {
+    addKey(items, numpadX + column * step, coreY + keyHeight + gap, label, 1, 1, "numpad");
+  });
+  addKey(items, numpadX + 3 * step, coreY + keyHeight + gap, "+", 1, 2, "numpad", true);
+  [["4", 0], ["5", 1], ["6", 2]].forEach(([label, column]) => {
+    addKey(items, numpadX + column * step, coreY + 2 * (keyHeight + gap), label, 1, 1, "numpad");
+  });
+  [["1", 0], ["2", 1], ["3", 2]].forEach(([label, column]) => {
+    addKey(items, numpadX + column * step, coreY + 3 * (keyHeight + gap), label, 1, 1, "numpad");
+  });
+  addKey(items, numpadX + 3 * step, coreY + 3 * (keyHeight + gap), "Enter", 1, 2, "numpad", true);
+  addKey(items, numpadX, coreY + 4 * (keyHeight + gap), "0", 2, 1, "numpad");
+  addKey(items, numpadX + 2 * step, coreY + 4 * (keyHeight + gap), ".", 1, 1, "numpad");
+
+  return items;
 }
 
-const alphaRows = [
-  [["~"], ["1"], ["2"], ["3"], ["4"], ["5"], ["6"], ["7"], ["8"], ["9"], ["0"], ["-"], ["="], ["Back", 2]],
-  [["Tab", 1.5], ["Q"], ["W"], ["E"], ["R"], ["T"], ["Y"], ["U"], ["I"], ["O"], ["P"], ["["], ["]"], ["\\", 1.5]],
-  [["Caps", 1.75], ["A"], ["S"], ["D"], ["F"], ["G"], ["H"], ["J"], ["K"], ["L"], [";"], ["'"], ["Enter", 2.25, "core", true]],
-  [["Shift", 2.25], ["Z"], ["X"], ["C"], ["V"], ["B"], ["N"], ["M"], [","], ["."], ["/"], ["Shift", 2.75]],
-  [["Ctrl", 1.25], ["Win", 1.25], ["Alt", 1.25], ["", 6.25], ["Alt", 1.25], ["Fn", 1.25], ["Menu", 1.25], ["Ctrl", 1.25]],
-];
+const keys99 = createKeyboard(["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del", "Home", "End", "PgUp", "PgDn"]);
+const keys97 = createKeyboard(["Esc", ...Array.from({ length: 12 }, (_, index) => `F${index + 1}`), "Del", "Home", "End"]);
 
-alphaRows.forEach((row, index) => addRow(row, coreY + index * (keyHeight + gap)));
-
-[["Home", 0, 0], ["End", 1, 0], ["PgUp", 0, 1], ["PgDn", 1, 1]].forEach(([label, column, row]) => {
-  addKey(navX + column * (unit + gap), coreY + row * (keyHeight + gap), label, 1, 1, "navigation");
-});
-
-addKey(navX + unit + gap, coreY + 3 * (keyHeight + gap), "↑", 1, 1, "arrow", true);
-[["←", 0], ["↓", 1], ["→", 2]].forEach(([label, column]) => {
-  addKey(navX + column * (unit + gap), coreY + 4 * (keyHeight + gap), label, 1, 1, "arrow");
-});
-
-[["Num", 0], ["/", 1], ["*", 2], ["-", 3]].forEach(([label, column]) => {
-  addKey(numpadX + column * (unit + gap), coreY, label, 1, 1, "numpad");
-});
-[["7", 0], ["8", 1], ["9", 2]].forEach(([label, column]) => {
-  addKey(numpadX + column * (unit + gap), coreY + keyHeight + gap, label, 1, 1, "numpad");
-});
-addKey(numpadX + 3 * (unit + gap), coreY + keyHeight + gap, "+", 1, 2, "numpad", true);
-[["4", 0], ["5", 1], ["6", 2]].forEach(([label, column]) => {
-  addKey(numpadX + column * (unit + gap), coreY + 2 * (keyHeight + gap), label, 1, 1, "numpad");
-});
-[["1", 0], ["2", 1], ["3", 2]].forEach(([label, column]) => {
-  addKey(numpadX + column * (unit + gap), coreY + 3 * (keyHeight + gap), label, 1, 1, "numpad");
-});
-addKey(numpadX + 3 * (unit + gap), coreY + 3 * (keyHeight + gap), "Enter", 1, 2, "numpad", true);
-addKey(numpadX, coreY + 4 * (keyHeight + gap), "0", 2, 1, "numpad");
-addKey(numpadX + 2 * (unit + gap), coreY + 4 * (keyHeight + gap), ".", 1, 1, "numpad");
-
-if (keys.length !== 99) {
-  throw new Error(`Expected 99 physical keys, generated ${keys.length}`);
+if (keys97.length !== 97 || keys99.length !== 99) {
+  throw new Error(`Expected 97/99 physical keys, generated ${keys97.length}/${keys99.length}`);
 }
 
 const escapeXml = (value) => String(value)
@@ -97,14 +99,14 @@ const escapeXml = (value) => String(value)
 
 function renderKeyMarkup(items) {
   return items.map((key, index) => {
-  const width = keyWidth(key.width);
-  const height = key.height * keyHeight + (key.height - 1) * gap;
-  const fill = key.accent ? "url(#accent)" : "url(#cap)";
-  const labelClass = key.label.length > 4 ? "small" : "";
-  const legendMarkup = key.label
-    ? `\n      <text class="legend ${labelClass}" x="${width / 2}" y="${height / 2 + 1}">${escapeXml(key.label)}</text>`
-    : "";
-  return `<g class="key ${key.group}" data-key-index="${index + 1}" transform="translate(${key.x} ${key.y})">
+    const width = keyWidth(key.width);
+    const height = key.height * keyHeight + (key.height - 1) * gap;
+    const fill = key.accent ? "url(#accent)" : "url(#cap)";
+    const labelClass = key.label.length > 4 ? "small" : "";
+    const legendMarkup = key.label
+      ? `\n      <text class="legend ${labelClass}" x="${width / 2}" y="${height / 2 + 1}">${escapeXml(key.label)}</text>`
+      : "";
+    return `<g class="key ${key.group}" data-key-index="${index + 1}" transform="translate(${key.x} ${key.y})">
       <rect class="key-shadow" x="0" y="3" width="${width}" height="${height}" rx="9"/>
       <rect class="key-wall" width="${width}" height="${height}" rx="9"/>
       <rect class="key-top" x="4" y="4" width="${width - 8}" height="${height - 10}" rx="7" fill="${fill}"/>${legendMarkup}
@@ -112,8 +114,20 @@ function renderKeyMarkup(items) {
   }).join("\n  ");
 }
 
-function renderSvg(items, title, description, accentColors) {
+function renderStatusPanel() {
+  const panelX = coreX + 16 * step;
+  const knobX = coreX + 17.55 * step;
+  return `<g class="status-panel" aria-label="decorative status panel, not a key">
+    <rect x="${panelX}" y="${topY + 3}" width="${keyWidth(1.35)}" height="${keyHeight - 6}" rx="8" fill="#071521" stroke="#6d8293" stroke-width="2"/>
+    <path d="M ${panelX + 12} ${topY + 39} L ${panelX + 29} ${topY + 22} L ${panelX + 43} ${topY + 34} L ${panelX + 62} ${topY + 15}" fill="none" stroke="#ff8a54" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${knobX}" cy="${topY + keyHeight / 2}" r="23" fill="#172b3d" stroke="#ff9a68" stroke-width="4"/>
+    <circle cx="${knobX}" cy="${topY + keyHeight / 2}" r="8" fill="#ff9a68"/>
+  </g>`;
+}
+
+function renderSvg(items, title, description, accentColors, decoration = "") {
   const keyMarkup = renderKeyMarkup(items);
+  const decorationMarkup = decoration ? `  ${decoration}\n` : "";
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${boardWidth} ${boardHeight}" role="img" aria-labelledby="title desc">
   <title id="title">${title}</title>
   <desc id="desc">${description}</desc>
@@ -132,29 +146,25 @@ function renderSvg(items, title, description, accentColors) {
   </style>
   <rect x="4" y="4" width="${boardWidth - 8}" height="${boardHeight - 8}" rx="31" fill="url(#case)" stroke="#496175" stroke-width="4" filter="url(#boardShadow)"/>
   <rect x="15" y="15" width="${boardWidth - 30}" height="${boardHeight - 30}" rx="24" fill="none" stroke="#7590a5" stroke-opacity=".26" stroke-width="2"/>
-  ${keyMarkup}
+${decorationMarkup}  ${keyMarkup}
 </svg>`;
 }
 
-const keys97 = keys.filter((key) => key.group !== "navigation" || key.label === "Home" || key.label === "End");
-if (keys97.length !== 97) {
-  throw new Error(`Expected 97 physical keys, generated ${keys97.length}`);
-}
-
-const svg99 = renderSvg(
-  keys,
-  "Generic compact 99-key ANSI keyboard",
-  "A verified 99-key compact 1800 layout with one alphanumeric block, four navigation keys, one arrow cluster, and one standard numpad.",
-  ["#25c8d4", "#0796aa", "#047384"],
-);
 const svg97 = renderSvg(
   keys97,
   "Generic compact 97-key ANSI keyboard",
-  "A verified 97-key compact 1800 layout with one alphanumeric block, two navigation keys, one arrow cluster, and one standard numpad.",
+  "A compact 1800-style 97-key keyboard with the numpad directly adjacent to the main block and the arrow cluster integrated at the lower right.",
   ["#ffab76", "#e97848", "#bd4f2c"],
+  renderStatusPanel(),
+);
+const svg99 = renderSvg(
+  keys99,
+  "Generic compact 99-key ANSI keyboard",
+  "A compact 1800-style 99-key keyboard with the numpad directly adjacent to the main block and the arrow cluster integrated at the lower right.",
+  ["#25c8d4", "#0796aa", "#047384"],
 );
 
-writeFileSync(output99Path, svg99, "utf8");
 writeFileSync(output97Path, svg97, "utf8");
+writeFileSync(output99Path, svg99, "utf8");
 console.log(`Generated ${output97Path} (${keys97.length} physical keys)`);
-console.log(`Generated ${output99Path} (${keys.length} physical keys)`);
+console.log(`Generated ${output99Path} (${keys99.length} physical keys)`);
