@@ -2,7 +2,7 @@
 
 ## Originality
 
-Each video must contain a recognizable editorial contribution: a useful model,
+Each content item must contain a recognizable editorial contribution: a useful model,
 comparison, demonstration, conclusion, or experience-based interpretation.
 Changing a topic inside a repeated template is not sufficient.
 
@@ -32,5 +32,5 @@ for accuracy or consent.
 
 ## Packaging integrity
 
-The title and thumbnail may create curiosity but must represent the outcome the
-video actually delivers.
+The title, cover, and caption may create curiosity but must represent the outcome
+the content actually delivers.

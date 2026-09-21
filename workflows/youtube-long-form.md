@@ -1,5 +1,9 @@
 # YouTube Long-form Workflow v0
 
+Status: `deferred-reference`. Lemon8 is the primary v0 path. This workflow remains
+as the future video adapter and must not add video-specific complexity to the
+canonical core.
+
 ## States
 
 `idea → validated → researching → scripting → producing → reviewing → scheduled → published → measuring → completed`

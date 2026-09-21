@@ -1,10 +1,11 @@
-# Script
+# Core Script
 
-Status: `approved-for-storyboard`
+Status: `verified-canonical`
 
 Target runtime: `8–10 minutes`
 
-All claim references such as `(C-001)` point to `research.md` and are not spoken.
+This is the platform-independent narrative. All claim references such as `(C-001)`
+point to `research.md` and are omitted from platform-facing copy.
 
 ## Working title
 
@@ -88,7 +89,7 @@ keyboard มันเกิดขึ้นเป็นปกติ เพรา�
 ที่ผูกกับ numpad บ่อย ๆ full-size เป็นจุดเริ่มที่ปลอดภัย
 
 สิ่งที่ต้องแลกคือพื้นที่แนวนอน โดยเฉพาะบนโต๊ะเล็ก หรือถ้าต้องการวางเมาส์ใกล้มือ
-มากขึ้น คีย์บอร์ดกลุ่มนี้อาจกินพื้นที่ส่วนที่เราไม่ได้ใช้จริง `(C-010, C-012)`
+มากขึ้น คีย์บอร์ดกลุ่มนี้อาจกินพื้นที่ส่วนที่เราไม่ได้ใช้จริง `(C-010, C-014)`
 
 ### 96%, 98% และ 1800 Compact
 
@@ -185,7 +186,7 @@ friction ที่เกิดขึ้น
 ข้อหนึ่ง เราใช้ numpad ป้อนตัวเลขต่อเนื่องบ่อยไหม
 
 ถ้าบ่อย เริ่มดู full-size หรือกลุ่ม 96/98/1800 compact ถ้าไม่บ่อย TKL หรือต่ำกว่า
-จะคืนพื้นที่ให้โต๊ะและเมาส์ได้ `(C-012)`
+จะคืนพื้นที่ให้โต๊ะและเมาส์ได้ `(C-014)`
 
 ข้อสอง เราต้องกด F1 ถึง F12 แบบปุ่มเดียวบ่อยไหม
 

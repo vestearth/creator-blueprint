@@ -10,7 +10,7 @@ but the channel's judgment, structure, and conclusions must remain identifiable.
 
 ## Viewer promise
 
-Every video should help the viewer understand a technology choice, use a tool
+Every post should help the viewer understand a technology choice, use a tool
 more effectively, or avoid a practical mistake.
 
 ## Voice
@@ -28,6 +28,8 @@ more effectively, or avoid a practical mistake.
 
 ## Format direction
 
-- Primary: evergreen YouTube videos of approximately 6–12 minutes
-- Secondary: Shorts derived from strong moments in published long-form videos
-- Presentation: faceless is acceptable when narration and visuals add real value
+- Primary v0: evergreen Lemon8 carousel posts built from verified canonical content
+- Presentation: diagram-led and mobile-readable, with real screenshots or product
+  photos when factual detail requires them
+- Future adapters: YouTube, TikTok, Instagram Reels, blog, and podcast; these do
+  not determine the current core architecture

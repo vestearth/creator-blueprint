@@ -1,0 +1,26 @@
+schema_version: 1
+platform: lemon8
+state: draft
+title: ""
+cover_copy: ""
+caption_file: caption.md
+cards: []
+export:
+  format: png
+  width: 1080
+  height: 1440
+asset_manifest: []
+source_notes: []
+publication:
+  target_account: ""
+  scheduled_at: null
+  published_at: null
+  url: null
+checks:
+  verification_passed: false
+  card_order_checked: false
+  phone_readability_checked: false
+  rights_checked: false
+  disclosure_checked: false
+  promise_alignment_checked: false
+  human_editorial_approval: false

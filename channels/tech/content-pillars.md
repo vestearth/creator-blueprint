@@ -2,7 +2,7 @@
 
 ## Initial experiment
 
-Use the first three videos to test demand rather than treating this mix as a
+Use the first three posts to test demand rather than treating this mix as a
 permanent commitment.
 
 | Pillar | Initial weight | Example |
@@ -19,6 +19,6 @@ An idea should meet at least three of these criteria:
 - Supports an original explanation, test, or point of view
 - Can remain useful beyond the current news cycle
 - Can be illustrated without questionable third-party footage
-- Creates a natural follow-up video
+- Creates a natural follow-up post or cross-platform adaptation
 
 Music is a separate audience behavior and is outside this channel's scope.

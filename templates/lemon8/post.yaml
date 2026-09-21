@@ -1,0 +1,17 @@
+schema_version: 1
+platform: lemon8
+state: adapting
+source:
+  brief: ../../core/brief.md
+  research: ../../core/research.md
+  core_script: ../../core/core-script.md
+  verification: ../../core/verification.md
+strategy:
+  angle: ""
+  hook: ""
+  card_count: 0
+  density: ""
+  summary: ""
+  cta: ""
+  caption_role: ""
+cards: []

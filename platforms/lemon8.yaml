@@ -1,0 +1,47 @@
+schema_version: 1
+platform: lemon8
+status: primary-v0
+purpose: "Adapt verified canonical content into useful, saveable carousel posts."
+
+format:
+  primary: carousel
+  model: "post -> cards"
+  card_count_guidance: "Use the fewest cards that fulfill the promise; 6-10 is a working range, not a platform limit."
+  image_orientation: portrait
+  aspect_ratio_assumption: "3:4 working canvas; verify current platform behavior before export."
+
+cover:
+  goal: "Make one concrete outcome legible at feed size."
+  rules:
+    - "One promise, question, or tension; do not summarize the whole post."
+    - "Use a short headline and one supporting visual idea."
+    - "Do not imply a result the cards do not deliver."
+
+cards:
+  reading_pattern: "One idea per card, sequenced as a continuous explanation."
+  density: "Prefer a headline, one primary visual, and 2-4 short supporting points."
+  continuity: "Carry stable typography, color semantics, and progress cues across cards."
+  accessibility:
+    - "Check at phone size."
+    - "Pair color with labels or shapes."
+    - "Avoid placing required meaning only in small captions."
+
+caption:
+  style: "Useful standalone summary in the channel voice; add context rather than duplicating every card."
+  structure: [hook, compact_summary, caveat_or_source_context, conversation_prompt]
+
+cta:
+  behavior: "Invite a relevant answer, save, or comparison; avoid engagement bait."
+
+hashtags:
+  strategy: "Use a small set of specific topic, audience, and format tags. Recheck current discovery behavior before publishing."
+  avoid: ["Unrelated trending tags", "Claims of guaranteed reach"]
+
+authenticity:
+  expectations:
+    - "Retain a recognizable human editorial angle."
+    - "Label uncertainty, examples, and experience-based recommendations."
+    - "Do not use AI-generated product imagery as factual product evidence."
+    - "Record the source or usage basis for every non-original asset."
+
+freshness_policy: "Volatile limits and UI behavior belong in a pre-publish check, not in framework architecture."

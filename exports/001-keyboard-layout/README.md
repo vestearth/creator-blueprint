@@ -39,6 +39,18 @@ copied into the versioned asset folder.
 This revision intentionally contains no narration. Music attribution and the exact
 YouTube description credit block are recorded in `assets/001-keyboard-layout/audio/README.md`.
 
+# Lemon8 Carousel v0
+
+- Directory: `lemon8/`
+- Files: `001-keyboard-layout-lemon8-01.png` through `08.png`
+- Format: PNG, 1080×1440, sRGB working output
+- Source: `assets/001-keyboard-layout/lemon8-cards.html`
+- Render command: `npm run render:001:lemon8`
+- Visual QA: cover, comparison, and recommendation cards inspected at full size
+
+The eight-card package remains subject to source freshness and final human
+editorial review before publication.
+
 # Keyboard Layout Short v1
 
 - File: `keyboard-layout-short-v1.mp4`

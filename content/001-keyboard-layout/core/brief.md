@@ -2,8 +2,7 @@
 id: "001"
 title: "Keyboard Layout คืออะไร? 60%, 65%, 75%, TKL, 98%, 100% ต่างกันอย่างไร"
 channel: tech
-format: youtube-long-form
-state: visual-cut-v0
+state: verified
 owner: vestearth
 created: "2026-09-18"
 ---
@@ -14,6 +13,11 @@ created: "2026-09-18"
 
 คนที่กำลังเลือก mechanical keyboard ควรเลือก layout ใด และแต่ละขนาดต้องแลก
 อะไรกับอะไรบ้าง?
+
+## Objective
+
+สร้างคำอธิบายกลางที่ช่วยให้คนตัดตัวเลือก keyboard layout จาก workflow จริง
+ก่อนนำไปดัดแปลงเป็นแต่ละแพลตฟอร์ม
 
 ## Viewer promise
 
@@ -48,6 +52,19 @@ created: "2026-09-18"
 ## Expected viewer action or understanding
 
 ผู้ชมสามารถตัดตัวเลือกให้เหลือหนึ่งหรือสอง layout ก่อนเริ่มเปรียบเทียบรุ่นและราคา
+
+## Key questions
+
+- ใช้ numpad ต่อเนื่องหรือไม่?
+- ต้องมี F-row, arrows และ navigation เป็นปุ่มแยกมากแค่ไหน?
+- ยอมใช้ Fn/layer และเปลี่ยน muscle memory ได้หรือไม่?
+- พื้นที่โต๊ะและการพกพาสำคัญเพียงใด?
+- รุ่นจริงจัดตำแหน่งปุ่มเหมือนชื่อกลุ่มที่คาดไว้หรือไม่?
+
+## Expected platform outputs
+
+- Primary v0: Lemon8 post แบบ 8 cards พร้อม caption, hashtags, source notes และ publish package
+- Future adapters: YouTube และ short-form video จาก canonical content ชุดเดียวกัน
 
 ## Visual feasibility and rights risks
 
