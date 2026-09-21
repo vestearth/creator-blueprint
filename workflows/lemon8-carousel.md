@@ -5,7 +5,18 @@ independent; Lemon8 decisions begin only at `/adapt`.
 
 ## States
 
-`idea → briefed → researching → core-draft → verified → adapting → designing → packaged → ready-for-human-review → ready-to-publish → published → reviewing → learned`
+```text
+idea → briefed → researching → core-draft → verified → adapting → designing
+  → packaged → ready-for-human-review → ready-to-publish → publish attempted
+                                                    ├── metadata complete → published → reviewing → learned
+                                                    └── metadata incomplete → published-metadata-incomplete
+                                                                                  ↓ metadata completed
+                                                                               published
+```
+
+`published-metadata-incomplete` records that the upload happened but the
+publication record is not yet complete. It must transition to `published` before
+review and learning begin.
 
 ## Workflow
 
