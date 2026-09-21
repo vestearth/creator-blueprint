@@ -1,19 +1,70 @@
 import { execFileSync } from "node:child_process";
-import { mkdirSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import path from "node:path";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const chrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const source = path.join(root, "assets", "001-keyboard-layout", "lemon8-cards.html");
+const dataSource = path.join(root, "content", "001-keyboard-layout", "outputs", "lemon8", "cards.json");
 const output = path.join(root, "exports", "001-keyboard-layout", "lemon8");
+const generatedSource = path.join(path.dirname(source), ".lemon8-cards.generated.html");
 mkdirSync(output, { recursive: true });
 
-for (let card = 1; card <= 8; card += 1) {
-  const name = `001-keyboard-layout-lemon8-${String(card).padStart(2, "0")}.png`;
-  execFileSync(chrome, ["--headless=new", "--disable-gpu", "--hide-scrollbars",
-    "--force-device-scale-factor=1", "--window-size=1080,1440",
-    `--screenshot=${path.join(output, name)}`, `${pathToFileURL(source).href}?card=${card}`],
-    { stdio: "inherit" });
+function findBrowser() {
+  const candidates = [
+    process.env.CHROME_PATH,
+    ...(process.platform === "win32" ? [
+      "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+      "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe",
+      process.env.LOCALAPPDATA && path.join(process.env.LOCALAPPDATA, "Google", "Chrome", "Application", "chrome.exe"),
+    ] : []),
+    ...(process.platform === "darwin" ? [
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+      "/Applications/Chromium.app/Contents/MacOS/Chromium",
+    ] : []),
+    ...(process.platform === "linux" ? [
+      "/usr/bin/google-chrome",
+      "/usr/bin/google-chrome-stable",
+      "/usr/bin/chromium",
+      "/usr/bin/chromium-browser",
+      "/usr/bin/microsoft-edge",
+    ] : []),
+  ].filter(Boolean);
+
+  const browser = candidates.find(candidate => existsSync(candidate));
+  if (browser) return browser;
+
+  throw new Error([
+    "No compatible Chromium browser was found.",
+    "Install Chrome, Chromium, or Edge, or set CHROME_PATH to the browser executable.",
+    `Checked ${candidates.length} paths for platform ${process.platform}.`,
+  ].join(" "));
 }
-console.log(`Rendered 8 Lemon8 cards to ${output}`);
+
+const browser = findBrowser();
+const model = JSON.parse(readFileSync(dataSource, "utf8"));
+const template = readFileSync(source, "utf8");
+const embeddedModel = JSON.stringify(model).replaceAll("</script", "<\\/script");
+
+if (!template.includes("__CARD_DATA__")) {
+  throw new Error(`Renderer template is missing the __CARD_DATA__ placeholder: ${source}`);
+}
+
+writeFileSync(generatedSource, template.replace("__CARD_DATA__", embeddedModel), "utf8");
+
+try {
+  for (const card of model.cards) {
+    const name = `001-keyboard-layout-lemon8-${String(card.order).padStart(2, "0")}.png`;
+    execFileSync(browser, ["--headless=new", "--disable-gpu", "--hide-scrollbars",
+      "--force-device-scale-factor=1", "--window-size=1080,1440",
+      `--screenshot=${path.join(output, name)}`, `${pathToFileURL(generatedSource).href}?card=${card.order}`],
+      { stdio: "inherit" });
+  }
+} finally {
+  rmSync(generatedSource, { force: true });
+}
+
+console.log(`Rendered ${model.cards.length} Lemon8 cards with ${browser} to ${output}`);

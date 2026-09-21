@@ -1,21 +1,14 @@
 ---
 card: 4
 role: explainer
-claim_refs: [C-003, C-010, C-014]
-asset_refs: [A-001]
 ---
 
-# TKL / 80%
+# Card 4 visual plan
 
-## On-card copy
+## Canonical render content
 
-**ตัด numpad แต่ยังเก็บปุ่มที่คุ้นมือส่วนใหญ่**
-
-- ยังมี F-row, arrows และ navigation เป็นปุ่มแยก
-- ตัวอย่าง K8: 87 ปุ่ม กว้าง 354.17 มม.
-- เทียบตัวอย่าง full-size แล้วสั้นลงประมาณ 8 ซม.
-
-เหมาะเมื่อ: แทบไม่ใช้ numpad แต่ไม่อยากจำ layer เพิ่ม
+Editorial copy, asset filenames, claim references, and render order are maintained
+only in card 4 of `../cards.json`. Do not duplicate them in this visual plan.
 
 ## Primary visual
 

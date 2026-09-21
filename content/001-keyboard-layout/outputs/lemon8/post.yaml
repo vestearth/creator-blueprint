@@ -1,6 +1,7 @@
 schema_version: 1
 platform: lemon8
 state: packaged-pending-human-review
+render_data: cards.json
 source:
   brief: ../../core/brief.md
   research: ../../core/research.md
@@ -14,12 +15,4 @@ strategy:
   summary: "numpad -> F-row -> arrows/navigation -> layer -> physical layout จริง"
   cta: "ชวนแชร์ layout และปุ่มที่ขาดไม่ได้"
   caption_role: "สรุป framework และย้ำว่าต้องตรวจรุ่นจริง"
-cards:
-  - {order: 1, file: cards/01-cover.md, role: cover}
-  - {order: 2, file: cards/02-full-size.md, role: explainer}
-  - {order: 3, file: cards/03-compact-full-size.md, role: explainer}
-  - {order: 4, file: cards/04-tkl.md, role: explainer}
-  - {order: 5, file: cards/05-75.md, role: explainer}
-  - {order: 6, file: cards/06-65-60.md, role: comparison}
-  - {order: 7, file: cards/07-comparison.md, role: comparison}
-  - {order: 8, file: cards/08-recommendation.md, role: recommendation}
+card_visual_plans: cards/

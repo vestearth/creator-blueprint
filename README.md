@@ -56,11 +56,13 @@ assets/ and exports/       Existing production assets and generated exports
 ## Start a Lemon8 content item
 
 1. Create `content/<id>-<slug>/core/` from `templates/core/`.
-2. Complete the brief, research, and platform-independent core script.
+2. Complete the brief, research, and platform-independent canonical narrative.
 3. Pass the verification gate before adapting the content.
 4. Follow `workflows/lemon8-carousel.md` and `platforms/lemon8.yaml`.
-5. Create `outputs/lemon8/` from `templates/lemon8/` and design the cards.
-6. Run the package checklist; a human must make the final editorial decision.
+5. Create `outputs/lemon8/` from `templates/lemon8/`; keep canonical card-facing
+   content in `cards.json` and visual plans in `cards/`.
+6. Run `npm run validate:lemon8 -- content/<id>-<slug>`; a human must make the
+   final editorial decision before the state can become `ready-to-publish`.
 7. After publishing, record observations and promote only durable findings to
    the existing `knowledge-base` creator namespace.
 

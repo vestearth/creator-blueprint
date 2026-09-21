@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "platform": "lemon8",
+  "content_id": "",
+  "theme": "tech-field-note-v0",
+  "cards": [
+    {
+      "order": 1,
+      "role": "cover",
+      "template": "standard",
+      "eyebrow": "",
+      "title": "",
+      "lead": "",
+      "body": [],
+      "assets": [],
+      "signal": "",
+      "footer": "",
+      "claim_refs": [],
+      "asset_refs": []
+    }
+  ]
+}

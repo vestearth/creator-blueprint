@@ -1,4 +1,4 @@
-# Core Script
+# Canonical Narrative
 
 Status: `draft`
 
@@ -7,9 +7,9 @@ scenes, shots, or other platform units here.
 
 ## Working title
 
-## Viewer promise
+## Audience promise
 
-## Hook
+## Hook concept
 
 ## Reasoning order
 
@@ -19,7 +19,7 @@ scenes, shots, or other platform units here.
 
 ## Caveats
 
-## Call to action intent
+## CTA intent
 
 ## Claim references
 

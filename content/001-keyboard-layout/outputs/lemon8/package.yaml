@@ -1,19 +1,12 @@
 schema_version: 1
 platform: lemon8
-state: published
+state: published-metadata-incomplete
+render_data: cards.json
 title: "Keyboard Layout เลือกยังไง? ดูปุ่มที่ใช้ ไม่ใช่แค่เปอร์เซ็นต์"
 cover_copy: "Keyboard Layout เลือกยังไง?"
 caption_file: caption.md
 source_notes_file: source-notes.md
-cards:
-  - cards/01-cover.md
-  - cards/02-full-size.md
-  - cards/03-compact-full-size.md
-  - cards/04-tkl.md
-  - cards/05-75.md
-  - cards/06-65-60.md
-  - cards/07-comparison.md
-  - cards/08-recommendation.md
+card_visual_plans: cards/
 export:
   format: png
   width: 1080
@@ -59,6 +52,7 @@ publication:
   scheduled_at: null
   published_at: "2026-09-21"
   url: null
+  package_version: "lemon8-v0-2026-09-21"
 checks:
   verification_passed: true
   card_order_checked: true

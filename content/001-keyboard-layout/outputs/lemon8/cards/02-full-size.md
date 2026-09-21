@@ -1,21 +1,14 @@
 ---
 card: 2
 role: explainer
-claim_refs: [C-002, C-010, C-014]
-asset_refs: [A-001]
 ---
 
-# Full-size / 100%
+# Card 2 visual plan
 
-## On-card copy
+## Canonical render content
 
-**ปุ่มครบ แต่อาจใช้พื้นที่เกินงานของเรา**
-
-- มี F-row, navigation, arrows และ numpad แยกชัด
-- เหมาะเมื่อป้อนตัวเลขต่อเนื่องหรือใช้ shortcut บน numpad
-- ตัวอย่าง K10: 104 ปุ่ม กว้าง 434.97 มม.
-
-ป้ายกำกับ: `ตัวอย่างรุ่นหนึ่ง ไม่ใช่มาตรฐานทุกตัว`
+Editorial copy, asset filenames, claim references, and render order are maintained
+only in card 2 of `../cards.json`. Do not duplicate them in this visual plan.
 
 ## Primary visual
 

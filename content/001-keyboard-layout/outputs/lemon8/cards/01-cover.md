@@ -1,17 +1,14 @@
 ---
 card: 1
 role: cover
-claim_refs: [C-001, C-009]
-asset_refs: [A-001]
 ---
 
-# Keyboard Layout เลือกยังไง?
+# Card 1 visual plan
 
-## On-card copy
+## Canonical render content
 
-60% • 65% • 75% • TKL • 98% • 100%
-
-**ดูปุ่มที่เราใช้ ไม่ใช่แค่เปอร์เซ็นต์**
+Editorial copy, asset filenames, claim references, and render order are maintained
+only in card 1 of `../cards.json`. Do not duplicate them in this visual plan.
 
 ## Primary visual
 

@@ -5,7 +5,8 @@
 This repository owns creator workflow, channel configuration, templates, and
 per-content working state.
 
-- Keep drafts, scripts, storyboards, asset notes, and publishing metadata here.
+- Keep drafts, canonical narratives, platform adaptations, asset notes, and
+  publishing metadata here.
 - Put reusable capabilities in the sibling `ai-skills` repository only after a
   repeated need is demonstrated.
 - Put validated, durable knowledge in the sibling `knowledge-base` repository.
@@ -27,9 +28,9 @@ per-content working state.
 
 Before a content item is ready to publish:
 
-- Its brief identifies the audience, viewer promise, and original angle.
+- Its brief identifies the audience, audience promise, and original angle.
 - Factual claims are traceable to research entries.
-- Visual and audio assets have a recorded source or usage basis.
-- The script, title, and thumbnail promise the same outcome.
+- Every asset has a recorded source or usage basis.
+- Canonical content, platform output, and packaging promise the same outcome.
 - The applicable disclosure and copyright checks are complete.
 - A human has performed the final editorial review.

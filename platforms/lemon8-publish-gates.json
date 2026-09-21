@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "platform": "lemon8",
+  "states": [
+    "draft",
+    "packaged",
+    "ready-for-human-review",
+    "ready-to-publish",
+    "published",
+    "published-metadata-incomplete"
+  ],
+  "publish_required_checks": [
+    "verification_passed",
+    "card_order_checked",
+    "phone_readability_checked",
+    "source_freshness_checked",
+    "rights_checked",
+    "disclosure_checked",
+    "promise_alignment_checked",
+    "rendered_assets_present",
+    "human_editorial_approval"
+  ],
+  "publication_required_fields": [
+    "target_account",
+    "published_at",
+    "url",
+    "package_version"
+  ]
+}

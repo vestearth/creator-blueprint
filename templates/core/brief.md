@@ -13,7 +13,7 @@ created: ""
 
 ## Target audience and question
 
-## Viewer promise
+## Audience promise
 
 ## Original angle
 

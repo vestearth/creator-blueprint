@@ -1,6 +1,7 @@
 schema_version: 1
 platform: lemon8
 state: adapting
+render_data: cards.json
 source:
   brief: ../../core/brief.md
   research: ../../core/research.md
@@ -14,4 +15,4 @@ strategy:
   summary: ""
   cta: ""
   caption_role: ""
-cards: []
+card_visual_plans: cards/

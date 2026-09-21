@@ -1,21 +1,14 @@
 ---
 card: 3
 role: explainer
-claim_refs: [C-008, C-009, C-012]
-asset_refs: [A-001]
 ---
 
-# 96% / 98% / 1800 Compact
+# Card 3 visual plan
 
-## On-card copy
+## Canonical render content
 
-**ยังมี numpad แต่บีบพื้นที่และย้ายบางปุ่ม**
-
-- เก็บปุ่มส่วนใหญ่ของ full-size
-- navigation และ spacing ต่างกันมากตามรุ่น
-- คำว่า `98%` มีตัวอย่างทั้ง 97, 98 และ 99 ปุ่ม
-
-ก่อนซื้อ: ซูมดู `Delete / Home / End / arrows / numpad`
+Editorial copy, asset filenames, claim references, and render order are maintained
+only in card 3 of `../cards.json`. Do not duplicate them in this visual plan.
 
 ## Primary visual
 

@@ -5,7 +5,7 @@ independent; Lemon8 decisions begin only at `/adapt`.
 
 ## States
 
-`idea → briefed → researching → core-draft → verified → adapting → designing → packaged → ready-for-human-review → published → reviewing → learned`
+`idea → briefed → researching → core-draft → verified → adapting → designing → packaged → ready-for-human-review → ready-to-publish → published → reviewing → learned`
 
 ## Workflow
 
@@ -18,7 +18,7 @@ Output: candidate recorded in `core/brief.md`, state `idea`.
 
 ### 2. `/brief`
 
-Define the objective, target audience, viewer promise, original angle, scope, key
+Define the objective, target audience, audience promise, original angle, scope, key
 questions, and expected Lemon8 deliverable. Confirm a rights-safe production path.
 
 Output: completed `core/brief.md`, state `briefed`.
@@ -63,7 +63,9 @@ Apply `channels/tech/design/lemon8.md`. Design the cover and cards as one readin
 experience: hierarchy, layout, type, diagrams, callouts, icons, imagery, rhythm,
 and card-to-card continuity. Record every asset and usage basis.
 
-Output: `outputs/lemon8/cards/` and asset manifest, state `designing`.
+Output: canonical render content in `outputs/lemon8/cards.json`, visual plans in
+`outputs/lemon8/cards/`, and an asset manifest; state `designing`. The renderer
+must not contain card-facing editorial copy.
 
 ### 8. `/package`
 
@@ -73,12 +75,28 @@ metadata, source notes, disclosures, and the pre-publish checklist.
 Output: `caption.md` and `package.yaml`, state `packaged` then
 `ready-for-human-review`.
 
+After human review, run:
+
+```text
+npm run validate:lemon8 -- content/<id>-<slug>
+```
+
+Only a passing package may move to `ready-to-publish`. Required checks are
+defined centrally in `platforms/lemon8-publish-gates.json`; missing or false
+checks are blocking.
+
 ### 9. `/publish`
 
-Record the target account, scheduled/published state, final asset version, URL,
-and timestamp. Direct automated publishing is outside v0.
+Record the target account, final package version, URL, and exact publication
+timestamp. Direct automated publishing is outside v0. If the post was published
+but these details were not captured, use `published-metadata-incomplete`; do not
+claim a complete `published` state.
 
 Output: updated `package.yaml`, state `published`.
+
+The renderer discovers Chrome, Chromium, or Edge on supported operating systems.
+Set `CHROME_PATH` to an explicit browser executable when automatic discovery is
+not suitable.
 
 ### 10. `/review`
 

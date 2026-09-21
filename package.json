@@ -7,6 +7,7 @@
     "render:001:master": "node tools/render-001-master-v1.mjs",
     "render:001:short": "node tools/render-001-short-v1.mjs",
     "render:001:lemon8": "node tools/render-001-lemon8.mjs",
+    "validate:lemon8": "node tools/validate-lemon8.mjs",
     "generate:keyboards:compact": "node tools/generate-keyboard-99-v3.mjs"
   },
   "devDependencies": {

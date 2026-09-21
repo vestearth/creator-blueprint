@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "platform": "lemon8",
+  "content_id": "001-keyboard-layout",
+  "theme": "tech-field-note-v0",
+  "cards": [
+    {
+      "order": 1,
+      "role": "cover",
+      "template": "standard",
+      "eyebrow": "TECH FIELD NOTE",
+      "title": "Keyboard Layout\nเลือกยังไง?",
+      "lead": "60% · 65% · 75% · TKL · 98% · 100%",
+      "body": ["ดูปุ่มที่เราใช้ ไม่ใช่แค่เปอร์เซ็นต์"],
+      "assets": ["reference-tkl-v1.png", "reference-75-v1.png"],
+      "signal": "ดูของจริง แล้วค่อยดูเปอร์เซ็นต์",
+      "footer": "ภาพจำลอง keyboard layout แบบไม่อ้างอิงแบรนด์",
+      "claim_refs": ["C-001", "C-009"],
+      "asset_refs": ["A-006"]
+    },
+    {
+      "order": 2,
+      "role": "explainer",
+      "template": "standard",
+      "eyebrow": "FULL-SIZE / 100%",
+      "title": "ปุ่มครบ แต่อาจใช้พื้นที่เกินงานของเรา",
+      "lead": "มี F-row, navigation, arrows และ numpad แยกชัด",
+      "body": [
+        "เหมาะเมื่อป้อนตัวเลขต่อเนื่องหรือใช้ shortcut บน numpad",
+        "ตัวอย่าง K10: 104 ปุ่ม · กว้าง 434.97 มม.",
+        "ตัวอย่างรุ่นหนึ่ง ไม่ใช่มาตรฐานทุกตัว"
+      ],
+      "assets": ["keyboard-fullsize-v2.png"],
+      "footer": "ขนาดตัวอย่าง ไม่ใช่มาตรฐานของทุกโมเดล",
+      "claim_refs": ["C-002", "C-010", "C-014"],
+      "asset_refs": ["A-006"]
+    },
+    {
+      "order": 3,
+      "role": "explainer",
+      "template": "standard",
+      "eyebrow": "96% / 98% / 1800 COMPACT",
+      "title": "ยังมี numpad แต่บีบพื้นที่และย้ายบางปุ่ม",
+      "lead": "เก็บปุ่มส่วนใหญ่ของ full-size แต่ navigation และ spacing ต่างกันตามรุ่น",
+      "body": [
+        "คำว่า 98% มีตัวอย่างทั้ง 97, 98 และ 99 ปุ่ม",
+        "ก่อนซื้อ: ซูมดู Delete · Home · End · arrows · numpad"
+      ],
+      "assets": ["keyboard-98-v2.png"],
+      "footer": "ตรวจ physical layout ของรุ่นจริงเสมอ",
+      "claim_refs": ["C-008", "C-009", "C-012"],
+      "asset_refs": ["A-006"]
+    },
+    {
+      "order": 4,
+      "role": "explainer",
+      "template": "standard",
+      "eyebrow": "TKL / 80%",
+      "title": "ตัด numpad แต่ยังเก็บปุ่มที่คุ้นมือส่วนใหญ่",
+      "lead": "ยังมี F-row, arrows และ navigation เป็นปุ่มแยก",
+      "body": [
+        "ตัวอย่าง K8: 87 ปุ่ม · กว้าง 354.17 มม.",
+        "เทียบตัวอย่าง full-size แล้วสั้นลงประมาณ 8 ซม.",
+        "เหมาะเมื่อแทบไม่ใช้ numpad แต่ไม่อยากจำ layer เพิ่ม"
+      ],
+      "assets": ["reference-tkl-v1.png"],
+      "footer": "ขนาดตัวอย่าง ไม่ใช่มาตรฐานของทุกโมเดล",
+      "claim_refs": ["C-003", "C-010", "C-014"],
+      "asset_refs": ["A-006"]
+    },
+    {
+      "order": 5,
+      "role": "explainer",
+      "template": "standard",
+      "eyebrow": "75%",
+      "title": "เก็บ F-row + ลูกศร แล้วบีบ navigation ให้ชิดขึ้น",
+      "lead": "สั้นกว่า TKL แต่ spacing และตำแหน่ง navigation อาจไม่คุ้นมือ",
+      "body": [
+        "ได้ปุ่ม F1–F12 แบบกดตรง",
+        "รุ่นตัวอย่างจากผู้ผลิตเดียวกันยังมีทั้ง 82 และ 84 ปุ่ม",
+        "เหมาะเมื่อใช้ F-row บ่อย แต่แทบไม่ใช้ numpad"
+      ],
+      "assets": ["reference-75-v1.png"],
+      "footer": "ตำแหน่งปุ่มต่างกันตามรุ่น",
+      "claim_refs": ["C-001", "C-004"],
+      "asset_refs": ["A-006"]
+    },
+    {
+      "order": 6,
+      "role": "comparison",
+      "template": "standard",
+      "eyebrow": "65% vs 60%",
+      "title": "ปุ่มไม่อยู่บนหน้าแรก ≠ ฟังก์ชันหาย",
+      "lead": "65% มักเก็บลูกศร · 60% พึ่ง Fn/layer มากขึ้น",
+      "body": [
+        "F-row ของทั้งสองกลุ่มมักเข้าผ่าน Fn/layer",
+        "ตัวอย่าง: K6 มี 68 ปุ่ม · K12 มี 61 ปุ่ม",
+        "Layer คือชุดคำสั่งอีกชั้นที่เรียกผ่าน Fn หรือ keymap"
+      ],
+      "assets": ["keyboard-65-v2.png", "keyboard-60-v2.png"],
+      "footer": "keymap ต่างกันตามรุ่นและ firmware",
+      "claim_refs": ["C-005", "C-006", "C-007", "C-010"],
+      "asset_refs": ["A-006"]
+    },
+    {
+      "order": 7,
+      "role": "comparison",
+      "template": "table",
+      "eyebrow": "เทียบจากปุ่มที่กดตรง",
+      "title": "เลือกจาก friction ที่ยอมรับได้",
+      "columns": ["Layout", "Numpad", "F-row", "Arrows"],
+      "rows": [
+        ["100%", "✓", "✓", "✓"],
+        ["96/98%", "✓", "✓", "✓"],
+        ["TKL", "—", "✓", "✓"],
+        ["75%", "—", "✓", "✓"],
+        ["65%", "—", "Fn", "✓"],
+        ["60%", "—", "Fn", "Fn / ตามรุ่น"]
+      ],
+      "note": "แนวโน้มของกลุ่ม—ต้องตรวจ physical layout รุ่นจริง",
+      "footer": "ตำแหน่งปุ่มต่างกันตามรุ่น",
+      "claim_refs": ["C-001", "C-003", "C-004", "C-005", "C-006", "C-008", "C-014"],
+      "asset_refs": ["A-002"]
+    },
+    {
+      "order": 8,
+      "role": "recommendation",
+      "template": "decision",
+      "eyebrow": "เลือกจาก Workflow ของเรา",
+      "title": "ไม่มี layout ที่ดีที่สุดสำหรับทุกคน",
+      "choices": [
+        ["ใช้ numpad ต่อเนื่อง?", "100% / 96–98%"],
+        ["อยากได้ตำแหน่งคุ้นมือ?", "TKL"],
+        ["ต้องกด F1–F12 ตรง ๆ?", "TKL / 75%"],
+        ["ต้องการลูกศร แต่รับ Fn ได้?", "65%"],
+        ["เน้นเล็กและพร้อมเรียน layer?", "60%"]
+      ],
+      "note": "ขั้นสุดท้าย: เปิดภาพ physical layout + keymap/manual ของรุ่นจริง",
+      "footer": "เราใช้ layout อะไร และมีปุ่มไหนที่ขาดไม่ได้?",
+      "claim_refs": ["C-011", "C-013", "C-014"],
+      "asset_refs": ["A-003"]
+    }
+  ]
+}

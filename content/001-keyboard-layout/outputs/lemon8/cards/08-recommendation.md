@@ -1,23 +1,14 @@
 ---
 card: 8
 role: recommendation
-claim_refs: [C-011, C-013, C-014]
-asset_refs: [A-003]
 ---
 
-# เลือกจาก Workflow ของเรา
+# Card 8 visual plan
 
-## On-card copy
+## Canonical render content
 
-1. ใช้ **numpad** ต่อเนื่อง? → `100% / 96–98%`
-2. ไม่ใช้ numpad แต่อยากคุ้นมือ? → `TKL`
-3. ต้องกด **F1–F12** ตรง ๆ? → `TKL / 75%`
-4. ต้องการลูกศร แต่รับ Fn ได้? → `65%`
-5. เน้นเล็กและพร้อมเรียน layer? → `60%`
-
-**ขั้นสุดท้าย:** เปิดภาพ physical layout + keymap/manual ของรุ่นจริง
-
-CTA: `เราใช้ layout อะไร และมีปุ่มไหนที่ขาดไม่ได้?`
+Editorial copy, asset filenames, claim references, and render order are maintained
+only in card 8 of `../cards.json`. Do not duplicate them in this visual plan.
 
 ## Primary visual
 

@@ -1,10 +1,11 @@
 schema_version: 1
 platform: lemon8
 state: draft
+render_data: cards.json
 title: ""
 cover_copy: ""
 caption_file: caption.md
-cards: []
+card_visual_plans: cards/
 export:
   format: png
   width: 1080
@@ -16,11 +17,14 @@ publication:
   scheduled_at: null
   published_at: null
   url: null
+  package_version: ""
 checks:
   verification_passed: false
   card_order_checked: false
   phone_readability_checked: false
+  source_freshness_checked: false
   rights_checked: false
   disclosure_checked: false
   promise_alignment_checked: false
+  rendered_assets_present: false
   human_editorial_approval: false

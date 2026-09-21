@@ -1,24 +1,14 @@
 ---
 card: 7
 role: comparison
-claim_refs: [C-001, C-003, C-004, C-005, C-006, C-008, C-014]
-asset_refs: [A-002]
 ---
 
-# เทียบจาก “ปุ่มที่กดตรง”
+# Card 7 visual plan
 
-## On-card copy
+## Canonical render content
 
-| Layout | Numpad | F-row | Arrows | สิ่งที่ต้องเช็ก |
-| --- | --- | --- | --- | --- |
-| 100% | ✓ | ✓ | ✓ | พื้นที่โต๊ะ |
-| 96/98% | ✓ | ✓ | ✓ | ตำแหน่ง nav |
-| TKL | — | ✓ | ✓ | ต้องใช้ numpad ไหม |
-| 75% | — | ✓ | ✓ | spacing/nav |
-| 65% | — | Fn | ✓ | ใช้ F-row บ่อยไหม |
-| 60% | — | Fn | Fn/ตามรุ่น | ยอมเรียน layer ไหม |
-
-`แนวโน้มของกลุ่ม—ต้องตรวจ physical layout รุ่นจริง`
+Editorial copy, asset filenames, claim references, and render order are maintained
+only in card 7 of `../cards.json`. Do not duplicate them in this visual plan.
 
 ## Primary visual
 
