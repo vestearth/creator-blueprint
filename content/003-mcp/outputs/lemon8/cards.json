@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "platform": "lemon8",
+  "content_id": "003-mcp",
+  "theme": "ai-signal-map-v1",
+  "cards": [
+    {
+      "order": 1,
+      "role": "cover",
+      "template": "cover-mcp",
+      "eyebrow": "AI / DEV WORKFLOW · 003",
+      "title": "Agent ใช้ Tool\nได้ยังไง?",
+      "lead": "รู้จัก MCP — ภาษากลางระหว่าง AI application กับข้อมูลและเครื่องมือ",
+      "signal": "AGENT ตัดสินใจ · MCP ส่งคำขอและผลลัพธ์",
+      "footer": "ต่อจาก 002: Prompt vs Agent",
+      "claim_refs": ["C-001", "C-011"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 2,
+      "role": "bridge-from-previous",
+      "template": "agent-loop",
+      "eyebrow": "ต่อจากตอน 002",
+      "title": "Agent เดินงานเป็น Loop\nแต่ตอน ACT เกิดอะไรขึ้น?",
+      "lead": "ต้องมีทางออกไปเรียกของจริง และทางกลับมาให้ Agent เห็นผล",
+      "steps": ["GOAL", "DECIDE", "ACT", "OBSERVE", "VERIFY"],
+      "signal": "ACT → ? → RESULT → OBSERVE",
+      "footer": "MCP เข้ามาตรงรอยต่อระหว่าง ACT กับ OBSERVE",
+      "claim_refs": ["C-011", "C-012"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 3,
+      "role": "definition",
+      "template": "mcp-bridge",
+      "eyebrow": "MCP = MODEL CONTEXT PROTOCOL",
+      "title": "ไม่ใช่สมอง\nไม่ใช่ตัว Tool",
+      "lead": "MCP คือมาตรฐานที่ทำให้ AI application กับ capability ภายนอกคุยกันรู้เรื่อง",
+      "nodes": ["DATA", "TOOLS", "PROMPTS"],
+      "note": "มันกำหนดวิธีค้นพบ เรียก/อ่าน และรับผลกลับ — ไม่ได้คิดแทน Agent",
+      "footer": "Protocol คือสัญญากลาง ไม่ใช่ autonomy",
+      "claim_refs": ["C-001", "C-003", "C-011", "C-012"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 4,
+      "role": "architecture",
+      "template": "system-stack",
+      "eyebrow": "ใครทำหน้าที่อะไร?",
+      "title": "Host คุมระบบ\nMCP เชื่อมความสามารถ",
+      "lead": "Agent ไม่ได้ต่อเข้าฐานข้อมูลหรือ API โดยตรงแบบไร้ตัวกลาง",
+      "items": [
+        ["01", "HOST", "ถือ model, context, policy และ approval"],
+        ["02", "CLIENT", "พูด MCP กับ server หนึ่งตัว"],
+        ["03", "SERVER", "ประกาศ capability ที่รองรับ"],
+        ["04", "SYSTEM", "ไฟล์ · database · API · service"]
+      ],
+      "band": "HOST → MCP CLIENT ↔ MCP SERVER → SYSTEM",
+      "footer": "Host เป็นผู้ประสานและรักษาขอบเขตระหว่างหลาย server",
+      "claim_refs": ["C-002"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 5,
+      "role": "discovery",
+      "template": "single-path",
+      "eyebrow": "STEP 1 · DISCOVER",
+      "title": "Agent รู้จัก Tool\nเพราะ Server บอกสัญญาไว้",
+      "lead": "Client ขอรายการ Tool ก่อน แล้ว Host เลือกสิ่งที่อนุญาตให้ model เห็น",
+      "steps": ["TOOLS/LIST", "NAME + DESC", "INPUT SCHEMA"],
+      "body": [
+        "ชื่อ + คำอธิบาย บอกว่า Tool ทำอะไร",
+        "Schema บอกว่า argument ต้องมีหน้าตาแบบไหน"
+      ],
+      "callout": "Agent ไม่ต้องเดาชื่อ function หรือรูปแบบ input เอง",
+      "footer": "การมองเห็น Tool ยังอยู่ภายใต้นโยบายของ Host",
+      "claim_refs": ["C-002", "C-004", "C-006"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 6,
+      "role": "invocation",
+      "template": "single-path",
+      "eyebrow": "STEP 2 · CALL → RESULT",
+      "title": "เลือก Tool แล้ว\nผลกลับเข้า Loop",
+      "lead": "Model สร้าง arguments → Host ตรวจ → Client ส่งคำขอให้ Server",
+      "steps": ["TOOLS/CALL", "SERVER RUNS", "RESULT"],
+      "body": [
+        "Server ทำงานกับระบบจริง แล้วคืน text หรือ structured data",
+        "Host ส่งผลกลับเข้า context ให้ Agent Observe และ Decide รอบถัดไป"
+      ],
+      "callout": "DECIDE → CALL → RESULT → OBSERVE → CONTINUE / STOP",
+      "footer": "MCP ขนคำขอและผลลัพธ์ ส่วน Agent loop เป็นคนเดินงานต่อ",
+      "claim_refs": ["C-004", "C-005", "C-011"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 7,
+      "role": "primitives",
+      "template": "when-agent",
+      "eyebrow": "SERVER EXPOSE อะไรได้บ้าง?",
+      "title": "สาม Primitives\nคุมโดยคนละฝั่ง",
+      "items": [
+        ["TOOLS · MODEL", "functions สำหรับดึงข้อมูล คำนวณ หรือทำ action"],
+        ["RESOURCES · APP", "context เช่นไฟล์ schema หรือข้อมูลเฉพาะระบบ"],
+        ["PROMPTS · USER", "template / instruction ที่ผู้ใช้เลือกใช้"]
+      ],
+      "note": "คำว่า model-controlled คือรูปแบบการเลือกใช้ ไม่ได้หมายถึงมีสิทธิ์ไม่จำกัด",
+      "footer": "Tools ≠ Resources ≠ Prompts แม้อยู่ใน MCP server เดียวกัน",
+      "claim_refs": ["C-003", "C-006", "C-007"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 8,
+      "role": "benefits",
+      "template": "when-chat",
+      "eyebrow": "MCP ช่วยอะไร?",
+      "title": "เปลี่ยนงานต่อเฉพาะคู่\nให้มี Contract กลาง",
+      "items": [
+        "ค้นพบ capability ด้วยรูปแบบเดียวกัน",
+        "มี metadata + schema ให้ Host และ model เข้าใจ",
+        "แยกผู้สร้าง Tool ออกจากผู้สร้าง AI application",
+        "นำ Server ไปใช้กับ Host ที่รองรับได้ง่ายขึ้น"
+      ],
+      "signal": "ลด integration glue · เพิ่มการประกอบซ้ำ",
+      "footer": "ง่ายขึ้น ไม่ได้แปลว่าต่อครั้งเดียวแล้วใช้ได้ทุกที่โดยไม่ตั้งค่า",
+      "claim_refs": ["C-001", "C-002", "C-004", "C-010"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 9,
+      "role": "boundary",
+      "template": "not-equal",
+      "eyebrow": "CONNECTION ≠ PERMISSION",
+      "title": "ต่อได้\nไม่ได้แปลว่าทำได้ทุกอย่าง",
+      "left": {
+        "label": "MCP ช่วยให้",
+        "items": ["ค้นพบ capability", "ส่งคำขอ", "รับผลลัพธ์"]
+      },
+      "right": {
+        "label": "SYSTEM ยังต้องออกแบบ",
+        "items": ["สิทธิ์เท่าที่จำเป็น", "approval ก่อน action", "ตรวจ input / result", "verify ก่อนเดินต่อ"]
+      },
+      "footer": "MCP authorization ไม่ได้แทน safety policy และ verification ทั้งระบบ",
+      "claim_refs": ["C-006", "C-009", "C-012"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 10,
+      "role": "recap",
+      "template": "decision",
+      "eyebrow": "ภาพเดียวต่อจาก 002",
+      "title": "ใครรับผิดชอบ\nส่วนไหน?",
+      "choices": [
+        ["กำหนดทิศและข้อจำกัด", "PROMPT"],
+        ["เลือกขั้นถัดไปจาก feedback", "AGENT"],
+        ["คุม context · permission · approval", "HOST"],
+        ["คุยกับ capability ด้วย contract กลาง", "MCP"]
+      ],
+      "signal": "Agent เลือก · Host คุม · MCP เชื่อม · Tool ลงมือ",
+      "footer": "ตอนต่อ: แกะ MCP Server หรือวาง Permission/Approval ก่อนดี?",
+      "claim_refs": ["C-002", "C-011", "C-012"],
+      "asset_refs": ["A-001"]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+schema_version: 1
+platform: lemon8
+state: designing
+render_data: cards.json
+source:
+  brief: ../../core/brief.md
+  research: ../../core/research.md
+  core_script: ../../core/core-script.md
+  verification: ../../core/verification.md
+strategy:
+  angle: "Agent เลือกขั้นถัดไป; Host คุมขอบเขต; MCP ทำให้คุยกับ Tool ด้วย contract กลาง"
+  hook: "Agent ใช้ Tool ได้ยังไง?"
+  card_count: 10
+  density: "one mechanism per card; diagram-led; 2–4 short blocks"
+  summary: "ตาม flow จาก Agent loop ผ่าน discovery/call/result และแยกสิ่งที่ MCP ไม่ได้แก้"
+  cta: "อยากดู MCP Server anatomy หรือ Permission/Approval ต่อ?"
+  caption_role: "ขยาย flow หนึ่ง tool call และย้ำ connection ≠ permission"
+card_visual_plans: cards/

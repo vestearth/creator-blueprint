@@ -1,0 +1,55 @@
+schema_version: 1
+platform: lemon8
+state: ready-for-human-review
+render_data: cards.json
+title: "Agent ใช้ Tool ได้ยังไง? รู้จัก MCP"
+cover_copy: "Agent ใช้ Tool ได้ยังไง?"
+caption_file: caption.md
+source_notes_file: source-notes.md
+card_visual_plans: cards/
+export:
+  format: png
+  width: 1080
+  height: 1440
+  color_space: sRGB
+  filenames: "003-mcp-lemon8-{01..10}.png"
+asset_manifest:
+  - id: A-001
+    asset: ../../../../assets/003-mcp/lemon8-cards.html
+    use: "Original MCP responsibility-map diagrams and rendered card visuals"
+    source: creator-blueprint
+    usage_basis: original HTML/CSS/SVG primitives
+  - id: A-002
+    asset: "@fontsource/noto-sans-thai"
+    use: "Thai/Latin typography"
+    source: npm dependency
+    usage_basis: OFL-1.1
+  - id: A-003
+    asset: "@fontsource/jetbrains-mono"
+    use: "Protocol labels"
+    source: npm dependency
+    usage_basis: OFL-1.1
+source_notes:
+  - "Full source ledger: ../../core/research.md"
+  - "Card mapping: source-notes.md"
+publication:
+  target_account: ""
+  scheduled_at: null
+  published_at: null
+  url: null
+  package_version: "lemon8-mcp-signal-map-v1-2026-09-22"
+checks:
+  verification_passed: false
+  card_order_checked: true
+  phone_readability_checked: true
+  source_freshness_checked: true
+  rights_checked: true
+  disclosure_checked: false
+  promise_alignment_checked: true
+  rendered_assets_present: true
+  human_editorial_approval: false
+review_notes:
+  - "Evidence audit is complete; human verification decision is still required."
+  - "Protocol claims target MCP specification 2026-07-28."
+  - "All ten cards were rendered and visually checked at phone scale."
+  - "Draft must not move to ready-to-publish until disclosure and human review pass."

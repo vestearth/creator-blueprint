@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-21",
+    "artifact": "002-ai-agent Lemon8 carousel v2",
+    "macrostructure": "Map / Diagram",
+    "theme": "Terminal",
+    "enrichment": "Tier-A CSS data map",
+    "brief": "Separate AI education from the Keyboard field-note visual family",
+    "status": "passed-58-gate-review"
+  },
+  {
     "date": "2026-09-18",
     "artifact": "001-keyboard-layout motion cut v1",
     "macrostructure": "Narrative Workflow",

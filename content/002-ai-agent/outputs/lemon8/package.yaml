@@ -1,0 +1,60 @@
+schema_version: 1
+platform: lemon8
+state: ready-for-human-review
+render_data: cards.json
+title: "Prompt เก่งแค่ไหน ก็ยังไม่ใช่ AI Agent"
+cover_copy: "Prompt เก่งแค่ไหน ก็ยังไม่ใช่ AI Agent"
+caption_file: caption.md
+source_notes_file: source-notes.md
+card_visual_plans: cards/
+export:
+  format: png
+  width: 1080
+  height: 1440
+  color_space: sRGB
+  filenames: "002-ai-agent-lemon8-{01..10}.png"
+asset_manifest:
+  - id: A-001
+    asset: ../../../../assets/002-ai-agent/lemon8-cards.html
+    use: "Original AI Signal Map diagram system, node layouts, and rendered card visuals"
+    source: creator-blueprint
+    usage_basis: original HTML/CSS/SVG primitives
+  - id: A-004
+    asset: ../../../../assets/002-ai-agent/tokens.css
+    use: "AI-only Terminal theme tokens; intentionally separate from the Keyboard visual system"
+    source: creator-blueprint
+    usage_basis: original design tokens
+  - id: A-002
+    asset: "@fontsource/noto-sans-thai"
+    use: "Thai/Latin typography"
+    source: npm dependency
+    usage_basis: OFL-1.1
+  - id: A-003
+    asset: "@fontsource/jetbrains-mono"
+    use: "Diagram and code labels"
+    source: npm dependency
+    usage_basis: OFL-1.1
+source_notes:
+  - "Full source ledger: ../../core/research.md"
+  - "Card mapping: source-notes.md"
+publication:
+  target_account: ""
+  scheduled_at: null
+  published_at: null
+  url: null
+  package_version: "lemon8-ai-signal-map-v4-freeze-2026-09-22"
+checks:
+  verification_passed: false
+  card_order_checked: true
+  phone_readability_checked: true
+  source_freshness_checked: true
+  rights_checked: true
+  disclosure_checked: false
+  promise_alignment_checked: true
+  rendered_assets_present: true
+  human_editorial_approval: false
+review_notes:
+  - "Evidence audit is complete; human verification decision is still required."
+  - "All ten cards were rendered and visually checked at full size and as a sequence contact sheet."
+  - "No realistic synthetic media is present; recheck Lemon8 disclosure requirements immediately before publishing."
+  - "Draft render may be reviewed before approval, but must not be published yet."

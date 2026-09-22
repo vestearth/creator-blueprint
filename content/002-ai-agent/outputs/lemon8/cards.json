@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "platform": "lemon8",
+  "content_id": "002-ai-agent",
+  "theme": "ai-signal-map-v1",
+  "cards": [
+    {
+      "order": 1,
+      "role": "cover",
+      "template": "cover-loop",
+      "eyebrow": "AI / DEV WORKFLOW · 002",
+      "title": "Prompt เก่งแค่ไหน\nก็ยังไม่ใช่ AI Agent",
+      "lead": "ความต่างไม่ได้อยู่ที่ตอบเก่ง แต่อยู่ที่ “เดินงานต่อ”",
+      "signal": "คำตอบดี ≠ งานเสร็จ",
+      "footer": "ดูที่วิธีเดินงาน ไม่ใช่แค่ชื่อผลิตภัณฑ์",
+      "claim_refs": ["C-001", "C-002", "C-010"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 2,
+      "role": "comparison",
+      "template": "single-path",
+      "eyebrow": "GENERAL CHAT / SINGLE-TURN",
+      "title": "ถามหนึ่งรอบ\nได้คำตอบหนึ่งรอบ",
+      "lead": "เราเป็นคนถือพวงมาลัยของขั้นถัดไป",
+      "steps": ["PROMPT", "MODEL", "ANSWER"],
+      "body": [
+        "Prompt ที่ชัดช่วยให้คำตอบดีขึ้น",
+        "แต่โดยทั่วไปเราเป็นคนเอาคำตอบไปค้นต่อ สร้างไฟล์ หรือเช็กผลเอง"
+      ],
+      "footer": "Chat ทั่วไปคือรูปแบบการทำงาน ไม่ใช่ข้อจำกัดของผลิตภัณฑ์ ChatGPT",
+      "claim_refs": ["C-001", "C-003"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 3,
+      "role": "explainer",
+      "template": "agent-loop",
+      "eyebrow": "AGENT-STYLE SYSTEM",
+      "title": "รับเป้าหมาย แล้วเดินงานเป็น Loop",
+      "lead": "แต่ละรอบใช้ผลจริงเลือกว่าจะทำอะไรต่อ",
+      "steps": ["GOAL", "DECIDE", "ACT", "OBSERVE", "VERIFY"],
+      "signal": "CONTINUE ↻ หรือ STOP ✓",
+      "footer": "Agent = model + runtime + tools + feedback loop",
+      "claim_refs": ["C-002", "C-005"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 4,
+      "role": "comparison",
+      "template": "not-equal",
+      "eyebrow": "PROMPT ≠ AGENT",
+      "title": "Prompt บอกทาง\nแต่ไม่ได้สร้างถนน",
+      "left": {
+        "label": "PROMPT ช่วยกำหนด",
+        "items": ["เป้าหมาย", "ข้อจำกัด", "รูปแบบผลลัพธ์"]
+      },
+      "right": {
+        "label": "SYSTEM ต้องจัดการ",
+        "items": ["ลงมือทำ", "รับผลกลับ", "เก็บสถานะ", "วนซ้ำ / หยุด"]
+      },
+      "footer": "Prompt engineering ยังสำคัญ — แต่เป็นเพียงส่วนหนึ่งของระบบ",
+      "claim_refs": ["C-003", "C-004", "C-010"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 5,
+      "role": "explainer",
+      "template": "system-stack",
+      "eyebrow": "มากกว่า MODEL",
+      "title": "Agent ที่ทำงานจริง\nพึ่งอะไรบ้าง?",
+      "lead": "ไม่จำเป็นต้องเหมือนกันทุกระบบ แต่ชิ้นส่วนเหล่านี้ทำให้ loop เดินได้",
+      "items": [
+        ["01", "GOAL", "รู้ว่าความสำเร็จหน้าตาอย่างไร"],
+        ["02", "CONTEXT", "มีข้อมูลที่เกี่ยวกับงาน"],
+        ["03", "TOOLS", "ค้น อ่าน เขียน คำนวณ หรือทำ action"],
+        ["04", "STATE", "รู้ว่าทำถึงไหนและกลับมาทำต่อได้"],
+        ["05", "VERIFY", "เช็กผลก่อนทำต่อหรือส่งมอบ"]
+      ],
+      "footer": "Workflow / runtime คือกติกาที่พาชิ้นส่วนทั้งหมดทำงานร่วมกัน",
+      "claim_refs": ["C-002", "C-004", "C-005", "C-012"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 6,
+      "role": "example",
+      "template": "report-example",
+      "eyebrow": "ตัวอย่าง: “หาข้อมูลแล้วทำรายงาน”",
+      "title": "โจทย์เดียวกัน\nขอบเขตงานไม่เท่ากัน",
+      "chat": ["ถาม / ให้ context", "ได้คำแนะนำหรือ draft", "เราเอาไปทำต่อ"],
+      "agent": ["แตกงานเป็นขั้น", "ค้น + เก็บ source", "สร้างไฟล์", "ตรวจ checklist", "แก้จุดไม่ผ่าน แล้วส่ง review"],
+      "note": "Agent ทำได้แค่ไหน ขึ้นกับ tools, permission และ environment ที่ให้ไว้",
+      "footer": "ความต่างไม่ใช่แค่คำตอบยาวกว่า แต่คือสิ่งที่ระบบลงมือทำจริง",
+      "claim_refs": ["C-002", "C-005", "C-011", "C-012"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 7,
+      "role": "recommendation",
+      "template": "when-chat",
+      "eyebrow": "เมื่อไร CHAT ทั่วไปก็พอ",
+      "title": "อย่าเพิ่ม Agent\nถ้างานยังง่าย",
+      "items": ["ถาม–ตอบหรือขอคำอธิบาย", "สรุป / Rewrite ข้อความ", "ระดมไอเดีย", "ต้องการ output เพียงรอบเดียว"],
+      "signal": "ง่ายกว่า · เร็วกว่า · คุมง่ายกว่า",
+      "footer": "เริ่มจากวิธีที่ง่ายที่สุด แล้วเพิ่มความซับซ้อนเมื่อมีเหตุผล",
+      "claim_refs": ["C-006"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 8,
+      "role": "recommendation",
+      "template": "when-agent",
+      "eyebrow": "เมื่อไร AGENT มีประโยชน์",
+      "title": "งานหลายขั้น\nที่ผลระหว่างทางเปลี่ยนแผน",
+      "items": [
+        ["RESEARCH", "ค้นหลายแหล่ง + เก็บหลักฐาน"],
+        ["CODING", "แก้โค้ด → รัน test → แก้ต่อ"],
+        ["FILES / APPS", "อ่าน–เขียน–ทำ action ข้ามระบบ"],
+        ["OPEN-ENDED", "คาดจำนวนขั้นล่วงหน้าได้ยาก"]
+      ],
+      "note": "ต้องมีเกณฑ์ตรวจ สิทธิ์ที่พอดี และจุดให้คนอนุมัติ",
+      "footer": "Agent ไม่ได้แปลว่าปล่อยอัตโนมัติ 100%",
+      "claim_refs": ["C-005", "C-007", "C-012"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 9,
+      "role": "bridge",
+      "template": "mcp-bridge",
+      "eyebrow": "แล้ว AGENT ต่อกับของจริงยังไง?",
+      "title": "นี่คือจุดที่ MCP เข้ามา",
+      "lead": "มาตรฐานเชื่อม AI application กับระบบภายนอก",
+      "nodes": ["RESOURCES", "TOOLS", "PROMPTS"],
+      "note": "MCP คือมาตรฐานการเชื่อมต่อ ไม่ใช่ Agent runtime และไม่ได้แทน application-level permission หรือ verification",
+      "footer": "ตอนถัดไป: MCP คืออะไร และเกี่ยวข้องกับ AI Agent ยังไง?",
+      "claim_refs": ["C-008", "C-009"],
+      "asset_refs": ["A-001"]
+    },
+    {
+      "order": 10,
+      "role": "recap",
+      "template": "decision",
+      "eyebrow": "เลือกจากงาน ไม่ใช่กระแส",
+      "title": "เราต้องการ “คำตอบ”\nหรือ “งานที่เดินต่อ” ?",
+      "choices": [
+        ["รู้คำตอบที่ต้องการ", "CHAT"],
+        ["รู้ขั้นตอนที่ต้องทำ", "WORKFLOW"],
+        ["รู้เป้าหมาย แต่ต้องตัดสินใจระหว่างทาง", "AGENT"]
+      ],
+      "signal": "Prompt บอกว่าจะไปไหน · ระบบของ Agent พางานไปต่อ",
+      "footer": "อยากให้ทำตอน MCP ต่อไหม? เซฟโพสต์นี้ไว้เป็นแผนที่ก่อน",
+      "claim_refs": ["C-001", "C-006", "C-007", "C-010"],
+      "asset_refs": ["A-001"]
+    }
+  ]
+}
