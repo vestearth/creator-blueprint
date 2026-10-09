@@ -1,6 +1,6 @@
 schema_version: 1
 platform: lemon8
-state: ready-for-human-review
+state: ready-to-publish
 render_data: cards.json
 title: "Prompt เก่งแค่ไหน ก็ยังไม่ใช่ AI Agent"
 cover_copy: "Prompt เก่งแค่ไหน ก็ยังไม่ใช่ AI Agent"
@@ -44,17 +44,18 @@ publication:
   url: null
   package_version: "lemon8-ai-signal-map-v4-freeze-2026-09-22"
 checks:
-  verification_passed: false
+  verification_passed: true
   card_order_checked: true
   phone_readability_checked: true
   source_freshness_checked: true
   rights_checked: true
-  disclosure_checked: false
+  disclosure_checked: true
   promise_alignment_checked: true
   rendered_assets_present: true
-  human_editorial_approval: false
+  human_editorial_approval: true
 review_notes:
   - "Evidence audit is complete; human verification decision is still required."
   - "All ten cards were rendered and visually checked at full size and as a sequence contact sheet."
   - "No realistic synthetic media is present; recheck Lemon8 disclosure requirements immediately before publishing."
   - "Draft render may be reviewed before approval, but must not be published yet."
+  - "2026-10-09: human verification and editorial approval recorded (Earth); disclosure checked against Lemon8 Thai community guidelines and supplemental terms, no AI or brand-mention label required."

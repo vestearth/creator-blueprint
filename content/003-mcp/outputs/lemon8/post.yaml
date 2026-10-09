@@ -13,6 +13,6 @@ strategy:
   card_count: 10
   density: "one mechanism per card; diagram-led; 2–4 short blocks"
   summary: "ตาม flow จาก Agent loop ผ่าน discovery/call/result และแยกสิ่งที่ MCP ไม่ได้แก้"
-  cta: "อยากดู MCP Server anatomy หรือ Permission/Approval ต่อ?"
+  cta: "ตอนต่อ: Permission/Approval ควรวางตรงไหน? ชวนเล่าว่าระบบที่ใช้อยู่ให้ AI ขออนุมัติก่อนทำอะไร"
   caption_role: "ขยาย flow หนึ่ง tool call และย้ำ connection ≠ permission"
 card_visual_plans: cards/
