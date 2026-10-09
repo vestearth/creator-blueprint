@@ -3,6 +3,7 @@
   "platform": "lemon8",
   "content_id": "002-ai-agent",
   "theme": "ai-signal-map-v1",
+  "series_label": "SYS/002",
   "cards": [
     {
       "order": 1,
@@ -12,6 +13,9 @@
       "title": "Prompt เก่งแค่ไหน\nก็ยังไม่ใช่ AI Agent",
       "lead": "ความต่างไม่ได้อยู่ที่ตอบเก่ง แต่อยู่ที่ “เดินงานต่อ”",
       "signal": "คำตอบดี ≠ งานเสร็จ",
+      "viz_label": "เปรียบเทียบเส้นทางตรงของแชตกับวงจรทำงานของเอเจนต์",
+      "path_label": "PROMPT → ANSWER",
+      "loop_label": "GOAL → LOOP → DONE",
       "footer": "ดูที่วิธีเดินงาน ไม่ใช่แค่ชื่อผลิตภัณฑ์",
       "claim_refs": ["C-001", "C-002", "C-010"],
       "asset_refs": ["A-001"]
@@ -23,6 +27,8 @@
       "eyebrow": "GENERAL CHAT / SINGLE-TURN",
       "title": "ถามหนึ่งรอบ\nได้คำตอบหนึ่งรอบ",
       "lead": "เราเป็นคนถือพวงมาลัยของขั้นถัดไป",
+      "viz_label": "เส้นทางทำงานแบบลำดับเดียว",
+      "callout": "ปลายทางของคำตอบ = จุดเริ่มงานรอบต่อไปของเรา",
       "steps": ["PROMPT", "MODEL", "ANSWER"],
       "body": [
         "Prompt ที่ชัดช่วยให้คำตอบดีขึ้น",
@@ -41,6 +47,8 @@
       "lead": "แต่ละรอบใช้ผลจริงเลือกว่าจะทำอะไรต่อ",
       "steps": ["GOAL", "DECIDE", "ACT", "OBSERVE", "VERIFY"],
       "signal": "CONTINUE ↻ หรือ STOP ✓",
+      "viz_label": "วงจรเอเจนต์ตั้งแต่เป้าหมาย ตัดสินใจ ลงมือ สังเกต และตรวจสอบ",
+      "center": "รับผลจริง\nแล้วปรับ\nขั้นถัดไป",
       "footer": "Agent = model + runtime + tools + feedback loop",
       "claim_refs": ["C-002", "C-005"],
       "asset_refs": ["A-001"]
@@ -77,6 +85,8 @@
         ["04", "STATE", "รู้ว่าทำถึงไหนและกลับมาทำต่อได้"],
         ["05", "VERIFY", "เช็กผลก่อนทำต่อหรือส่งมอบ"]
       ],
+      "band": "WORKFLOW / RUNTIME",
+      "band_note": "= ลำดับ · loop · approval · stopping condition",
       "footer": "Workflow / runtime คือกติกาที่พาชิ้นส่วนทั้งหมดทำงานร่วมกัน",
       "claim_refs": ["C-002", "C-004", "C-005", "C-012"],
       "asset_refs": ["A-001"]
@@ -87,6 +97,8 @@
       "template": "report-example",
       "eyebrow": "ตัวอย่าง: “หาข้อมูลแล้วทำรายงาน”",
       "title": "โจทย์เดียวกัน\nขอบเขตงานไม่เท่ากัน",
+      "chat_label": "CHAT ทั่วไป",
+      "agent_label": "AGENT",
       "chat": ["ถาม / ให้ context", "ได้คำแนะนำหรือ draft", "เราเอาไปทำต่อ"],
       "agent": ["แตกงานเป็นขั้น", "ค้น + เก็บ source", "สร้างไฟล์", "ตรวจ checklist", "แก้จุดไม่ผ่าน แล้วส่ง review"],
       "note": "Agent ทำได้แค่ไหน ขึ้นกับ tools, permission และ environment ที่ให้ไว้",
@@ -131,6 +143,10 @@
       "title": "นี่คือจุดที่ MCP เข้ามา",
       "lead": "มาตรฐานเชื่อม AI application กับระบบภายนอก",
       "nodes": ["RESOURCES", "TOOLS", "PROMPTS"],
+      "viz_label": "เอเจนต์เชื่อมต่อ resources, tools และ prompts ผ่าน MCP โดยมีการควบคุมระดับแอปพลิเคชันแยกต่างหาก",
+      "agent_label": "AGENT",
+      "bridge_label": "MCP",
+      "control_label": "APPLICATION-LEVEL CONTROL",
       "note": "MCP คือมาตรฐานการเชื่อมต่อ ไม่ใช่ Agent runtime และไม่ได้แทน application-level permission หรือ verification",
       "footer": "ตอนถัดไป: MCP คืออะไร และเกี่ยวข้องกับ AI Agent ยังไง?",
       "claim_refs": ["C-008", "C-009"],

@@ -107,8 +107,8 @@ Prompt ยังบอกทิศ, Agent loop ยังเป็นคนเด
 
 ## CTA intent
 
-ชวนคนดูเลือกตอนต่อระหว่าง “ข้างใน MCP Server มีอะไร?” กับ “Permission/Approval ควรวาง
-ตรงไหน?” เพื่อวัดว่าคนดูต้องการ implementation หรือ safety ต่อ
+ชวนคนดูต่อตอน “Permission/Approval ควรวางตรงไหน?” (human reviewer เลือกฝั่ง safety
+แทน “ข้างใน MCP Server มีอะไร?” เมื่อ 2026-10-09)
 
 ## Claim references
 

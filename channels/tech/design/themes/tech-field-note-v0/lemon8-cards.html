@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><style>
+@font-face{font-family:noto;src:url('../../../../../node_modules/@fontsource/noto-sans-thai/files/noto-sans-thai-thai-400-normal.woff2')}@font-face{font-family:noto;src:url('../../../../../node_modules/@fontsource/noto-sans-thai/files/noto-sans-thai-thai-700-normal.woff2');font-weight:700}*{box-sizing:border-box}body{margin:0;background:#ddd;font-family:noto,'Segoe UI',sans-serif}.card{width:1080px;height:1440px;padding:72px;background:#f4f1e8;color:#111827;position:relative;overflow:hidden}.num{position:absolute;right:72px;top:72px;z-index:2;font-size:28px;color:#5f6b7a;background:#f4f1e8;padding-left:12px}.eyebrow{max-width:calc(100% - 150px);font-size:28px;font-weight:700;color:#2457ff;letter-spacing:.04em}.title{font-size:72px;line-height:1.12;margin:28px 0 24px;font-weight:700}.lead{font-size:42px;line-height:1.4;margin:0 0 42px}.panel{border:3px solid #111827;border-radius:28px;padding:36px;background:#fffdf7;box-shadow:12px 12px 0 #111827}.item{font-size:36px;line-height:1.45;margin:22px 0}.photo{height:430px;width:100%;object-fit:contain;display:block;filter:drop-shadow(0 18px 18px #0005)}.photo-pair{display:grid;grid-template-rows:1fr 1fr;height:560px;gap:12px}.card:not(.cover) .photo-pair{height:450px}.photo-pair img{width:100%;height:100%;min-height:0;object-fit:contain;filter:drop-shadow(0 12px 10px #0006)}.photo-label{font-size:26px;font-weight:700;color:#2457ff}.note{font-size:28px;line-height:1.45;color:#5f6b7a}.footer{position:absolute;left:72px;right:72px;bottom:62px;border-top:2px solid #111827;padding-top:20px;font-size:27px;color:#5f6b7a}.cover{background:#111827;color:#f4f1e8}.cover .num{background:#111827}.cover .eyebrow{color:#8fb0ff}.cover .panel{background:#f4f1e8;color:#111827}.cover .photo-pair{height:500px}.cover .title{font-size:88px;margin-top:42px}.signal{background:#2457ff;color:white;padding:18px 26px;font-size:38px;font-weight:700;display:inline-block;transform:rotate(-1deg)}table{width:100%;border-collapse:collapse;font-size:28px;background:#fffdf7}th,td{border:2px solid #111827;padding:14px;text-align:left}th{background:#111827;color:#fff}.choice{display:grid;grid-template-columns:1.5fr 1fr;gap:12px;font-size:32px;margin:14px 0}.choice span{padding:16px 20px;border:2px solid #111827}.choice span:last-child{background:#2457ff;color:#fff;font-weight:700;text-align:center}
+</style></head><body><main id="app"></main>
+<script id="card-data" type="application/json">__CARD_DATA__</script>
+<script>
+const model=JSON.parse(document.getElementById('card-data').textContent);
+const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+const text=value=>esc(value).replace(/\n/g,'<br>');
+const assetUrl=asset=>esc(model.asset_base+asset);
+const media=assets=>assets.length>1
+  ? `<div class="photo-pair">${assets.map(asset=>`<img src="${assetUrl(asset)}">`).join('')}</div>`
+  : assets.length===1?`<img class="photo" src="${assetUrl(assets[0])}">`:'';
+function shell(card,content,extraClass=''){
+  return `<section class="card ${extraClass}"><b class="num">${card.order}/${model.cards.length}</b><div class="eyebrow">${text(card.eyebrow)}</div><h1 class="title">${text(card.title)}</h1>${content}<footer class="footer">${text(card.footer)}</footer></section>`;
+}
+function render(card){
+  if(card.template==='table'){
+    const head=card.columns.map(value=>`<th>${text(value)}</th>`).join('');
+    const rows=card.rows.map(row=>`<tr>${row.map(value=>`<td>${text(value)}</td>`).join('')}</tr>`).join('');
+    return shell(card,`<table><tr>${head}</tr>${rows}</table><p class="note">${text(card.note)}</p>`);
+  }
+  if(card.template==='decision'){
+    const choices=card.choices.map(([question,answer])=>`<div class="choice"><span>${text(question)}</span><span>${text(answer)}</span></div>`).join('');
+    return shell(card,`${choices}<div class="panel item">${text(card.note)}</div>`);
+  }
+  if(card.template!=='standard')throw new Error(`Unknown card template: ${card.template}`);
+  const body=(card.body??[]).map(value=>`<p class="item">${text(value)}</p>`).join('');
+  const signal=card.signal?`<p class="signal">${text(card.signal)}</p>`:'';
+  return shell(card,`<p class="lead">${text(card.lead)}</p><div class="panel">${media(card.assets??[])}${body}</div>${signal}`,card.role==='cover'?'cover':'');
+}
+const requested=Number(new URLSearchParams(location.search).get('card')||1);
+const card=model.cards.find(item=>item.order===requested)??model.cards[0];
+document.getElementById('app').innerHTML=render(card);
+</script></body></html>

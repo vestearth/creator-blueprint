@@ -3,6 +3,7 @@
   "platform": "lemon8",
   "content_id": "003-mcp",
   "theme": "ai-signal-map-v1",
+  "series_label": "SYS/003",
   "cards": [
     {
       "order": 1,
@@ -10,8 +11,10 @@
       "template": "cover-mcp",
       "eyebrow": "AI / DEV WORKFLOW · 003",
       "title": "Agent ใช้ Tool\nได้ยังไง?",
-      "lead": "รู้จัก MCP — ภาษากลางระหว่าง AI application กับข้อมูลและเครื่องมือ",
+      "lead": "รู้จัก MCP — ภาษากลางระหว่าง AI application\nกับข้อมูลและเครื่องมือ",
       "signal": "AGENT ตัดสินใจ · MCP ส่งคำขอและผลลัพธ์",
+      "viz_label": "Agent เชื่อมกับเครื่องมือผ่าน Host และ MCP",
+      "units": ["AGENT", "HOST\n+ MCP", "DATA\n+ TOOLS"],
       "footer": "ต่อจาก 002: Prompt vs Agent",
       "claim_refs": ["C-001", "C-011"],
       "asset_refs": ["A-001"]
@@ -25,6 +28,8 @@
       "lead": "ต้องมีทางออกไปเรียกของจริง และทางกลับมาให้ Agent เห็นผล",
       "steps": ["GOAL", "DECIDE", "ACT", "OBSERVE", "VERIFY"],
       "signal": "ACT → ? → RESULT → OBSERVE",
+      "viz_label": "วงจรเอเจนต์ตั้งแต่เป้าหมาย ตัดสินใจ ลงมือ สังเกต และตรวจสอบ",
+      "center": "รับผลจริง\nแล้วปรับ\nขั้นถัดไป",
       "footer": "MCP เข้ามาตรงรอยต่อระหว่าง ACT กับ OBSERVE",
       "claim_refs": ["C-011", "C-012"],
       "asset_refs": ["A-001"]
@@ -35,8 +40,12 @@
       "template": "mcp-bridge",
       "eyebrow": "MCP = MODEL CONTEXT PROTOCOL",
       "title": "ไม่ใช่สมอง\nไม่ใช่ตัว Tool",
-      "lead": "MCP คือมาตรฐานที่ทำให้ AI application กับ capability ภายนอกคุยกันรู้เรื่อง",
+      "lead": "MCP คือมาตรฐานที่ทำให้ AI application\nกับ capability ภายนอกคุยกันรู้เรื่อง",
       "nodes": ["DATA", "TOOLS", "PROMPTS"],
+      "viz_label": "เอเจนต์เชื่อมต่อ resources, tools และ prompts ผ่าน MCP โดยมีการควบคุมระดับแอปพลิเคชันแยกต่างหาก",
+      "agent_label": "AGENT",
+      "bridge_label": "MCP",
+      "control_label": "APPLICATION-LEVEL CONTROL",
       "note": "มันกำหนดวิธีค้นพบ เรียก/อ่าน และรับผลกลับ — ไม่ได้คิดแทน Agent",
       "footer": "Protocol คือสัญญากลาง ไม่ใช่ autonomy",
       "claim_refs": ["C-001", "C-003", "C-011", "C-012"],
@@ -48,9 +57,9 @@
       "template": "system-stack",
       "eyebrow": "ใครทำหน้าที่อะไร?",
       "title": "Host คุมระบบ\nMCP เชื่อมความสามารถ",
-      "lead": "Agent ไม่ได้ต่อเข้าฐานข้อมูลหรือ API โดยตรงแบบไร้ตัวกลาง",
+      "lead": "ในระบบแบบ MCP Agent ไม่ได้ต่อเข้าฐานข้อมูลหรือ API โดยตรง",
       "items": [
-        ["01", "HOST", "ถือ model, context, policy และ approval"],
+        ["01", "HOST", "ประสาน model, context, policy และ approval"],
         ["02", "CLIENT", "พูด MCP กับ server หนึ่งตัว"],
         ["03", "SERVER", "ประกาศ capability ที่รองรับ"],
         ["04", "SYSTEM", "ไฟล์ · database · API · service"]
@@ -66,12 +75,13 @@
       "template": "single-path",
       "eyebrow": "STEP 1 · DISCOVER",
       "title": "Agent รู้จัก Tool\nเพราะ Server บอกสัญญาไว้",
-      "lead": "Client ขอรายการ Tool ก่อน แล้ว Host เลือกสิ่งที่อนุญาตให้ model เห็น",
+      "lead": "Client ขอรายการ Tool ก่อน\nแล้ว Host ตัดสินว่าจะเปิด Tool ไหนให้ model",
       "steps": ["TOOLS/LIST", "NAME + DESC", "INPUT SCHEMA"],
       "body": [
         "ชื่อ + คำอธิบาย บอกว่า Tool ทำอะไร",
         "Schema บอกว่า argument ต้องมีหน้าตาแบบไหน"
       ],
+      "viz_label": "ลำดับ discovery หรือ tool call ผ่าน MCP",
       "callout": "Agent ไม่ต้องเดาชื่อ function หรือรูปแบบ input เอง",
       "footer": "การมองเห็น Tool ยังอยู่ภายใต้นโยบายของ Host",
       "claim_refs": ["C-002", "C-004", "C-006"],
@@ -83,15 +93,16 @@
       "template": "single-path",
       "eyebrow": "STEP 2 · CALL → RESULT",
       "title": "เลือก Tool แล้ว\nผลกลับเข้า Loop",
-      "lead": "Model สร้าง arguments → Host ตรวจ → Client ส่งคำขอให้ Server",
+      "lead": "Model สร้าง arguments → Host อาจขอยืนยัน\n→ Client ส่งคำขอให้ Server",
       "steps": ["TOOLS/CALL", "SERVER RUNS", "RESULT"],
       "body": [
-        "Server ทำงานกับระบบจริง แล้วคืน text หรือ structured data",
+        "Server ทำงานกับระบบจริง แล้วคืนผล เช่น ข้อความ รูป หรือ structured data",
         "Host ส่งผลกลับเข้า context ให้ Agent Observe และ Decide รอบถัดไป"
       ],
+      "viz_label": "ลำดับ discovery หรือ tool call ผ่าน MCP",
       "callout": "DECIDE → CALL → RESULT → OBSERVE → CONTINUE / STOP",
       "footer": "MCP ขนคำขอและผลลัพธ์ ส่วน Agent loop เป็นคนเดินงานต่อ",
-      "claim_refs": ["C-004", "C-005", "C-011"],
+      "claim_refs": ["C-004", "C-005", "C-006", "C-011"],
       "asset_refs": ["A-001"]
     },
     {
@@ -152,13 +163,13 @@
       "eyebrow": "ภาพเดียวต่อจาก 002",
       "title": "ใครรับผิดชอบ\nส่วนไหน?",
       "choices": [
-        ["กำหนดทิศและข้อจำกัด", "PROMPT"],
+        ["กำหนดทิศและข้อจำกัด", "คำสั่งผู้ใช้"],
         ["เลือกขั้นถัดไปจาก feedback", "AGENT"],
         ["คุม context · permission · approval", "HOST"],
         ["คุยกับ capability ด้วย contract กลาง", "MCP"]
       ],
       "signal": "Agent เลือก · Host คุม · MCP เชื่อม · Tool ลงมือ",
-      "footer": "ตอนต่อ: แกะ MCP Server หรือวาง Permission/Approval ก่อนดี?",
+      "footer": "ตอนต่อ: Permission/Approval ควรวางตรงไหนในระบบ Agent?",
       "claim_refs": ["C-002", "C-011", "C-012"],
       "asset_refs": ["A-001"]
     }

@@ -1,6 +1,6 @@
 # Verification Gate
 
-Status: `evidence-verified-pending-human-review`
+Status: `verified`
 
 AI-assisted evidence review completed: `2026-09-22`
 
@@ -41,17 +41,33 @@ AI-assisted evidence review completed: `2026-09-22`
 - [x] Preserves the 002 thesis that tools, state and feedback loop surround the model.
 - [x] Does not contradict card 9 of 002: MCP is connection standard, not Agent runtime.
 
+## Freshness recheck — 2026-10-09 (AI-assisted)
+
+- All cited URLs load unchanged; every sourced claim is still supported as worded.
+- MCP `2026-07-28` is still the current revision (versioning page; no newer release or
+  release candidate). Recheck architecture and authorization wording if publishing
+  after 2026-10-22.
+- Card copy softened to the spec's wording: card 6 Host confirmation is a SHOULD
+  (`อาจขอยืนยัน`, C-006 added); card 5 Host decides which tools to expose; card 4
+  Host coordinates the model and the lead is scoped to MCP; card 6 lists more result
+  types; card 10 uses `คำสั่งผู้ใช้` so it is not confused with MCP Prompts.
+- Optional ledger improvement: cite the specification overview, which says MCP cannot
+  enforce security principles at the protocol level, for C-009/C-012.
+- Lemon8 disclosure: no official Lemon8 rule found for labeling AI-assisted content or
+  for unpaid posts naming brands (Thai community guidelines and supplemental terms,
+  accessed 2026-10-09). Original diagrams only, so no realistic-media label applies.
+
 ## Human review
 
-Reviewer:
+Reviewer: Earth (operator)
 
-Date:
+Date: 2026-10-09
 
-Decision: `pending`
+Decision: `approved`
 
-Open issues:
+Open issues (resolved by the reviewer on 2026-10-09):
 
 - ยืนยันว่าคำว่า Host / Client / Server ไม่แน่นเกินไปสำหรับคนดูทั่วไป
 - ยืนยันตัวอย่าง flow ว่าเห็น “Agent ใช้ Tool ได้อย่างไร” โดยไม่กลายเป็น tutorial protocol
 - ยืนยันคำแปล `ภาษากลาง` ว่าไม่ทำให้เข้าใจว่า MCP เป็น programming language
-- เลือก CTA ตอนต่อระหว่าง implementation และ permission/safety
+- เลือก CTA ตอนต่อระหว่าง implementation และ permission/safety → เลือก Permission/Approval
