@@ -12,7 +12,8 @@
     "render:003:lemon8": "node tools/render-lemon8.mjs 003-mcp",
     "validate:lemon8": "node tools/validate-lemon8.mjs",
     "test": "node --test tools/*.test.mjs",
-    "generate:keyboards:compact": "node tools/generate-keyboard-99-v3.mjs"
+    "generate:keyboards:compact": "node tools/generate-keyboard-99-v3.mjs",
+    "render:004:lemon8": "node tools/render-lemon8.mjs 004-keyboard-switch"
   },
   "devDependencies": {
     "@fontsource/jetbrains-mono": "5.3.0",

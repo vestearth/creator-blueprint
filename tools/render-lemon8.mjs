@@ -49,7 +49,15 @@ function findBrowser() {
 
 function browserVersion(browser) {
   try {
-    return execFileSync(browser, ["--version"], { encoding: "utf8" }).trim();
+    // Chrome's --version starts a persistent GUI process on Windows.
+    if (process.platform === "win32") {
+      return execFileSync("powershell.exe", [
+        "-NoProfile", "-NonInteractive", "-Command",
+        "(Get-Item -LiteralPath $env:LEMON8_BROWSER_PATH).VersionInfo.ProductVersion",
+      ], { encoding: "utf8", windowsHide: true, timeout: 5000,
+        env: { ...process.env, LEMON8_BROWSER_PATH: browser } }).trim();
+    }
+    return execFileSync(browser, ["--version"], { encoding: "utf8", timeout: 5000 }).trim();
   } catch {
     return null;
   }
