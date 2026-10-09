@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "content_id": "004-keyboard-switch",
+  "theme": "switch-field-notes-v1",
+  "rendered_at": "2026-10-09T09:43:24.014Z",
+  "browser": "155.0.8059.39",
+  "inputs": {
+    "content/004-keyboard-switch/outputs/lemon8/cards.json": "b5d2e5172441733d09dc0ea9fc07eb69652ea1096b1373c0e3012863ea90c8b6",
+    "channels/tech/design/themes/switch-field-notes-v1/theme.json": "d8cbea0b9f155677fadedcce04b92f6a9e1609e1fe4e52601b6996f46b76e877",
+    "channels/tech/design/themes/switch-field-notes-v1/lemon8-cards.html": "9171ba95774164c28ce73333a124185d2f37e3f2aa74783abc30da037ec47712",
+    "channels/tech/design/themes/switch-field-notes-v1/tokens.css": "588c5c9e35d633e24f95d836006422b0ff2c939dfe9f6afc5b6038e405f62de3"
+  },
+  "outputs": {
+    "004-keyboard-switch-lemon8-01.png": "9aa8fb9534331d442b753c4e44bd80cb7f93fc0a6cc79676f4ca0589c124f28a",
+    "004-keyboard-switch-lemon8-02.png": "4b4ced086498966ed696ded9b9f9ab2e3d286ce3986632c8899613c2bc447489",
+    "004-keyboard-switch-lemon8-03.png": "c6471c0413fb8ea7192ca8b6466ce9507c7c7d990ef4f1b5175fa65d673dc17d",
+    "004-keyboard-switch-lemon8-04.png": "0db63b6888eaeb738998cd44075d69daca0b0bec08a43c763956357cb198a955",
+    "004-keyboard-switch-lemon8-05.png": "7ed579b059d377210babc2dd7563490a907185fdb3e03d07b632b473e274d7cc",
+    "004-keyboard-switch-lemon8-06.png": "a3b87d308d2759ed5f61b3440cb672336f7c5e0f29ae4e5358014375639a162a",
+    "004-keyboard-switch-lemon8-07.png": "0e4172c5f8916b32b5727e04a6245974361257ea5130adeb6f84cfd51edcf98a",
+    "004-keyboard-switch-lemon8-08.png": "8b193cf651fb894a708e0ebe94083868e472bbc2f3d649d142df757476840f91",
+    "004-keyboard-switch-lemon8-09.png": "1845c4ea92b7561d2686b8d9b046efb6a5955fab2a74d3fc3fb4d69aae083bc0",
+    "004-keyboard-switch-lemon8-10.png": "59882f7079e4d6b08a81abfcc12463a397a61e57d6b729871c17721a3472d35d"
+  }
+}

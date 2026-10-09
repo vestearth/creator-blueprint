@@ -27,3 +27,7 @@ Card-facing editorial copy lives in `../cards.json`. This file records compositi
 - Number marker remains in top-right on each card.
 - Review all ten cards in order at 25% scale and inspect cards with the densest text at full size.
 - Recheck Lemon8 aspect ratio and disclosures before publication.
+
+## Revision — 2026-10-09
+
+Card 7 now uses a three-row Red/Silver comparison: operating force, pre-travel and total travel, including tolerances and maximum qualifiers. Card 8 explicitly attributes broad sound influences to manufacturers. All switch illustrations and color caveats remain.

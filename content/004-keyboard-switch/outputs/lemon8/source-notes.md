@@ -10,7 +10,7 @@ Card text is in `cards.json`; full evidence and source URLs are in `../../core/r
 | 4 | Tactile has bump without requiring a click; prominence varies | C-002, C-008, C-012–C-013 | Brown stem illustration is generic |
 | 5 | Clicky combines tactile and audible feedback; mechanisms vary | C-003–C-004, C-009, C-012–C-013 | Blue stem illustration is generic; do not infer full-board sound |
 | 6 | Red/Brown/Blue examples are familiar, but Black/Purple/Green examples show categories have other colors | C-013 | CHERRY models support these examples; card does not claim every brand follows one code |
-| 7 | Force, travel, spring, lube/material/geometry change feel | C-005–C-008 | Do not compare one force number in isolation |
+| 7 | G Pro 2.0 Red/Silver share published operating force but differ in travel | C-005–C-007, C-014 | Manufacturer specs for these two models only; not a measured subjective feel ranking |
 | 8 | Sound adjectives are descriptive; whole build and recording matter | C-009–C-011 | “Creamy” is scoped editorial vocabulary, not a standard |
 | 9 | Feedback preference provides a first trial choice | C-001–C-003, C-012 | Guidance, not deterministic use case |
 | 10 | Multi-step purchase method | C-001, C-005–C-007, C-009, C-012 | Optional tester/real-board trial |

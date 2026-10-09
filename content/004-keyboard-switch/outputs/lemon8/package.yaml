@@ -15,7 +15,7 @@ export:
   filenames: "004-keyboard-switch-lemon8-{01..10}.png"
 asset_manifest:
   - id: A-001
-    asset: ../../../../assets/004-keyboard-switch/lemon8-cards.html
+    asset: ../../../../channels/tech/design/themes/switch-field-notes-v1/lemon8-cards.html
     use: "Original diagrams and card visuals"
     source: creator-blueprint
     usage_basis: original HTML/CSS/SVG primitives
@@ -37,7 +37,7 @@ publication:
   scheduled_at: null
   published_at: null
   url: null
-  package_version: "lemon8-switch-field-notes-v2-2026-09-23"
+  package_version: "lemon8-switch-field-notes-v3-2026-10-09"
 checks:
   verification_passed: true
   card_order_checked: true

@@ -15,12 +15,14 @@ AI-assisted evidence review completed: `2026-09-23`
 | C-005 | Yes — Gateron and KBDfans | Yes; no claim that a single force number predicts feel | If model specs added | Pass |
 | C-006 | Yes — Gateron and CHERRY | Yes; pre-travel and total travel distinguished | No | Pass |
 | C-007 | Yes — Gateron linear guide | Yes; broad factors without deterministic recipes | No | Pass |
-| C-008 | Yes — Gateron Banana product page | Yes; only qualitative difference in bump prominence claimed | If model example added | Pass with caveat |
+| C-008 | Yes — Akko tactile guide, reopened 2026-10-09 | Yes; only qualitative difference in bump prominence claimed | If model example added | Pass with caveat |
 | C-009 | Yes — KBDfans and Keychron | Yes; broad system influence, no fixed acoustic outcome | No | Pass |
 | C-010 | Yes for clacky/thocky — KBDfans; creamy is scoped editorial classification | Yes if wording stays “ในโพสต์นี้” and no exact definition is given | Recheck if expanded | Pass with caveat |
 | C-011 | Yes — KBDfans lists recording/build factors | Yes; recommendation about a single clip is inference | No | Pass with caveat |
 | C-012 | Inference from preceding claims | Yes; framed as an optional decision method | No | Pass |
 | C-013 | Yes — CHERRY MX Green comparison table, MX Black and MX Purple pages | Yes; colors are examples, not a universal taxonomy | Check if model examples change near publish | Pass |
+
+| C-014 | Yes — Gateron G Pro 2.0, reopened 2026-10-09 | Published force/travel including tolerances; no subjective ranking | Reopen near publication | Pass |
 
 ## Source quality and uncertainty
 
@@ -54,3 +56,7 @@ Open issues:
 - ตรวจถ้อยคำ Creamy / Thock / Clack อีกครั้งก่อนดัดแปลง เพื่อไม่เผลอสื่อว่ามีนิยามเสียงที่วัดได้แน่นอน
 - ประเด็นด้านความหนาแน่นของคำบนการ์ดและ asset ใหม่ต้องตรวจอีกครั้งใน final editorial review
 - C-013 และภาพสวิตช์ถูกเพิ่มตามคำขอผู้ใช้หลังการอนุมัติ narrative รอบแรก; ให้ดูความชัดของคำว่า “สีช่วยจำ ไม่ใช่กฎ” ใน final editorial review
+
+## Integration evidence review — 2026-10-09
+
+AI rechecked the added C-014 published specs and replacement C-008 vendor description. User authorized the integration and repository merge. Original human adaptation approval is retained; the newly rendered package still awaits final human publication review.

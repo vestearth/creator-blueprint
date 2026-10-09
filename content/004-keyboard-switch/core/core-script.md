@@ -30,7 +30,9 @@ Switch คือกลไกใต้ปุ่มที่ตอบสนอง�
 
 เมื่อรู้ว่าชอบ feedback แบบไหน ให้ดู **force** และ **travel** ต่อ ตัวเลข operating/actuation force บอกแรงที่จุดหนึ่ง ไม่ใช่ feel ตลอดทางหรือแรงตอนกดสุด; spring และความสัมพันธ์ระหว่างแรงกับระยะกดก็มีผล [C-005, C-007] **Pre-travel** คือระยะก่อนสวิตช์ส่ง input ส่วน **total travel** คือระยะกดทั้งหมด สองค่านี้ตอบคนละคำถาม [C-006] จากนั้นดูรายละเอียดรุ่น เช่น spring, bump/click mechanism, factory lube และ stem/housing material/geometry โดยหลีกเลี่ยงสูตรว่าใช้วัสดุ X แล้วต้องได้เสียง Y [C-004, C-007–C-009]
 
-ศัพท์ **Creamy / Thock / Clack** ช่วยบอกภาพเสียงที่คนฟังพยายามสื่อ แต่ในโพสต์นี้เราไม่ใช้เป็นประเภท switch หรือสเปกมาตรฐานที่เทียบข้าม build ได้ [C-010] Switch มีส่วน แต่ keycaps, plate, mount, case, foam และการประกอบก็เปลี่ยน feel/เสียงได้ [C-009] คลิปเสียงหนึ่งคลิปยังได้รับผลจากแรงพิมพ์ โต๊ะ ห้อง และไมค์ จึงเป็นตัวอย่างการฟัง ไม่ใช่คำรับประกันว่าเมื่อซื้อ switch รุ่นเดียวกันแล้วคีย์บอร์ดเราจะได้เสียงเดียวกัน [C-011]
+ตัวอย่างที่จับต้องได้: Gateron G Pro 2.0 Red และ Silver เป็น Linear และระบุ operating force เท่ากันที่ 45±15 gf แต่ Red มี pre-travel 2.0±0.6 mm / total travel 4.0 mm max ส่วน Silver 1.2±0.3 mm / 3.4 mm max [C-014] ตัวเลขนี้แสดงความต่างของระยะกดในสองรุ่น ไม่ได้พิสูจน์ความรู้สึกของทุกคนหรือแนะนำว่ารุ่นใดดีกว่า
+
+ศัพท์ **Creamy / Thock / Clack** ช่วยบอกภาพเสียงที่คนฟังพยายามสื่อ แต่ในโพสต์นี้เราไม่ใช้เป็นประเภท switch หรือสเปกมาตรฐานที่เทียบข้าม build ได้ [C-010] ตามคำอธิบายของผู้ผลิต Switch มีส่วน แต่ keycaps, plate, mount, case, foam และการประกอบก็เปลี่ยน feel/เสียงได้ [C-009] คลิปเสียงหนึ่งคลิปยังได้รับผลจากแรงพิมพ์ โต๊ะ ห้อง และไมค์ จึงเป็นตัวอย่างการฟัง ไม่ใช่คำรับประกันว่าเมื่อซื้อ switch รุ่นเดียวกันแล้วคีย์บอร์ดเราจะได้เสียงเดียวกัน [C-011]
 
 สีแดง Linear, สีน้ำตาล Tactile และสีน้ำเงิน Clicky เป็นภาพจำที่ช่วยเริ่มต้นได้ แต่สีไม่ได้เป็นกฎของทุก switch แม้ในแคตตาล็อกผู้ผลิตเดียวกันยังมีสีดำที่เป็น Linear, สีม่วงที่เป็น Tactile และสีเขียวที่เป็น Clicky [C-013] เวลาซื้อจึงอ่านประเภทและสเปกของ *รุ่นจริง* แทนการตัดสินจากสี
 
@@ -50,4 +52,4 @@ Switch คือกลไกใต้ปุ่มที่ตอบสนอง�
 
 ## Claim references
 
-Material factual claims use C-001 through C-011 and C-013 in `research.md`. The selection method and practical caveats are editorial guidance C-012.
+Material factual claims use C-001 through C-011 and C-013–C-014 in `research.md`. The selection method and practical caveats are editorial guidance C-012.

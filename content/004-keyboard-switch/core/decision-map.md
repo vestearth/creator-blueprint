@@ -226,3 +226,7 @@ checkpoint:
   fog: []
   next_action: "Run /brief then /research for 004, transcribing the claim guidance above into research.md"
 ```
+
+## Draft integration — 2026-10-09
+
+Integrated into the existing illustrated ten-card draft after user authorization to choose and merge. Card 7 uses G Pro 2.0 Red/Silver only; KS-33 was removed from C-008. Card 8 attributes system sound to manufacturers and avoids fixed material-to-sound formulas. Caption retains one-line Hall Effect scope. Definitions and broad lube/build factors stay in the canonical narrative because Gateron Linear and KBDfans directly support them in the existing source ledger. New illustrations remain original generic SVGs with C-013 color caveats. Final human editorial review remains a publication gate.

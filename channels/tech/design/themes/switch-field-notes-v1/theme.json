@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "name": "switch-field-notes-v1",
+  "description": "Original generic switch illustrations and beginner-friendly mechanical keyboard comparisons.",
+  "template": "lemon8-cards.html",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "model_fields": [],
+  "card_fields": [
+    "order",
+    "template",
+    "eyebrow",
+    "title",
+    "footer",
+    "claim_refs",
+    "asset_refs"
+  ],
+  "templates": {
+    "cover": [
+      "lead",
+      "labels",
+      "stem_colors",
+      "art_note",
+      "signal"
+    ],
+    "anatomy": [
+      "lead",
+      "labels",
+      "items"
+    ],
+    "switch": [
+      "lead",
+      "stem_hex",
+      "color_label",
+      "feel_label",
+      "art_note",
+      "items",
+      "signal"
+    ],
+    "colors": [
+      "lead",
+      "primary_colors",
+      "alternate_label",
+      "alternate_colors",
+      "signal"
+    ],
+    "dimensions": [
+      "lead",
+      "items"
+    ],
+    "comparison": [
+      "lead",
+      "models",
+      "rows",
+      "note",
+      "signal"
+    ],
+    "system": [
+      "lead",
+      "center",
+      "items",
+      "signal"
+    ],
+    "choice": [
+      "choices",
+      "signal"
+    ],
+    "recap": [
+      "steps",
+      "signal"
+    ]
+  }
+}
