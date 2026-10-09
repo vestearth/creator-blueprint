@@ -15,12 +15,12 @@ export:
   filenames: "002-ai-agent-lemon8-{01..10}.png"
 asset_manifest:
   - id: A-001
-    asset: ../../../../assets/002-ai-agent/lemon8-cards.html
+    asset: ../../../../channels/tech/design/themes/ai-signal-map-v1/lemon8-cards.html
     use: "Original AI Signal Map diagram system, node layouts, and rendered card visuals"
     source: creator-blueprint
     usage_basis: original HTML/CSS/SVG primitives
   - id: A-004
-    asset: ../../../../assets/002-ai-agent/tokens.css
+    asset: ../../../../channels/tech/design/themes/ai-signal-map-v1/tokens.css
     use: "AI-only Terminal theme tokens; intentionally separate from the Keyboard visual system"
     source: creator-blueprint
     usage_basis: original design tokens

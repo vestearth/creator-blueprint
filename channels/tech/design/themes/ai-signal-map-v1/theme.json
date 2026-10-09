@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "ai-signal-map-v1",
+  "description": "Terminal-style diagram system for the AI / developer workflow pillar.",
+  "template": "lemon8-cards.html",
+  "canvas": { "width": 1080, "height": 1440 },
+  "model_fields": ["series_label"],
+  "card_fields": ["order", "template", "eyebrow", "title", "footer", "claim_refs", "asset_refs"],
+  "templates": {
+    "cover-loop": ["lead", "signal", "viz_label", "path_label", "loop_label"],
+    "cover-mcp": ["lead", "signal", "viz_label", "units"],
+    "single-path": ["lead", "steps", "body", "viz_label", "callout"],
+    "agent-loop": ["lead", "steps", "signal", "viz_label", "center"],
+    "not-equal": ["left", "right"],
+    "system-stack": ["lead", "items", "band"],
+    "report-example": ["chat_label", "chat", "agent_label", "agent", "note"],
+    "when-chat": ["items", "signal"],
+    "when-agent": ["items", "note"],
+    "mcp-bridge": ["lead", "nodes", "note", "viz_label", "agent_label", "bridge_label", "control_label"],
+    "decision": ["choices", "signal"]
+  }
+}

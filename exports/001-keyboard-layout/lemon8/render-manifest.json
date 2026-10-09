@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "content_id": "001-keyboard-layout",
+  "theme": "tech-field-note-v0",
+  "rendered_at": null,
+  "browser": null,
+  "adopted": "Existing exports from commit 8b3f403, rendered before render manifests existed; the template refactor was verified pixel-identical on one machine. Re-render to replace.",
+  "inputs": {
+    "content/001-keyboard-layout/outputs/lemon8/cards.json": "6d9aa52813d50096d93db853e952e638cf067a1c9b8bdd23d09586857a26ccfd",
+    "channels/tech/design/themes/tech-field-note-v0/theme.json": "691d5c2c8fc6aa12738ea574c4fd4cdcc42beed269a3bc76e1c9ffa8a8af8707",
+    "channels/tech/design/themes/tech-field-note-v0/lemon8-cards.html": "ce4b9dd3db49e8beb84089761b6e3795655e89a5793d15f137a8488a63f19da9",
+    "assets/001-keyboard-layout/reference-tkl-v1.png": "043ab27f3f583a8078a480d9d1574d8ac8e6f2a1c126eff738a999349961bf65",
+    "assets/001-keyboard-layout/reference-75-v1.png": "ab0d1cbc09882205d158ec45ab29bb5fa51ff34565b47e3a1c56e9309c2d2e81",
+    "assets/001-keyboard-layout/keyboard-fullsize-v2.png": "e7929f4fed5b6031b9b444d37592534b29c40191abf6bb356b8c8ac077569475",
+    "assets/001-keyboard-layout/keyboard-98-v2.png": "31fbb5e8be5064ac5e1dda7926f6a71fe9acd26141ba8ceb244869ae7092023d",
+    "assets/001-keyboard-layout/keyboard-65-v2.png": "49c71805371cc9571a7e3d788aef44e06da2a973fd6e09d250ca777efd7990ee",
+    "assets/001-keyboard-layout/keyboard-60-v2.png": "9c710f78d8589d61743490bac336c5ec11efff5abe8b41f1a93ee58a91fdcec5"
+  },
+  "outputs": {
+    "001-keyboard-layout-lemon8-01.png": "591cf771b3dfd2f9705d49d360825350e0a841c26d99e6ca03de79355967c2ae",
+    "001-keyboard-layout-lemon8-02.png": "e895967eda1b6f6add09234919a35f835b9f294fea8ea0c86f385ddf6ae2f43b",
+    "001-keyboard-layout-lemon8-03.png": "becbc10a8006ba5397452c67a2037608c254eb3c134297dbcbafa9dd60f038d4",
+    "001-keyboard-layout-lemon8-04.png": "675ab58eb3530f9ca3f0be928045b645ca460393b721ad66a2f4bb24f2a749db",
+    "001-keyboard-layout-lemon8-05.png": "3f303e0f4542802695833e4c90ecb2e58bad9aab6686f605c77183a92a1362cb",
+    "001-keyboard-layout-lemon8-06.png": "22df2b2546c5a06b626c94414cb4ea4c3eff211ab5d68f38083d5b18e2548283",
+    "001-keyboard-layout-lemon8-07.png": "64835d20236cacdef1d057aa53c28d7e677a2b76f0beee6254e9dccbec3bf9bc",
+    "001-keyboard-layout-lemon8-08.png": "63f529dc639c6546fe8ca9b17bc9ecfd0aa1ca239f2e83c95efb5bace80aabb3"
+  }
+}

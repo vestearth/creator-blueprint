@@ -44,8 +44,9 @@ YouTube description credit block are recorded in `assets/001-keyboard-layout/aud
 - Directory: `lemon8/`
 - Files: `001-keyboard-layout-lemon8-01.png` through `08.png`
 - Format: PNG, 1080×1440, sRGB working output
-- Source: `assets/001-keyboard-layout/lemon8-cards.html`
+- Theme: `channels/tech/design/themes/tech-field-note-v0/`; card images from `assets/001-keyboard-layout/`
 - Render command: `npm run render:001:lemon8`
+- Render manifest: `lemon8/render-manifest.json`
 - Visual QA: cover, comparison, and recommendation cards inspected at full size
 
 The eight-card package remains subject to source freshness and final human

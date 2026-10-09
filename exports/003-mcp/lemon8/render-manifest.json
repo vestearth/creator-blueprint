@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "content_id": "003-mcp",
+  "theme": "ai-signal-map-v1",
+  "rendered_at": null,
+  "browser": null,
+  "adopted": "Existing exports from commit 8b3f403, rendered before render manifests existed; the template refactor was verified pixel-identical on one machine. Re-render to replace.",
+  "inputs": {
+    "content/003-mcp/outputs/lemon8/cards.json": "4e40ca259196eebaff04b49087873039ed16b8f5fb6446615730f950475de8d8",
+    "channels/tech/design/themes/ai-signal-map-v1/theme.json": "a3be1a440d045261f57e5075014b7299906e2f31e507ad3dd48b0be15d3fa11f",
+    "channels/tech/design/themes/ai-signal-map-v1/lemon8-cards.html": "2d485f7f9aa9abeb392c69c7349820b461e99c5058b1ff181e37aef248a7fd36",
+    "channels/tech/design/themes/ai-signal-map-v1/tokens.css": "fa0d1d67dcf5e84f0474de823b8d102f5868def8704a014bdb336dc0e19e7ea6"
+  },
+  "outputs": {
+    "003-mcp-lemon8-01.png": "d0fc8110e6097d17c9e2a8969cf7761043818c93318b6829e10311ec20263495",
+    "003-mcp-lemon8-02.png": "320b0046d79cb4bf82f3f8515b8513874744600b2cb3227565905fff21addba7",
+    "003-mcp-lemon8-03.png": "a069541d736362c2925bf5bd3532fa2ef25cf3bb4d91b98eb5f904052cad11d7",
+    "003-mcp-lemon8-04.png": "26709209b840196312e58d4c9a84c0f4bd57bb6d130237caa37a888c07a1f7fc",
+    "003-mcp-lemon8-05.png": "c39bb2530536308f68ad762ea91ec95d157723061d106c9d48ae7b0a61cf9929",
+    "003-mcp-lemon8-06.png": "c2194e6ac9564221871caec89c3e00aa43a42813d03028e352e78daaaa6f04b9",
+    "003-mcp-lemon8-07.png": "10c8427cb1f51677cc71e62938bb8ae149ee095f3baa8da9d2b9c08672c06d63",
+    "003-mcp-lemon8-08.png": "d9bc214036320c7ac074b660f6ecba249096a72b2ab493359b65fed74140c4a8",
+    "003-mcp-lemon8-09.png": "ca096d1398b23cd67661ce38407e087eb9961412e0d03162bd4bf7c8fc9782d2",
+    "003-mcp-lemon8-10.png": "b1d7df255874a394378600e5cb7e50378795eb4d3d9e3f3bf87a8c087dc9077b"
+  }
+}
