@@ -45,7 +45,8 @@ task state, feedback loop หรือ verification ขึ้นมาเอง
 
 สรุป: **Prompt กำหนดทิศ ส่วน Tools + State + Feedback Loop ทำให้งานเดินหน้า**
 
-ตอนต่อไปอยากให้ผมแกะเรื่อง MCP ไหมครับ ว่ามันเชื่อม Agent กับ data และ tools อย่างไร?
+ตอนต่อไปเราจะแกะเรื่อง MCP ว่ามันเชื่อม Agent กับ data และ tools อย่างไร
+ตอนนี้เราใช้ AI แบบ Chat, Workflow หรือ Agent กันบ้างครับ?
 
 ## Content detail
 

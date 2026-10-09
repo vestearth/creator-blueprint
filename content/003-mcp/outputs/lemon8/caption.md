@@ -41,8 +41,8 @@ MCP ไม่ได้สร้าง planning, memory, stopping condition ห�
 
 **Prompt กำหนดทิศ · Agent เลือกขั้นถัดไป · Host คุมขอบเขต · MCP เชื่อม · Tool ลงมือ**
 
-ตอนต่อไปจะแกะเรื่อง Permission/Approval ว่าควรวางตรงไหนในระบบ Agent
-ระบบที่คุณใช้อยู่ ให้ AI ขออนุมัติก่อนทำอะไรบ้างครับ?
+ตอนต่อไปเราจะแกะเรื่อง Permission/Approval ว่าควรวางตรงไหนในระบบ Agent
+ระบบที่เราใช้อยู่ ให้ AI ขออนุมัติก่อนทำอะไรบ้างครับ?
 
 ## Content detail
 
