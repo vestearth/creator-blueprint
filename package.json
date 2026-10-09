@@ -9,6 +9,7 @@
     "render:001:lemon8": "node tools/render-001-lemon8.mjs",
     "render:002:lemon8": "node tools/render-002-lemon8.mjs",
     "render:003:lemon8": "node tools/render-003-lemon8.mjs",
+    "render:004:lemon8": "node tools/render-004-lemon8.mjs",
     "validate:lemon8": "node tools/validate-lemon8.mjs",
     "generate:keyboards:compact": "node tools/generate-keyboard-99-v3.mjs"
   },

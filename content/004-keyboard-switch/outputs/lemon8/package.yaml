@@ -1,0 +1,58 @@
+schema_version: 1
+platform: lemon8
+state: ready-for-human-review
+render_data: cards.json
+title: "Linear / Tactile / Clicky ต่างกันยังไง? เลือก Switch จากการใช้งาน ไม่ใช่แค่เสียง"
+cover_copy: "cards.json#cards[0].title"
+caption_file: caption.md
+source_notes_file: source-notes.md
+card_visual_plans: cards/
+export:
+  format: png
+  width: 1080
+  height: 1440
+  color_space: sRGB
+  filenames: "004-keyboard-switch-lemon8-{01..10}.png"
+asset_manifest:
+  - id: A-001
+    asset: ../../../../assets/004-keyboard-switch/lemon8-cards.html
+    use: "Original diagrams and card visuals"
+    source: creator-blueprint
+    usage_basis: original HTML/CSS/SVG primitives
+  - id: A-002
+    asset: "@fontsource/noto-sans-thai"
+    use: "Thai/Latin typography"
+    source: npm dependency
+    usage_basis: OFL-1.1
+  - id: A-003
+    asset: "@fontsource/jetbrains-mono"
+    use: "Technical labels"
+    source: npm dependency
+    usage_basis: OFL-1.1
+source_notes:
+  - "Full source ledger: ../../core/research.md"
+  - "Card mapping: source-notes.md"
+publication:
+  target_account: ""
+  scheduled_at: null
+  published_at: null
+  url: null
+  package_version: "lemon8-switch-field-notes-v2-2026-09-23"
+checks:
+  verification_passed: true
+  card_order_checked: true
+  phone_readability_checked: true
+  source_freshness_checked: true
+  rights_checked: true
+  disclosure_checked: true
+  promise_alignment_checked: true
+  rendered_assets_present: true
+  human_editorial_approval: false
+review_notes:
+  - "Core verification approved by vestearth in task conversation on 2026-09-23."
+  - "All ten cards rendered and reviewed in order at contact-sheet scale; dense cards inspected full-size."
+  - "Generic original switch illustrations provide color examples; source evidence for alternate colors is C-013."
+  - "User requested colored switch visuals and a color-code caveat; copy was simplified on cards 2–5 and 9."
+  - "No realistic synthetic media or third-party assets; disclosure check found no required media attribution in current draft."
+  - "Official Lemon8 Singapore guidance recommends 3:4; verify crop in upload preview before posting."
+  - "Final human editorial approval and in-app platform check remain before ready-to-publish."

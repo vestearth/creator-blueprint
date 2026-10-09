@@ -1,0 +1,4 @@
+@font-face{font-family:NotoThai;src:url(../../node_modules/@fontsource/noto-sans-thai/files/noto-sans-thai-thai-400-normal.woff2)}
+@font-face{font-family:NotoThai;src:url(../../node_modules/@fontsource/noto-sans-thai/files/noto-sans-thai-thai-700-normal.woff2);font-weight:700}
+@font-face{font-family:JetBrains;src:url(../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff2);font-weight:700}
+:root{--paper:#F4F1E8;--ink:#111827;--muted:#5F6B7A;--blue:#2457FF;--line:#BFC7CD;--panel:#FFFEFA;--pale:#E9EDFC;--warn:#C83C3C;--thai:NotoThai,sans-serif;--mono:JetBrains,monospace}

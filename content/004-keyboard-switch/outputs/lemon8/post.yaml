@@ -1,0 +1,18 @@
+schema_version: 1
+platform: lemon8
+state: designing
+render_data: cards.json
+source:
+  brief: ../../core/brief.md
+  research: ../../core/research.md
+  core_script: ../../core/core-script.md
+  verification: ../../core/verification.md
+strategy:
+  angle: "ประเภท switch เป็นตัวกรองแรก: feedback → force/travel → รุ่นจริง → build → preference"
+  hook: "Linear / Tactile / Clicky ต่างกันยังไง?"
+  card_count: 10
+  density: "หนึ่งประเด็นต่อใบ; diagram-led; ข้อความสั้น 2–3 จุด"
+  summary: "ใช้ภาพสวิตช์สีที่คุ้นตาอธิบายสาม feedback styles, แก้ความเข้าใจว่าสีเป็นกฎ แล้วค่อยดูสเปกและวิธีเลือก"
+  cta: "ถ้ามีโอกาส ลอง switch tester หรือคีย์บอร์ดจริงก่อนซื้อ"
+  caption_role: "สรุปวิธีเลือกและขยาย caveat เรื่องเสียงกับการทดลองจริง"
+card_visual_plans: cards/
