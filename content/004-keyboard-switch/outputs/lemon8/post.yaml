@@ -1,6 +1,6 @@
 schema_version: 1
 platform: lemon8
-state: designing
+state: ready-to-publish
 render_data: cards.json
 source:
   brief: ../../core/brief.md
