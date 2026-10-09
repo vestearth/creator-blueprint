@@ -45,6 +45,7 @@ content/<id>-<slug>/
 
 ```text
 channels/                 Channel identity, editorial rules, and design system
+                          (renderable card themes in channels/tech/design/themes/)
 platforms/                Platform behavior profiles; no canonical content
 workflows/                Repeatable production processes
 templates/core/           Platform-independent starting documents
@@ -61,7 +62,8 @@ assets/ and exports/       Existing production assets and generated exports
 4. Follow `workflows/lemon8-carousel.md` and `platforms/lemon8.yaml`.
 5. Create `outputs/lemon8/` from `templates/lemon8/`; keep canonical card-facing
    content in `cards.json` and visual plans in `cards/`.
-6. Run `npm run validate:lemon8 -- content/<id>-<slug>`; a human must make the
+6. Render with `npm run render:lemon8 -- <id>-<slug>`, then run
+   `npm run validate:lemon8 -- content/<id>-<slug>`; a human must make the
    final editorial decision before the state can become `ready-to-publish`.
 7. After publishing, record observations and promote only durable findings to
    the existing `knowledge-base` creator namespace.

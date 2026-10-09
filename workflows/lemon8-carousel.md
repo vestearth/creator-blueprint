@@ -78,6 +78,19 @@ Output: canonical render content in `outputs/lemon8/cards.json`, visual plans in
 `outputs/lemon8/cards/`, and an asset manifest; state `designing`. The renderer
 must not contain card-facing editorial copy.
 
+`cards.json` names a `theme`; each theme lives in
+`channels/tech/design/themes/<theme>/` with its HTML template, tokens, and a
+`theme.json` listing the card templates it supports and the fields each one
+requires. Render with:
+
+```text
+npm run render:lemon8 -- <id>-<slug>
+```
+
+The renderer refuses unknown templates or missing fields before launching the
+browser, and writes `exports/<id>-<slug>/lemon8/render-manifest.json` with hashes
+of every render input and output.
+
 ### 8. `/package`
 
 Prepare title/cover copy, caption, hashtags, card order, export specifications,
@@ -94,7 +107,16 @@ npm run validate:lemon8 -- content/<id>-<slug>
 
 Only a passing package may move to `ready-to-publish`. Required checks are
 defined centrally in `platforms/lemon8-publish-gates.json`; missing or false
-checks are blocking.
+checks are blocking. The validator also blocks when a claim or asset reference
+does not resolve, an export is missing, has the wrong size, or is stale against
+the render manifest, or `checks.verification_passed` disagrees with
+`core/verification.md`.
+
+After publication the same command checks the publication record. For
+`published-metadata-incomplete` it requires the publication date and
+`publication_notes`, lists the outstanding fields, and reports publish checks that
+were never completed as warnings; once nothing is outstanding it asks for the
+state to become `published`. Run the tests with `npm test`.
 
 ### 9. `/publish`
 

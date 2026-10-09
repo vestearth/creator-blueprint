@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "tech-field-note-v0",
+  "description": "Paper field-note system for the mechanical keyboard pillar; card images load from assets/<content-id>/.",
+  "template": "lemon8-cards.html",
+  "canvas": { "width": 1080, "height": 1440 },
+  "model_fields": [],
+  "card_fields": ["order", "template", "eyebrow", "title", "footer", "claim_refs", "asset_refs"],
+  "templates": {
+    "standard": ["lead"],
+    "table": ["columns", "rows", "note"],
+    "decision": ["choices", "note"]
+  }
+}

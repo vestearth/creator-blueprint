@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "content_id": "002-ai-agent",
+  "theme": "ai-signal-map-v1",
+  "rendered_at": null,
+  "browser": null,
+  "adopted": "Existing exports from commit 8b3f403, rendered before render manifests existed; the template refactor was verified pixel-identical on one machine. Re-render to replace.",
+  "inputs": {
+    "content/002-ai-agent/outputs/lemon8/cards.json": "7679bdeae4197181724099e3cda104aaa232d0efd34db05f894a040c1b3e511c",
+    "channels/tech/design/themes/ai-signal-map-v1/theme.json": "a3be1a440d045261f57e5075014b7299906e2f31e507ad3dd48b0be15d3fa11f",
+    "channels/tech/design/themes/ai-signal-map-v1/lemon8-cards.html": "2d485f7f9aa9abeb392c69c7349820b461e99c5058b1ff181e37aef248a7fd36",
+    "channels/tech/design/themes/ai-signal-map-v1/tokens.css": "fa0d1d67dcf5e84f0474de823b8d102f5868def8704a014bdb336dc0e19e7ea6"
+  },
+  "outputs": {
+    "002-ai-agent-lemon8-01.png": "60ab1ef0ec2fa6cc645a92e239aefcbff8115aeb95689cd84d0950a4870a6c90",
+    "002-ai-agent-lemon8-02.png": "6347cd5c3fe14358ff9cd426b32ea062f6b1b43852f992aee74799ac738a3a3f",
+    "002-ai-agent-lemon8-03.png": "86938b2f8666e163c5a7628b1a26b5ccf1201b656973d6849f9b0b39730a46f0",
+    "002-ai-agent-lemon8-04.png": "38bab389b61c07f4c369619b06cab91cb011e5f46647fb024b60268a45390867",
+    "002-ai-agent-lemon8-05.png": "f8735956681d611118f9b5355099edbd6548720f8dccd48d9a81f63eb6a8dab0",
+    "002-ai-agent-lemon8-06.png": "2930fcef5527d7ef929c7183d48cd264e7a4cd7201b89e60a73467c967667be8",
+    "002-ai-agent-lemon8-07.png": "d8cbeda1cd6882a969e65f922068ef2f8e3955a93f2f0af11c141e1da1dede23",
+    "002-ai-agent-lemon8-08.png": "b12286b2262b31473a7b926824c779278f644db14694886c64e61b0d89a2dc01",
+    "002-ai-agent-lemon8-09.png": "04fcf91e4266e871306f4bfd1416b776d3f9c39ba81eb43ff540c7a423633f2f",
+    "002-ai-agent-lemon8-10.png": "7224b91e68b026be4c6e55f13bfa9eec9d13444245df929c6f3cda0c841743f5"
+  }
+}

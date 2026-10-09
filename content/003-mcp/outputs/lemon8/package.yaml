@@ -15,7 +15,7 @@ export:
   filenames: "003-mcp-lemon8-{01..10}.png"
 asset_manifest:
   - id: A-001
-    asset: ../../../../assets/003-mcp/lemon8-cards.html
+    asset: ../../../../channels/tech/design/themes/ai-signal-map-v1/lemon8-cards.html
     use: "Original MCP responsibility-map diagrams and rendered card visuals"
     source: creator-blueprint
     usage_basis: original HTML/CSS/SVG primitives

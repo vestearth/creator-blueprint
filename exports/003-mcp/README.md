@@ -3,8 +3,9 @@
 Draft Lemon8 carousel renders for human editorial review.
 
 - Source content: `../../content/003-mcp/`
-- Render source: `../../assets/003-mcp/lemon8-cards.html`
-- Renderer: `../../tools/render-003-lemon8.mjs`
+- Theme: `../../channels/tech/design/themes/ai-signal-map-v1/`
+- Renderer: `../../tools/render-lemon8.mjs`
+- Render manifest: `lemon8/render-manifest.json`
 - Output: `lemon8/003-mcp-lemon8-01.png` through `10.png`
 
 Re-render with:
