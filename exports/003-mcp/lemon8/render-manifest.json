@@ -2,25 +2,24 @@
   "schema_version": 1,
   "content_id": "003-mcp",
   "theme": "ai-signal-map-v1",
-  "rendered_at": null,
-  "browser": null,
-  "adopted": "Existing exports from commit 8b3f403, rendered before render manifests existed; the template refactor was verified pixel-identical on one machine. Re-render to replace.",
+  "rendered_at": "2026-10-09T09:17:43.901Z",
+  "browser": "Google Chrome 154.0.8037.98",
   "inputs": {
-    "content/003-mcp/outputs/lemon8/cards.json": "4e40ca259196eebaff04b49087873039ed16b8f5fb6446615730f950475de8d8",
+    "content/003-mcp/outputs/lemon8/cards.json": "d69e6d393a3640f98f24b830bffa95990981f16505c2a691e5d14a810485adef",
     "channels/tech/design/themes/ai-signal-map-v1/theme.json": "a3be1a440d045261f57e5075014b7299906e2f31e507ad3dd48b0be15d3fa11f",
     "channels/tech/design/themes/ai-signal-map-v1/lemon8-cards.html": "2d485f7f9aa9abeb392c69c7349820b461e99c5058b1ff181e37aef248a7fd36",
     "channels/tech/design/themes/ai-signal-map-v1/tokens.css": "fa0d1d67dcf5e84f0474de823b8d102f5868def8704a014bdb336dc0e19e7ea6"
   },
   "outputs": {
-    "003-mcp-lemon8-01.png": "d0fc8110e6097d17c9e2a8969cf7761043818c93318b6829e10311ec20263495",
-    "003-mcp-lemon8-02.png": "320b0046d79cb4bf82f3f8515b8513874744600b2cb3227565905fff21addba7",
-    "003-mcp-lemon8-03.png": "a069541d736362c2925bf5bd3532fa2ef25cf3bb4d91b98eb5f904052cad11d7",
-    "003-mcp-lemon8-04.png": "26709209b840196312e58d4c9a84c0f4bd57bb6d130237caa37a888c07a1f7fc",
-    "003-mcp-lemon8-05.png": "c39bb2530536308f68ad762ea91ec95d157723061d106c9d48ae7b0a61cf9929",
-    "003-mcp-lemon8-06.png": "c2194e6ac9564221871caec89c3e00aa43a42813d03028e352e78daaaa6f04b9",
-    "003-mcp-lemon8-07.png": "10c8427cb1f51677cc71e62938bb8ae149ee095f3baa8da9d2b9c08672c06d63",
-    "003-mcp-lemon8-08.png": "d9bc214036320c7ac074b660f6ecba249096a72b2ab493359b65fed74140c4a8",
-    "003-mcp-lemon8-09.png": "ca096d1398b23cd67661ce38407e087eb9961412e0d03162bd4bf7c8fc9782d2",
-    "003-mcp-lemon8-10.png": "b1d7df255874a394378600e5cb7e50378795eb4d3d9e3f3bf87a8c087dc9077b"
+    "003-mcp-lemon8-01.png": "30fcfec4e57251633d0eeb3985199205e22f168a11aa70da6c26cfffa2ffeb3b",
+    "003-mcp-lemon8-02.png": "877c994f3778ed53d1813f3be58726fce7ad9bc8014e4cd62a54e997fd798b84",
+    "003-mcp-lemon8-03.png": "78fb93353ad09ad8cb09547e3782b067cebfa9f2c90c88c316a1c628fa2f4ccb",
+    "003-mcp-lemon8-04.png": "2299d26de8e4689dd6ac44161901a159814ca21ec487831c6c1ab5c71a5ed657",
+    "003-mcp-lemon8-05.png": "87ddeb3f354b245ac999f46520a888abc3caafed20996f9e86edc9a03f170a55",
+    "003-mcp-lemon8-06.png": "27227f9998d09001ebe4371788119a2db420c148b3cb87a1c4322e4ffc4a9632",
+    "003-mcp-lemon8-07.png": "484daac364212d4ba0583c4849cc87c37ef942ff6a764d41b4e696b2d913c193",
+    "003-mcp-lemon8-08.png": "4a76b0ebe5d1061c04bb03380106a2bfcea57e1048c0aeaf6c7b144f00b84b58",
+    "003-mcp-lemon8-09.png": "b1361762e42b7145d6343d229882df12b332693e8bc482227062e50a239b50e3",
+    "003-mcp-lemon8-10.png": "f875dd481628cf3eb7cf0142f953513cd955355c0377ab81d363152e1bd3a04c"
   }
 }

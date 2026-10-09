@@ -1,6 +1,6 @@
 # Verification Gate
 
-Status: `evidence-verified-pending-human-review`
+Status: `verified`
 
 AI-assisted evidence review completed: `2026-09-21`
 
@@ -34,15 +34,28 @@ AI-assisted evidence review completed: `2026-09-21`
 - [x] Copyright, privacy, brand, voice, and likeness risks were reviewed.
 - [x] Relevant safety risks and platform disclosure needs were reviewed.
 
+## Freshness recheck — 2026-10-09 (AI-assisted)
+
+- All cited URLs load unchanged; every sourced claim is still supported as worded.
+- Anthropic "Building effective agents" now carries a note that tooling has changed
+  since December 2024; the cited text is unchanged, so cite it as December 2024
+  guidance.
+- OpenAI's agents overview now also lists an Agents API runtime; this strengthens
+  C-003 and contradicts nothing.
+- MCP `2026-07-28` is still the current revision.
+- Lemon8 disclosure: no official Lemon8 rule found for labeling AI-assisted content or
+  for unpaid posts naming brands (Thai community guidelines and supplemental terms,
+  accessed 2026-10-09). Original diagrams only, so no realistic-media label applies.
+
 ## Human review
 
-Reviewer:
+Reviewer: Earth (operator)
 
-Date:
+Date: 2026-10-09
 
-Decision: `pending`
+Decision: `approved`
 
-Open issues:
+Open issues (resolved by the reviewer on 2026-10-09):
 
 - ยืนยันว่า “Chat ทั่วไป” ถูกอ่านเป็น interaction pattern ไม่ใช่ข้อจำกัดของผลิตภัณฑ์ ChatGPT
 - ยืนยันตัวอย่าง “ทำรายงาน” ว่าสอดคล้องกับประสบการณ์และน้ำเสียงของช่อง

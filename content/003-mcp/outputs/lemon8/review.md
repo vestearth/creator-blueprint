@@ -7,7 +7,7 @@ Status: `not-published`
 - URL:
 - Published at:
 - Observation window:
-- Package version: `lemon8-mcp-signal-map-v1-2026-09-22`
+- Package version: `lemon8-mcp-signal-map-v3-2026-10-09`
 
 ## Performance
 

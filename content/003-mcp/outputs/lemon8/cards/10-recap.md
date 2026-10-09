@@ -12,4 +12,4 @@ Responsibility map สี่แถว Prompt / Agent / Host / MCP และ sign
 ## Continuity and QA
 
 - [x] เชื่อม thesis ของ 002 กลับมาครบ
-- [ ] Human reviewer เลือก CTA ตอนต่อ
+- [x] Human reviewer เลือก CTA ตอนต่อ: Permission/Approval (2026-10-09)

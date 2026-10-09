@@ -18,7 +18,7 @@ Flow แบบย่อ:
 
 1. MCP Client ขอรายการ Tool จาก Server ด้วย `tools/list`
 2. Tool บอกชื่อ คำอธิบาย และ input schema
-3. Host เลือก Tool ที่อนุญาตให้ model เห็น
+3. Host ตัดสินว่าจะเปิด Tool ไหนให้ model
 4. Agent เลือก Tool และสร้าง arguments
 5. Client ส่ง `tools/call` ให้ Server ไปทำงานกับไฟล์ ฐานข้อมูล หรือ API
 6. Result กลับเข้า context ให้ Agent ดูผลและเลือกขั้นถัดไป
@@ -41,8 +41,8 @@ MCP ไม่ได้สร้าง planning, memory, stopping condition ห�
 
 **Prompt กำหนดทิศ · Agent เลือกขั้นถัดไป · Host คุมขอบเขต · MCP เชื่อม · Tool ลงมือ**
 
-ตอนต่อไปอยากดูอะไรมากกว่ากัน: “ข้างใน MCP Server มีอะไร?” หรือ “Permission/Approval
-ควรวางตรงไหน?”
+ตอนต่อไปจะแกะเรื่อง Permission/Approval ว่าควรวางตรงไหนในระบบ Agent
+ระบบที่คุณใช้อยู่ ให้ AI ขออนุมัติก่อนทำอะไรบ้างครับ?
 
 ## Content detail
 
